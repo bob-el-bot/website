@@ -1,8 +1,50 @@
 html {
-    color: white;
+    color: #f2f2f2;
     font-family: 'Belanosima', sans-serif;
     background-color: #36393e;
 }
+
+.topnav a {
+    float: right;
+    margin-left: 10px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .topnav .invite {
+    background-color: #631515;
+  }
+
+  .topnav .invite:hover {
+    background-color: #9c2828;
+    opacity: 1;
+  }
+
+  .topnav a:nth-child(1) {
+    float: left;
+    margin-left: 0;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .topnav a:nth-child(1):hover {
+    opacity: 1;
+  }
+  
+  .topnav a:hover {
+    background-color: #36393e;
+    opacity: 0.8;
+  }
+
+  .container {
+    position: absolute;
+    margin: 15px;
+    width: 97%;
+  }
 
 .header {
     display: flex;
@@ -42,20 +84,40 @@ html {
     border: none;
     outline: none;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 200ms ease-in;
     color: #1e2124;
 }
 
 .buttonMain:hover {
-    color: white;
+    color: #f2f2f2;
+}
+
+body {
+    background-color: #181b1d;
 }
 
 .body {
-    margin: 15px;
+    background-color: #181b1d;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.body .section div {
+    display: inline;
+    flex-direction: row;
+}
+
+.body .section {
+    display: flex;
+}
+
+.body .invite {
     background-color: #36393e;
-    height: 400px;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 footer {
@@ -75,9 +137,9 @@ footer a
 }
 
 footer a:hover {
-    color: white;
+    color: #f2f2f2;
     text-decoration: underline;
-    fill: white;
+    fill: #f2f2f2;
 }
 
 footer p {
@@ -96,7 +158,7 @@ footer img {
 }
 
 footer b, h2 {
-    color: white;
+    color: #f2f2f2;
     margin-bottom: 0;
 }
 
