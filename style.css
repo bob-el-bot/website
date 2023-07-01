@@ -16,20 +16,23 @@ html {
 }
 
 .header .section {
-    float: left;
     margin: 15px;
-    margin-top: 50px;
     width: 100%;
-    top: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .header .section .main {
-    vertical-align: middle;
-    transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    align-self: center;
+}
+
+.header .section .status {
+    align-self: center;
+    margin: auto;
+}
+
+.header .section .status .pfp {
+    border-radius: 50%;
 }
 
 .buttonMain {
