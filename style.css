@@ -48,3 +48,71 @@ html {
 .buttonMain:hover {
     color: white;
 }
+
+.body {
+    margin: 15px;
+    background-color: #36393e;
+    height: 400px;
+}
+
+footer {
+    text-align: center;
+    background-color: #1e2124;
+    color: #999999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+footer a 
+{
+    color: #999999;
+    text-decoration: none;
+    fill: #999999;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+    fill: white;
+}
+
+footer p {
+    line-height: 24px;
+}
+
+footer .main-content {
+    display: flex; 
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+}
+
+footer b, h2 {
+    color: white;
+    margin-bottom: 0;
+}
+
+footer .quantam {
+    color: #ff9900;
+}
+
+footer .quantam:hover {
+    color: #ffad33;
+}
+
+footer .column {
+    text-align: left;
+    padding-left: 15px;
+}
+
+@media (max-width: 882px) {
+    footer .main-content {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+}
