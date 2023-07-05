@@ -14,14 +14,15 @@ html {
     text-decoration: none;
     font-size: 16px;
     border-radius: 8px;
+    transition: all 200ms ease-in;
   }
 
   .topnav .invite {
-    background-color: #631515;
+    background-color: #8C52FF;
   }
 
   .topnav .invite:hover {
-    background-color: #9c2828;
+    background-color: #CB6CE6;
     opacity: 1;
   }
 
@@ -70,6 +71,14 @@ html {
     align-self: center;
 }
 
+.header .section h1 {
+    background: rgb(203,108,230);
+    background: linear-gradient(-90deg, rgba(203,108,230,1) 0%, rgba(94,23,235,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .header .section .status {
     align-self: center;
     margin: auto;
@@ -82,7 +91,7 @@ html {
 .buttonMain {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
-    background-color: #631515;
+    background-color: #8C52FF;
     border: none;
     outline: none;
     padding: 0.5rem 1rem;
@@ -94,6 +103,43 @@ html {
 
 .buttonMain:hover {
     color: #f2f2f2;
+}
+
+.stats {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-flow: row;
+    margin-right: 0;
+    font-size: 15px;
+    margin-left: auto;
+}
+
+.growth {
+    display: flex;
+}
+
+.stats .stat {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.stats .stat .number {
+    background-color: #181b1d;
+    border-radius: 20px;
+    padding-left: 2px;
+    padding-right: 8px;
+    padding-top: 0;
+    padding-bottom: 2px;
+}
+
+.stats .stat .verified {
+    background-color: #5865F2;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 body {
@@ -185,5 +231,15 @@ footer .column {
     footer .main-content {
         justify-content: flex-start;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 580px) {
+    .stats {
+        font-size: 12px;
+    }
+
+    .growth {
+        display: none;
     }
 }
