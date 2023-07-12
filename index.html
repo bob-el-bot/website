@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale e=1">
         <!-- Icons -->
         <link rel="preload" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="assets/images/bob.png">
         <!-- Fonts -->
@@ -21,6 +22,23 @@
             <div class="container">
                 <div class="topnav">
                     <a class="home" href="">Bob</a>
+                    <a class="mobile-button" id="nav-mobile-button">
+                        <img style="max-height: 14px;" src="assets/images/hamburger-menu-icon.svg">
+                    </a>
+                    <a class="invite" href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
+                        Invite
+                    Bob
+                    </a>
+                    <a href="#plans">Future Plans</a>
+                    <a href="#features">Features</a>
+                </div>
+            </div>
+            <!-- Navigation Mobile Options -->
+            <div id="nav-modal" class="nav-modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <br>
                     <a class="invite" href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
                         Invite
                     Bob
@@ -36,7 +54,7 @@
                     <h3>A bot for 🎲 RNG, new 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!</h3>
                     <button style="margin-right: 10px;" class="buttonMain" onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands'">
                         <b>
-                            Invite
+                            Invite Bob
                         </b>
                     </button>
                     <button class="buttonMain" onclick="window.location.href='#learn-more'">
@@ -53,7 +71,7 @@
             </div>
         </div>
         <!-- Stats -->
-        <div class="stats">
+        <div id="learn-more" class="stats">
             <div style="padding-right: 10px;" class="growth">
                 <h2 style="margin-block-end: 0; margin-block-start: 0;">🚀Bob is growing daily!</h2>
             </div>
@@ -61,11 +79,11 @@
                 <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">🤗4,000+ Users</h2>
             </div>
             <div class="stat" style="padding-left: 10px;">
-                <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">🟢96 Servers</h2>
+                <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">🟢100+ Servers</h2>
             </div>
         </div>
         <!-- body -->
-        <div id="learn-more" class="body">
+        <div class="body">
             <div class="section">
                 <div class="text">
                     <div>
@@ -100,7 +118,7 @@
                     </div>
                 </div>
                 <div class="img-holder">
-                        <img src="assets/images/wingman.svg">
+                    <img src="assets/images/wingman.svg">
                 </div>
             </div>
             <div class="invite">
@@ -172,4 +190,26 @@
             </div>
         </footer>
     </body>
+    <!-- Mobile Navigation Options Modal -->
+    <script>
+        var modal = document.getElementById("nav-modal");
+
+        var btn = document.getElementById("nav-mobile-button");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </html>

@@ -34,13 +34,14 @@ html {
     font-size: 16px;
     border-radius: 8px;
     transition: all 200ms ease-in;
+    display: block;
 }
 
 .topnav .invite {
     background-color: #8C52FF;
-    -webkit-box-shadow: 0px 0px 6px 2px rgba(140,82,255,1);
-    -moz-box-shadow: 0px 0px 6px 2px rgba(140,82,255,1);
-    box-shadow: 0px 0px 6px 2px rgba(140,82,255,1);
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
+    box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
 }
 
 .topnav .invite:hover {
@@ -48,12 +49,16 @@ html {
     opacity: 1;
 }
 
-.topnav a:nth-child(1) {
+.topnav .home {
     float: left;
     margin-left: 0;
     margin-right: auto;
     font-weight: bold;
     font-size: large;
+}
+
+.topnav .mobile-button {
+    display: none;
 }
 
 .topnav a:hover {
@@ -77,6 +82,59 @@ html {
     width: 100%;
 }
 
+.nav-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #121416;
+    margin: 50% auto;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 5px;
+    width: 30%;
+    justify-content: center;
+}
+
+.close {
+    color: #f2f2f2;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 56, 56);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content a {
+    margin-top: 15px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 200ms ease-in;
+    display: block;
+}
+
+.modal-content a:hover {
+    background-color: #36393e;
+}
+
 .header {
     display: flex;
     min-height: 350px;
@@ -94,7 +152,7 @@ html {
     align-items: center;
 }
 
-.header .section:nth-of-type(3) {
+.header .section:nth-of-type(4) {
     display: flex;
 }
 
@@ -113,7 +171,7 @@ html {
 
 .header .section h3 {
     font-size: 22px;
-    color: white;
+    color: #f2f2f2;
 }
 
 .header .section .status {
@@ -130,9 +188,9 @@ html {
     font-size: 1rem;
     background-color: #8C52FF;
     color: #1e2124;
-    -webkit-box-shadow: 0px 0px 6px 2px rgba(140,82,255,1);
-    -moz-box-shadow: 0px 0px 6px 2px rgba(140,82,255,1);
-    box-shadow: 0px 0px 6px 2px rgba(140,82,255,1);
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
+    box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
     border: none;
     outline: none;
     padding: 0.5rem 1rem;
@@ -309,7 +367,7 @@ footer .column {
     .body .section .text h2 {
         font-size: 25px;
     }
-    
+
     .body .section .text p {
         font-size: 20px;
     }
@@ -326,7 +384,7 @@ footer .column {
 @media (max-width: 920px) {
     .body .section img {
         min-width: 350px;
-    } 
+    }
 }
 
 @media (max-width: 882px) {
@@ -340,22 +398,22 @@ footer .column {
     .body .section .text h2 {
         font-size: 22px;
     }
-    
+
     .body .section .text p {
         font-size: 18px;
     }
-    
+
     .body .section img {
         width: 70%;
         min-width: 250px;
-    } 
+    }
 }
 
 @media (max-width: 800px) {
     .body .section img {
         width: 80%;
         min-width: 200px;
-    } 
+    }
 }
 
 @media (max-width: 744px) {
@@ -375,14 +433,17 @@ footer .column {
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
     .stats {
         font-size: 12px;
     }
 
-    .header .section:nth-of-type(3) {
+    .header .section:nth-of-type(4) {
         display: none;
     }
+}
+
+@media (max-width: 580px) {
 
     .header .section h1 {
         font-size: 35px;
@@ -390,10 +451,28 @@ footer .column {
 
     .header .section h3 {
         font-size: 20px;
-        color: white;
+        color: #f2f2f2;
     }
 
     .growth {
         display: none;
+    }
+
+    .topnav a {
+        display: none;
+    }
+
+    .topnav .mobile-button {
+        display: block;
+    }
+
+    .topnav .home {
+        display: block;
+    }
+
+    @media (min-width: 580px) {
+        .nav-modal {
+            display: none;
+        }
     }
 }
