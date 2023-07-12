@@ -359,21 +359,6 @@ footer .column {
 }
 
 @media (max-width: 744px) {
-    .body .section .text h2 {
-        font-size: 20px;
-    }
-    
-    .body .section .text p {
-        font-size: 18px;
-    }
-    
-    .body .section img {
-        width: 80%;
-        min-width: 150px;
-    } 
-}
-
-@media (max-width: 600px) {
     .body .section div {
         width: 100%;
         max-width: 100%;
