@@ -241,6 +241,7 @@ body {
 
 .body .section img {
     width: 70%;
+    min-width: 400px;
 }
 
 .body .invite {
@@ -303,10 +304,88 @@ footer .column {
     padding-left: 15px;
 }
 
+@media (max-width: 1200px) {
+    .body .section .text h2 {
+        font-size: 25px;
+    }
+    
+    .body .section .text p {
+        font-size: 20px;
+    }
+
+    .body .section img {
+        min-width: 400px;
+    }
+
+    .body .section {
+        margin: 0 0px;
+    }
+}
+
+@media (max-width: 920px) {
+    .body .section img {
+        min-width: 350px;
+    } 
+}
+
 @media (max-width: 882px) {
     footer .main-content {
         justify-content: flex-start;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 840px) {
+    .body .section .text h2 {
+        font-size: 22px;
+    }
+    
+    .body .section .text p {
+        font-size: 18px;
+    }
+    
+    .body .section img {
+        width: 70%;
+        min-width: 250px;
+    } 
+}
+
+@media (max-width: 800px) {
+    .body .section img {
+        width: 80%;
+        min-width: 200px;
+    } 
+}
+
+@media (max-width: 744px) {
+    .body .section .text h2 {
+        font-size: 20px;
+    }
+    
+    .body .section .text p {
+        font-size: 18px;
+    }
+    
+    .body .section img {
+        width: 80%;
+        min-width: 150px;
+    } 
+}
+
+@media (max-width: 600px) {
+    .body .section div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .body .section {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .body .section .text {
+        width: 100%;
     }
 }
 
