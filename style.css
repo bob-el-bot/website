@@ -271,6 +271,13 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 40px;
+    border-radius: 20px;
+    background-color: #181b1d;
+}
+
+.body .section:nth-child(odd) {
+    margin: 0 40px;
+    background-color: #121416;
 }
 
 .body .section .text {
@@ -303,10 +310,24 @@ body {
     min-width: 400px;
 }
 
-.body .invite {
-    background-color: #36393e;
+.body .future-plans {
     padding: 15px;
-    border-radius: 10px;
+    margin: 0 10%;
+    border-radius: 20px;
+    background-color: #181b1d;
+    color: #f2f2f2;
+}
+
+.body .future-plans h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+
+.body .future-plans p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
 footer {
@@ -372,6 +393,14 @@ footer .column {
         font-size: 20px;
     }
 
+    .body .future-plans h3 {
+        font-size: 25px;
+    }
+    
+    .body .future-plans p {
+        font-size: 20px;
+    }
+
     .body .section img {
         min-width: 400px;
     }
@@ -401,6 +430,18 @@ footer .column {
 
     .body .section .text p {
         font-size: 18px;
+    }
+
+    .body .future-plans h3 {
+        font-size: 22px;
+    }
+    
+    .body .future-plans p {
+        font-size: 18px;
+    }
+
+    .buttonMain {
+        font-size: 14px;
     }
 
     .body .section img {
@@ -446,7 +487,7 @@ footer .column {
 @media (max-width: 580px) {
 
     .header .section h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .header .section h3 {
@@ -474,5 +515,11 @@ footer .column {
         .nav-modal {
             display: none;
         }
+    }
+}
+
+@media (max-width: 400px){    
+    .body .future-plans {
+        margin: 0 1%;
     }
 }
