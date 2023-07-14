@@ -19,7 +19,7 @@
         <!-- Header Section -->
         <div class="header">
             <!-- Navigation -->
-            <div class="container">
+            <div style="z-index: 100 !important;" class="container">
                 <div class="topnav">
                     <a class="home" href="">Bob</a>
                     <a class="mobile-button" id="nav-mobile-button">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <!-- Navigation Mobile Options -->
-            <div id="nav-modal" class="nav-modal">
+            <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -43,21 +43,21 @@
                         Invite
                     Bob
                     </a>
-                    <a href="#plans">Future Plans</a>
+                    <a href="#future-plans">Future Plans</a>
                     <a href="#features">Features</a>
                 </div>
             </div>
             <!-- header content -->
             <div class="section">
-                <div calss="main">
-                    <h1>Add the fun to your server!</h1>
-                    <h3>A bot for 🎲 RNG, new 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!</h3>
-                    <button style="margin-right: 10px;" class="buttonMain" onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands'">
+                <div class="main">
+                    <h1 style="animation: fadein 1s;">Add the fun to your server!</h1>
+                    <h3 class="hidden">A bot for 🎲 RNG, new 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!</h3>
+                    <button style="margin-right: 10px; animation: fadein 1s;" class="buttonMain" onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands'">
                         <b>
                             Invite Bob
                         </b>
                     </button>
-                    <button class="buttonMain" onclick="window.location.href='#learn-more'">
+                    <button style="animation: fadein 1s;" class="buttonMain" onclick="window.location.href='#learn-more'">
                         <b>
                             Learn More
                         </b>
@@ -78,15 +78,19 @@
                 <h2 style="margin-block-end: 0; margin-block-start: 0;">🚀Bob is growing daily!</h2>
             </div>
             <div class="stat">
-                <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">🤗4,000+ Users</h2>
+                <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">🤗
+                    <span id="number">4,000</span>+ Users
+                </h2>
             </div>
             <div class="stat" style="padding-left: 10px;">
-                <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">🟢100+ Servers</h2>
+                <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">🟢
+                    <span id="number2">100</span>+ Servers
+                </h2>
             </div>
         </div>
         <!-- body -->
         <div class="body">
-            <div class="commands">
+            <div class="commands hidden">
                 <h2>
                     🔥Tons of Commands
                 </h2>
@@ -278,7 +282,7 @@
                     With more on the way!
                 </p>
             </div>
-            <div class="section">
+            <div class="section hidden">
                 <div class="text">
                     <div>
                         <h2>🎲All the RNG</h2>
@@ -289,7 +293,7 @@
                     <img src="assets/images/rng.svg">
                 </div>
             </div>
-            <div class="section">
+            <div class="section hidden">
                 <div class="img-holder">
                     <img src="assets/images/games.svg">
                 </div>
@@ -300,7 +304,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section">
+            <div class="section hidden">
                 <div class="text">
                     <div>
                         <div>
@@ -315,8 +319,7 @@
                     <img src="assets/images/wingman.svg">
                 </div>
             </div>
-
-            <div id="future-plans" class="section">
+            <div id="future-plans" class="section hidden">
                 <div class="future-plans">
                     <h3>🔮 Future Plans</h3>
                     <p>
@@ -428,4 +431,43 @@
             }
         }
     </script>
+
+    <!-- Take away slide in effect on mobile for performance. -->
+    <script>
+        const observer = new IntersectionObserver((entires) => {
+            entires.forEach((entry) => {
+                if (entry.isIntersecting) {
+                   entry.target.classList.add('show');
+                } else {
+                   entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((element) => observer.observe(element));
+    </script>
+
+    <!-- to be added later -->
+    <!-- Number Count Up Anim -->
+    <!-- <script>
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const users = document.getElementById("number");
+        animateValue(users, 0, 4000, 1000);
+
+        const servers = document.getElementById("number2");
+        animateValue(servers, 0, 100, 2000);
+    </script> -->
 </html>
