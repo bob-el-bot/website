@@ -8,6 +8,7 @@ html {
 
 ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
     background-color: #121416;
 }
 
@@ -22,6 +23,10 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #1e2124;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0.0);
 }
 
 .topnav a {
@@ -269,15 +274,14 @@ body {
 
 .body .section {
     display: flex;
-    justify-content: center;
     margin: 0 40px;
-    border-radius: 20px;
-    background-color: #181b1d;
+    justify-content: center;
+    background-color: #121416;
 }
 
-.body .section:nth-child(odd) {
-    margin: 0 40px;
-    background-color: #121416;
+.body .section:nth-child(2) {
+    border-radius: 20px;
+    background-color: #181b1d;
 }
 
 .body .section .text {
@@ -310,9 +314,79 @@ body {
     min-width: 400px;
 }
 
+.body .commands {
+    margin: 0 40px;
+}
+
+.body .commands h2 {
+    font-size: 30px;
+}
+
+.body .commands p {
+    font-size: 24px;
+}
+
+.body .stream-holder {
+    overflow: scroll;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+.body .stream {
+    display: flex;
+    flex-direction: row;
+}
+
+.body .stream .command-card {
+    display: block;
+    background-color: #181b1d;
+    border: solid 2px #36393e;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+.body .stream .command-card h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.body .stream .command-card p {
+    font-size: 17px;
+}
+
+.body .stream .command-card h3 span {
+    background-color: #181b1d;
+    border-radius: 5px;
+    padding: 2px;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #8C52FF;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px
+}
+
+@keyframes run {
+    0% {
+        left: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
 .body .future-plans {
     padding: 15px;
     margin: 0 10%;
+    margin-bottom: 15px;
     border-radius: 20px;
     background-color: #181b1d;
     color: #f2f2f2;
@@ -396,8 +470,16 @@ footer .column {
     .body .future-plans h3 {
         font-size: 25px;
     }
-    
+
     .body .future-plans p {
+        font-size: 20px;
+    }
+
+    .body .commands h2 {
+        font-size: 25px;
+    }
+    
+    .body .commands p {
         font-size: 20px;
     }
 
@@ -435,8 +517,16 @@ footer .column {
     .body .future-plans h3 {
         font-size: 22px;
     }
-    
+
     .body .future-plans p {
+        font-size: 18px;
+    }
+
+    .body .commands h2 {
+        font-size: 22px;
+    }
+    
+    .body .commands p {
         font-size: 18px;
     }
 
@@ -511,14 +601,18 @@ footer .column {
         display: block;
     }
 
-    @media (min-width: 580px) {
-        .nav-modal {
-            display: none;
-        }
+    .body .commands {
+        margin: 0;
     }
 }
 
-@media (max-width: 400px){    
+@media (min-width: 580px) {
+    .nav-modal {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
     .body .future-plans {
         margin: 0 1%;
     }
