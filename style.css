@@ -279,9 +279,19 @@ body {
     background-color: #121416;
 }
 
-.body .section:nth-child(2) {
+.body .section:nth-child(even) {
     border-radius: 20px;
     background-color: #181b1d;
+}
+
+.body .section div:last-child {
+    width: 100%;
+    max-width: 80%;
+}
+
+
+.body .section:last-child {
+    margin: 0px;
 }
 
 .body .section .text {
@@ -384,16 +394,12 @@ body {
 
 
 .body .future-plans {
-    padding: 15px;
-    margin: 0 10%;
     margin-bottom: 15px;
-    border-radius: 20px;
-    background-color: #181b1d;
     color: #f2f2f2;
 }
 
 .body .future-plans h3 {
-    margin-top: 0px;
+    margin-top: 15px;
     margin-bottom: 0px;
     font-size: 30px;
 }
