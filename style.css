@@ -713,6 +713,10 @@ footer .column {
     .body .commands {
         margin: 0;
     }
+
+    .hidden {
+        transition: none;
+    }
 }
 
 @media (min-width: 580px) {
