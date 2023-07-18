@@ -536,26 +536,6 @@ footer .column {
     transition-delay: 580ms;
 }
 
-.hidden:nth-child(8) {
-    transition-delay: 630ms;
-}
-
-.hidden:nth-child(9) {
-    transition-delay: 680ms;
-}
-
-.hidden:nth-child(10) {
-    transition-delay: 720ms;
-}
-
-.hidden:nth-child(11) {
-    transition-delay: 750ms;
-}
-
-.hidden:nth-child(12) {
-    transition-delay: 770ms;
-}
-
 .show {
     opacity: 1;
     transform: translateX(0);
