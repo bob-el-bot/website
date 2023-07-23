@@ -653,6 +653,12 @@ footer .column {
     }
 }
 
+@media (max-width: 610px) {
+    .growth {
+        display: none;
+    }
+}
+
 @media (max-width: 600px) {
     .stats {
         font-size: 12px;
@@ -672,10 +678,6 @@ footer .column {
     .header .section h3 {
         font-size: 20px;
         color: #f2f2f2;
-    }
-
-    .growth {
-        display: none;
     }
 
     .topnav a {
