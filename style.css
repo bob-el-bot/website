@@ -6,6 +6,11 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background: #453369;
+    color: #f2f2f2;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -203,6 +208,10 @@ html {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.header .section h1::selection {
+    -webkit-text-fill-color: #f2f2f2;
 }
 
 .header .section h3 {
