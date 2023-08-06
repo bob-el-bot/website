@@ -1,0 +1,69 @@
+.other-header {
+    display: flex;
+    min-height: 300px;
+    max-height: 18%;
+    height: 60vw;
+    flex-shrink: 0;
+    flex-grow: 1;
+    background-color: #1e2124;
+}
+
+.other-header .section {
+    margin: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.other-header .section .main {
+    align-self: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.other-header .section h1 {
+    padding-top: 50px;
+    font-size: 40px;
+    padding-bottom: 0;
+    font-size: 40px;
+    background: rgb(203, 108, 230);
+    background: linear-gradient(-90deg, rgba(203, 108, 230, 1) 0%, rgba(94, 23, 235, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.other-header .section p {
+    padding-top: 0px;
+    font-size: 20px;
+    color: #f2f2f2;
+}
+
+.other-header .section h1::selection {
+    -webkit-text-fill-color: #f2f2f2;
+}
+
+.other-section {
+    padding: 5px 200px;
+}
+
+.other-section p {
+    font-size: 18px;
+}
+
+.other-section h2 {
+    font-size: 28px;
+}
+
+@media (max-width: 1200px) {
+    .other-section {
+        padding: 5px 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .other-section {
+        padding: 5px 0px;
+    }
+}
