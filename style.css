@@ -110,7 +110,8 @@ html {
     padding: 15px 0;
     display: flex;
     justify-content: flex-end;
-    background-color: #121416;
+    background-color: #181b1d;
+    border-bottom: solid 2px #36393e;
     box-shadow: -1px 1px 35px 0px rgba(0, 0, 0, 0.47);
     -webkit-box-shadow: -1px 1px 35px 0px rgba(0, 0, 0, 0.47);
     -moz-box-shadow: -1px 1px 35px 0px rgba(0, 0, 0, 0.47);
@@ -183,7 +184,10 @@ html {
     height: 60vw;
     flex-shrink: 0;
     flex-grow: 1;
-    background-color: #1e2124;
+    background-color: #121416;
+    background-repeat: no-repeat;
+    background-size: cover; 
+
 }
 
 .header .section {
@@ -235,12 +239,9 @@ html {
 .buttonMain {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
-    background-color: #8C52FF;
-    color: #1e2124;
-    -webkit-box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
-    -moz-box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
-    box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
-    border: none;
+    background-color: transparent;
+    color: #f2f2f2;
+    border: solid 2px #36393e;
     outline: none;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -250,7 +251,29 @@ html {
 
 .buttonMain:hover {
     color: #f2f2f2;
-    background-color: #CB6CE6;
+    background: #36393e;
+    border: solid 2px #999999;
+}
+
+.buttonMainInvite {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    background-color: #8C52FF;
+    color: #f2f2f2;
+    border: solid 2px #8C52FF;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
+    box-shadow: 0px 0px 6px 2px rgba(140, 82, 255, 1);
+}
+
+.buttonMainInvite:hover {
+    color: #f2f2f2;
+    background: #CB6CE6;
 }
 
 .stats {
@@ -265,9 +288,7 @@ html {
     margin-left: auto;
     background: rgb(203, 108, 230);
     background: linear-gradient(-90deg, rgba(203, 108, 230, 1) 0%, rgba(94, 23, 235, 1) 100%);
-    box-shadow: 1px 1px 35px 0px rgba(0, 0, 0, 0.47);
-    -webkit-box-shadow: -1px 1px 35px 0px rgba(0, 0, 0, 0.47);
-    -moz-box-shadow: -1px 1px 35px 0px rgba(0, 0, 0, 0.47);
+
 }
 
 .growth {
@@ -326,6 +347,7 @@ body {
 .body .section:nth-child(even) {
     border-radius: 20px;
     background-color: #181b1d;
+    border: solid 2px #36393e;
 }
 
 .body .section div:last-child {
