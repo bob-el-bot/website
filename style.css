@@ -163,7 +163,8 @@ html {
 }
 
 .modal-content {
-    background-color: #121416;
+    background-color: #181b1d;
+    border: solid 2px #36393e;
     margin: 50% auto;
     border-radius: 10px;
     padding: 10px;
@@ -212,7 +213,6 @@ html {
     background-color: #121416;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .header .section {
