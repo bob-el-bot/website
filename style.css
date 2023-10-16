@@ -261,6 +261,16 @@ html {
     box-shadow: 0px 0px 6px 2px #453369;
 }
 
+.commandName {
+    border-radius: 5px;
+    padding: 2px;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #8C52FF;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+}
+
 .buttonMain {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
@@ -605,6 +615,7 @@ footer .column {
 
     .body .section .text p {
         font-size: 20px;
+        min-width: 75%;
     }
 
     .body .future-plans h3 {
@@ -708,16 +719,17 @@ footer .column {
     }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 630px) {
     .growth {
         display: none;
+    }
+
+    .stats {
+        font-size: 12px;
     }
 }
 
 @media (max-width: 600px) {
-    .stats {
-        font-size: 12px;
-    }
 
     .header .section:nth-of-type(4) {
         display: none;
