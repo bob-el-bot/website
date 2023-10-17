@@ -378,7 +378,7 @@ body {
     justify-content: center;
 }
 
-.body .section:nth-child(even) {
+.body .section:nth-child(odd) {
     border-radius: 20px;
     background-color: #181b1d;
     border: solid 2px #36393e;
