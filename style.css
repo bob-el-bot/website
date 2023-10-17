@@ -369,7 +369,6 @@ body {
     align-items: center;
     min-width: 50%;
     width: 50%;
-    max-width: 50%;
 }
 
 .body .section {
@@ -498,6 +497,7 @@ body {
 .body .future-plans {
     margin-bottom: 15px;
     color: #f2f2f2;
+    max-width: 80%;
 }
 
 .body .future-plans h3 {
@@ -764,6 +764,8 @@ footer .column {
     }
 
     .hidden {
+        transform: scale(1);
+        opacity: 1;
         transition: none;
     }
 }
