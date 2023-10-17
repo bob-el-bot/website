@@ -719,6 +719,12 @@ footer .column {
     }
 }
 
+@media (max-width: 680px) {
+    .header .section:nth-of-type(4) {
+        display: none;
+    }
+}
+
 @media (max-width: 630px) {
     .growth {
         display: none;
@@ -730,14 +736,12 @@ footer .column {
 }
 
 @media (max-width: 600px) {
-
-    .header .section:nth-of-type(4) {
-        display: none;
+    .header .section .main {
+        text-align: center;
     }
 }
 
 @media (max-width: 580px) {
-
     .header .section h1 {
         font-size: 30px;
     }
@@ -784,10 +788,17 @@ footer .column {
     .stats .stat .number {
         font-size: 16px;
     }
+
+    .header .section {
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
 }
 
 @media(prefers-reduced-motion) {
     .hidden {
+        transform: scale(1);
+        opacity: 1;
         transition: none;
     }
 }
