@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bob The Bot</title>
+        <meta name="viewport" content="width=device-width, initial-scale e=1">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/bobTransparent.svg">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="commands.css">
+        <!--  Essential META Tags -->
+        <meta name="description" content="A bot for 🎲 RNG, new 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
+        <meta name="keywords" content="Bob, Bob The Bot, Bob Bot, bob the bot, bobthebot, BobTheBot, bot for shipping, bot for games, bot for fonts, RNG, RNG bot, rng bot, dice roll, dungeons and dragons">
+        <!--  Embed META Tags -->
+        <meta property="og:title" content="Bob's Commands in Detail.">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="https://bobthebot.net/assets/images/bob.png">
+        <meta property="og:url" content="https://bobthebot.net">
+        <meta property="og:description" content="A bot for 🎲 RNG, new 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
+        <meta data-react-helmet="true" name="theme-color" content="#8C52FF">
+    </head>
+    <body style="margin: 0px; height: 100%;">
+        <!-- Navigation -->
+        <div style="z-index: 100 !important;" class="container">
+            <div class="topnav">
+                <a class="home" href="https://bobthebot.net">Bob</a>
+                <a class="mobile-button" id="nav-mobile-button">
+                    <img
+                        alt="open menu"
+                        style="max-height: 14px;"
+                        alt="open menu"
+                        src="assets/images/hamburger-menu-icon.svg"
+                    >
+                </a>
+                <a class="invite" href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
+                    ❤️ Invite
+                            Bob
+                </a>
+                <a href="https://bobthebot.net#future-plans">🔮 Future Plans</a>
+                <a href="https://bobthebot.net#features">✨ Features</a>
+            </div>
+        </div>
+        <!-- Navigation Mobile Options -->
+        <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <br>
+                <a class="invite" href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
+                    ❤️ Invite
+                            Bob
+                </a>
+                <a href="https://bobthebot.net#future-plans">🔮 Future Plans</a>
+                <a href="https://bobthebot.net#features">✨ Features</a>
+            </div>
+        </div>
+        <!-- body -->
+        <div class="body" style="padding-top: 100px;">
+            <div class="commands">
+                <div class="command-info">
+                    <h2>
+                        Bob's Commands
+                    </h2>
+                    <h3>
+                        An in-depth look at all of Bob's commands.
+                    </h3>
+                    <div class="stream-holder">
+                        <p id="rng">🎲 Random Commands (RNG)</p>
+                        <div class="stream">
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🎨
+                                        <span>/random color</span>
+                                    </h3>
+                                    <p>
+                                        Get a color with Hex, CMYK, HSL, HSV and RGB codes.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🐶
+                                        <span>/random dog</span>
+                                    </h3>
+                                    <p>
+                                        Get a cute doggo image, with a link to it.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🗓️
+                                        <span>/random date</span>
+                                    </h3>
+                                    <p>
+                                        Get a random date between the specified years.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>earliestYear</p>
+                                            <p>The earliest year you want the date to occur in (atleast 0)</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>latestYear</p>
+                                            <p>The latest year you want the date to occur in (must be bigger than earliestYear)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🦉
+                                        <span>/random advice</span>
+                                    </h3>
+                                    <p>
+                                        Get random words of wisdom.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🎲
+                                        <span>/random dice-roll</span>
+                                    </h3>
+                                    <p>
+                                        Roll a die with a specified # of sides.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>sides</p>
+                                            <p>The number of sides you want the dice to have (atleast 0)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        😉
+                                        <span>/random dad-joke</span>
+                                    </h3>
+                                </div>
+                                <p>
+                                    Get a random dad joke.
+                                </p>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🤓
+                                        <span>/random fact</span>
+                                    </h3>
+                                </div>
+                                <p>
+                                    Get an outrageous fact.
+                                </p>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🤔
+                                        <span>/random choose</span>
+                                    </h3>
+                                    <p>
+                                        Can't decide? Bob will pick from the options provided for you.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>option*5</p>
+                                            <p>An item for Bob to choose from (Atleast 2 must be given).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🎱
+                                        <span>/random 8ball</span>
+                                    </h3>
+                                    <p>
+                                        Get an 8 ball response to a prompt.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>prompt</p>
+                                            <p>The prompt for the magic 8ball.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        ✍️
+                                        <span>/random quote</span>
+                                    </h3>
+                                    <p>
+                                        Get a random quote.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>prompt</p>
+                                            <p>Use this to narrow the type of quote you want. This is optional, use /quote-prompts to view all valid prompts.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🪙
+                                        <span>/random coin-toss</span>
+                                    </h3>
+                                    <p>
+                                        Flip a coin.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="quoting">🖊️ Quote Commands</p>
+                        <div class="stream">
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🖊️
+                                        <span>/quote new</span>
+                                    </h3>
+                                    <p>
+                                        Quote someone to remember it forever (pro tip: you can also right click a message to quote it).
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>quote</p>
+                                            <p>The text you want quoted. Quotation marks (") are automatically added.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>user</p>
+                                            <p>The user the quote belongs to.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>tag*3</p>
+                                            <p>You can optionally add a tag to make searching them easier.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🖊️
+                                        <span>/quote channel</span>
+                                    </h3>
+                                    <p>
+                                        Sets the quote channel for the server.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>channel</p>
+                                            <p>The channel you want to use as the quotes channel for the server.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="games">🎮 Game Commands</p>
+                        <div class="stream">
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        ✂️
+                                        <span>/rock-paper-scissors</span>
+                                    </h3>
+                                    <p>
+                                        Play Bob in a game of rock paper scissors.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🧠
+                                        <span>/master-mind guess</span>
+                                    </h3>
+                                    <p>
+                                        Make a guess in a game of Master Mind.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>guess</p>
+                                            <p>Your 4 digit guess for the code.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🧠
+                                        <span>/master-mind new</span>
+                                    </h3>
+                                    <p>
+                                        Start a new game of Master Mind, the rules will shared upon usage.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="other">✨ Other Commands</p>
+                        <div class="stream">
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        💖
+                                        <span>/ship</span>
+                                    </h3>
+                                    <p>
+                                        See how good of a match 2 users are.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>person*2</p>
+                                            <p>The people you want to match together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🔎
+                                        <span>/code preview</span>
+                                    </h3>
+                                    <p>
+                                        Get a formatted preview of specific lines in a file from GitHub.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>link</p>
+                                            <p>The GitHub link you want to share</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🤗
+                                        <span>/hug</span>
+                                    </h3>
+                                    <p>
+                                        Show your friends some love with a hug.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>person*5</p>
+                                            <p>The people you want to hug.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        📊
+                                        <span>/poll</span>
+                                    </h3>
+                                    <p>
+                                        Create a poll with the specified options and prompt.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>prompt</p>
+                                            <p>The question you are asking.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>option*4</p>
+                                            <p>The answers to the prompt.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        📜
+                                        <span>/fonts</span>
+                                    </h3>
+                                    <p>
+                                        Change your text to a different font.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>text</p>
+                                            <p>The text you want transformed.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>font</p>
+                                            <p>Choose from: 𝖒𝖊𝖉𝖎𝖊𝖛𝖆𝖑, 𝓯𝓪𝓷𝓬𝔂, 𝕠𝕦𝕥𝕝𝕚𝕟𝕖𝕕, s̷l̷̷a̷s̷h̷e̷d̷, ɟןıddǝp, and 🄱🄾🅇🄴🄳.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🔒
+                                        <span>/encrypt</span>
+                                    </h3>
+                                    <p>
+                                        Change text into a cipher.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>message</p>
+                                            <p>The text you want encrypted.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>font</p>
+                                            <p>Choose from: Caesar, A1Z26, Atbash, Morse Code.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        ✉️
+                                        <span>/confess</span>
+                                    </h3>
+                                    <p>
+                                        Have Bob DM a user a message.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>message</p>
+                                            <p>The text you want sent on your behalf.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>user</p>
+                                            <p>The person you want to send your message to.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>signoff</p>
+                                            <p>The way you want to end your message (exmaple: your secret admirer).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="info">🗄️ Help / Informational Commands</p>
+                        <div class="stream">                   
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        ✨
+                                        <span>/new</span>
+                                    </h3>
+                                </div>
+                                <p>
+                                    See the latest updates to Bob. Including: dev-notes, git commits, and more.
+                                </p>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🧾
+                                        <span>/quote-prompts</span>
+                                    </h3>
+                                    <p>
+                                        See all valid prompts for /quote.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🏓
+                                        <span>/ping</span>
+                                    </h3>
+                                    <p>
+                                        Find the client's latency.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🤖
+                                        <span>/info</span>
+                                    </h3>
+                                    <p>
+                                        Learn about Bob.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        🏰
+                                        <span>/suggest</span>
+                                    </h3>
+                                    <p>
+                                        Join Bob's official server, and share you ideas!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card">
+                                <div class="name">
+                                    <h3>
+                                        📪
+                                        <span>/help</span>
+                                    </h3>
+                                    <p>
+                                        Get DMed a detailed list of all of Bob's commands.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer>
+            <div style="margin: 0px 15px;">
+                <div class="main-content">
+                    <div class="column" style="margin-left: 0; margin-right: auto;">
+                        <h2>Bob.</h2>
+                        The bot for RNG, quoting, fonts, encryption, games, and more!
+                        <br>
+                        <a style="text-decoration: none;" href="https://discord.gg/HvGMRZD8jQ">
+                            <img alt="Join Discord Server" src="assets/images/discordapp-tile.svg">
+                        </a>
+                        <a style="text-decoration: none;" href="https://github.com/bob-el-bot/BobTheBot">
+                            <img alt="View Github" src="assets/images/github-tile.svg">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <p>
+                            <b>Help</b>
+                            <br>
+                            Use
+                            <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                    text-underline-position: under;
+                                    text-decoration-color: #8C52FF;
+                                    text-decoration-style: solid;
+                                    text-decoration-thickness: 2px;">/help</span>
+                            on Discord
+                            <br>
+                            <a href="https://discord.gg/HvGMRZD8jQ">Join Bob's Server</a>
+                            <br>
+                            <a href="/commands.html">Commands</a>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <p>
+                            <b>Support Bob</b>
+                            <br>
+                            <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
+                            <br>
+                            <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <p>
+                            <b>Contact</b>
+                            <br>
+                            <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
+                            <br>
+                            DM
+                            <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                text-underline-position: under;
+                                text-decoration-color: #8C52FF;
+                                text-decoration-style: solid;
+                                text-decoration-thickness: 2px;">vorlon.</span>
+                            on Discord
+                        </p>
+                    </div>
+                    <div class="column">
+                        <p>
+                            <b>Legal</b>
+                            <br>
+                            <a href="/privacy.html">Privacy Policy</a>
+                            <br>
+                            <a href="/tos.html">Terms of Service</a>
+                        </p>
+                    </div>
+                </div>
+                <hr color="#5b6069">
+                <div>
+                    <p style="margin-bottom: 0;">
+                        <span style="color: #999999;">Made by ⚡</span>
+                        <a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
+                        ⚡
+                    </p>
+                    <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
+                        © Zach Goodson 2023, All Rights
+                            Reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <!-- Mobile Navigation Options Modal -->
+    <script>
+        var modal = document.getElementById("nav-modal");
+
+        var btn = document.getElementById("nav-mobile-button");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</html>

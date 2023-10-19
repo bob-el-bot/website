@@ -1,0 +1,103 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+.command-info .stream-holder::-webkit-scrollbar {
+    display: none;
+}
+  
+
+.command-info {
+    overflow: hidden;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.command-info p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.command-info .stream-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.command-info .stream-holder .stream {
+    display: flex;
+    flex-direction: column;
+}
+
+.command-info .stream-holder .stream .command-info-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.command-info .stream-holder .stream .command-info-card h3 span {
+    font-weight: bold;
+    background-color: #121416;
+    border-radius: 5px;
+    padding: 2px;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #8C52FF;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px
+}
+
+.command-info .stream-holder .stream .command-info-card {
+    display: flexbox;
+    flex-direction: column;
+    background-color: #181b1d;
+    border: solid 2px #36393e;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: normal;
+}
+
+.command-info .stream-holder .stream .command-info-card .name .parameters {
+    background-color: #36393e;
+    border-radius: 10px;
+}
+
+.command-info .stream-holder .stream .command-info-card .name .parameters .parameter:nth-child(1) p {
+    border-radius: 10px 10px 0 0;
+}
+
+.command-info .stream-holder .stream .command-info-card .name .parameters .parameter p:nth-child(1) {
+    background-color: #121416;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.command-info .stream-holder .stream .command-info-card .name .parameters .parameter p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.command-info .stream-holder .stream .command-info-card .name p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+@media (max-width: 580px) {
+    .command-info .stream-holder .stream .command-info-card .name p {
+        font-size: 15px;
+    }
+
+    .command-info .stream-holder .stream .command-info-card .name .parameters .parameter p {
+        font-size: 15px;
+    }
+}
+
