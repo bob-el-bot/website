@@ -102,11 +102,12 @@ html {
 }
 
 .topnav .invite {
-    color: #8C52FF;
+    background-color: rgba(139, 82, 255, 1);
+    color: #f2f2f2;
 }   
 
 .topnav .invite:hover {
-    background-color: #36393e;
+    background-color: rgba(203, 107, 230, 1);
 }
 
 .topnav .home {
@@ -290,7 +291,7 @@ html {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
     color: #f2f2f2;
-    background-color: transparent;
+    background-color: rgba(139, 82, 255, 0.5);
     border: solid 2px #8C52FF;
     outline: none;
     padding: 0.5rem 1rem;
@@ -300,7 +301,7 @@ html {
 }
 
 .buttonMainInvite:hover {
-    background: #36393e;
+    background: rgba(203, 107, 230, 0.5);
     border: solid 2px #CB6CE6;
 }
 
