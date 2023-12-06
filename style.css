@@ -4,6 +4,7 @@ html {
     background-color: #36393e;
     height: 100%;
     scroll-behavior: smooth;
+    scroll-padding-top: 73px;
 }
 
 ::selection {
@@ -755,6 +756,10 @@ footer .column {
 
     .topnav .home {
         display: block;
+    }
+
+    html {
+        scroll-padding-top: 72px;
     }
 
     .body .commands {
