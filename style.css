@@ -455,6 +455,13 @@ body {
     max-width: 200px;
     max-height: 100px;
     min-height: 100px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.body .stream .command-card:hover {
+    background-color: #36393e;
+    border: solid 2px #999999;
 }
 
 .body .stream .command-card h3 {
