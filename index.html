@@ -551,17 +551,20 @@
     </script>
     <!-- Take away slide in effect on mobile for performance. -->
     <script>
-        const observer = new IntersectionObserver((entires) => {
-            entires.forEach((entry) => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                    entry.target.classList.add('show');
                 } else {
                    entry.target.classList.remove('show');
                 }
             });
+        }, {
+            rootMargin: '100px 0px', // Adjust the values as needed
         });
-
+    
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((element) => observer.observe(element));
     </script>
+    
 </html>
