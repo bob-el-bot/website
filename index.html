@@ -1,603 +1,655 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Bob The Bot</title>
-        <meta name="viewport" content="width=device-width, initial-scale e=1">
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="assets/images/bobTransparent.svg">
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <!--  Essential META Tags -->
-        <meta name="description" content="Bob, the bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
-        <meta name="keywords" content="Bob, Bob The Bot, Bob Bot, bob the bot, bobthebot, BobTheBot, bot for shipping, bot for games, bot for fonts, RNG, RNG bot, rng bot, dice roll, dungeons and dragons">
-        <!--  Embed META Tags -->
-        <meta property="og:title" content="Bob The Bot.">
-        <meta property="og:type" content="article">
-        <meta property="og:image" content="https://bobthebot.net/assets/images/bob.png">
-        <meta property="og:url" content="https://bobthebot.net">
-        <meta property="og:description" content="The bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
-        <meta data-react-helmet="true" name="theme-color" content="#8C52FF">
-    </head>
-    <body style="margin: 0px; height: 100%;">
-        <!-- Header Section -->
-        <div class="header">
-            <!-- Navigation -->
-            <div style="z-index: 100 !important;" class="container">
-                <div class="topnav">
-                    <a class="home" href="">Bob</a>
-                    <a class="mobile-button" id="nav-mobile-button">
-                        <img
-                            alt="open menu"
-                            style="max-height: 14px;"
-                            alt="open menu"
-                            src="assets/images/hamburger-menu-icon.svg"
-                        >
-                    </a>
-                    <a class="invite" href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
-                        ❤️ Invite
+
+<head>
+    <title>Bob The Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale e=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/bobTransparent.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--  Essential META Tags -->
+    <meta name="description"
+        content="Bob, the bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
+    <meta name="keywords"
+        content="Bob, Bob The Bot, Bob Bot, bob the bot, bobthebot, BobTheBot, bot for shipping, bot for games, bot for fonts, RNG, RNG bot, rng bot, dice roll, dungeons and dragons">
+    <!--  Embed META Tags -->
+    <meta property="og:title" content="Bob The Bot.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://bobthebot.net/assets/images/bob.png">
+    <meta property="og:url" content="https://bobthebot.net">
+    <meta property="og:description"
+        content="The bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
+    <meta data-react-helmet="true" name="theme-color" content="#8C52FF">
+</head>
+
+<body style="margin: 0px; height: 100%;">
+    <!-- Header Section -->
+    <div class="header">
+        <!-- Navigation -->
+        <div style="z-index: 100 !important;" class="container">
+            <div class="topnav">
+                <a class="home" href="">Bob</a>
+                <a class="mobile-button" id="nav-mobile-button">
+                    <img alt="open menu" style="max-height: 14px;" alt="open menu"
+                        src="assets/images/hamburger-menu-icon.svg">
+                </a>
+                <a class="invite"
+                    href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
+                    ❤️ Invite
                     Bob
-                    </a>
-                    <a href="#future-plans">🔮 Future Plans</a>
-                    <a href="#features">✨ Features</a>
-                </div>
-            </div>
-            <!-- Navigation Mobile Options -->
-            <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <br>
-                    <a class="invite" href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
-                        ❤️ Invite
-                    Bob
-                    </a>
-                    <a href="#future-plans">🔮 Future Plans</a>
-                    <a href="#features">✨ Features</a>
-                </div>
-            </div>
-            <!-- header content -->
-            <div class="section">
-                <div class="main">
-                    <h1 style="animation: fadein 1s;">Add the fun to your server!</h1>
-                    <h3>Bob, the bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!</h3>
-                    <button style="margin-right: 10px; animation: fadein 1s;" class="buttonMainInvite" onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands'">
-                        <b>
-                            Invite Bob
-                        </b>
-                    </button>
-                    <button style="animation: fadein 1s;" class="buttonMain" onclick="window.location.href='#learn-more'">
-                        <b>
-                            Learn More
-                        </b>
-                    </button>
-                </div>
-            </div>
-            <div class="section">
-                <div class="status">
-                    <img
-                        alt=""
-                        class="decor"
-                        style="position: relative; left: 0px; top: 40px;"
-                        src="assets/images/sparkle2.svg"
-                    >
-                    <img alt="Bob" class="pfp" src="assets/images/bob.png">
-                    <img
-                        alt=""
-                        class="decor"
-                        style="position: relative; left: 0px; top: -40px;"
-                        src="assets/images/sparkle1.svg"
-                    >
-                </div>
+                </a>
+                <a href="#future-plans">🔮 Future Plans</a>
+                <a href="#features">✨ Features</a>
             </div>
         </div>
-        <!-- Stats -->
-        <div class="stats">
-            <div style="padding-right: 10px;" class="growth">
-                <h2 style="margin-block-end: 0; margin-block-start: 0;">🚀Bob is growing daily!</h2>
-            </div>
-            <div class="stat">
-                <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">
-                    🤗
-                    <span id="number">40,000</span>
-                    + Users
-                </h2>
-            </div>
-            <div class="stat" style="padding-left: 10px;">
-                <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">
-                    🟢
-                    <span id="number2">450</span>
-                    + Servers
-                </h2>
+        <!-- Navigation Mobile Options -->
+        <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <br>
+                <a class="invite"
+                    href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
+                    ❤️ Invite
+                    Bob
+                </a>
+                <a href="#future-plans">🔮 Future Plans</a>
+                <a href="#features">✨ Features</a>
             </div>
         </div>
-        <!-- body -->
-        <div class="body">
-            <div class="commands" id="features">
-                <h2>
-                    🔥Tons of Commands
-                </h2>
-                <div class="stream-holder">
-                    <div class="stream">
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#code-preview'">
-                            <h3>
-                                🔎
-                                <span>/code preview</span>
-                            </h3>
-                            <p>
-                                Preview a file from GitHub.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#quote-new'">
-                            <h3>
-                                🖊️
-                                <span>/quote new</span>
-                            </h3>
-                            <p>
-                                Quote someone to remember it forever.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-color'">
-                            <h3>
-                                🎨
-                                <span>/random color</span>
-                            </h3>
-                            <p>
-                                Get a color with Hex, CMYK, HSL, HSV and RGB codes.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#welcome'">
-                            <h3>
-                                👋
-                                <span>/welcome</span>
-                            </h3>
-                            <p>
-                                Have Bob welcome new users.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-dog'">
-                            <h3>
-                                🐶
-                                <span>/random dog</span>
-                            </h3>
-                            <p>
-                                Get a cute doggo image.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#ship'">
-                            <h3>
-                                💖
-                                <span>/ship</span>
-                            </h3>
-                            <p>
-                                See how good of a match 2 users are.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-advice'">
-                            <h3>
-                                🦉
-                                <span>/random advice</span>
-                            </h3>
-                            <p>
-                                Get random words of wisdom.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-date'">
-                            <h3>
-                                🗓️
-                                <span>/random date</span>
-                            </h3>
-                            <p>
-                                Get a random date.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#decrypt'">
-                            <h3>
-                                🔓
-                                <span>/decrypt</span>
-                            </h3>
-                            <p>
-                                Change cipher text into plain text.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-dice-roll'">
-                            <h3>
-                                🎲
-                                <span>/random dice-roll</span>
-                            </h3>
-                            <p>
-                                Roll a die with a specified # of sides.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#hug'">
-                            <h3>
-                                🤗
-                                <span>/hug</span>
-                            </h3>
-                            <p>
-                                Show your friends some love with a hug.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-quote'">
-                            <h3>
-                                ✍️
-                                <span>/random quote</span>
-                            </h3>
-                            <p>
-                                Get a random quote.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#poll'">
-                            <h3>
-                                📊
-                                <span>/poll</span>
-                            </h3>
-                            <p>
-                                Create a poll.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-dad-joke'">
-                            <h3>
-                                😉
-                                <span>/random dad-joke</span>
-                            </h3>
-                            <p>
-                                Get a random dad joke.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#announce'">
-                            <h3>
-                                📣
-                                <span>/announce</span>
-                            </h3>
-                            <p>
-                                Create Fancy embed announcements.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-fact'">
-                            <h3>
-                                🤓
-                                <span>/random fact</span>
-                            </h3>
-                            <p>
-                                Get an outrageous fact.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#analyze-link'">
-                            <h3>
-                                🕵️
-                                <span>/analyze-link</span>
-                            </h3>
-                            <p>
-                                See where a link will take you, and check for rick rolls.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-choose'">
-                            <h3>
-                                🤔
-                                <span>/random choose</span>
-                            </h3>
-                            <p>
-                                Can't decide? Bob will pick for you!
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-8ball'">
-                            <h3>
-                                🎱
-                                <span>/random 8ball</span>
-                            </h3>
-                            <p>
-                                Get an 8 ball response to a prompt.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#rock-paper-scissors'">
-                            <h3>
-                                ✂️
-                                <span>/rock-paper-scissors</span>
-                            </h3>
-                            <p>
-                                Play Rock Paper Scissors vs a bot or user.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#master-mind-new'">
-                            <h3>
-                                🧠
-                                <span>/master-mind</span>
-                            </h3>
-                            <p>
-                                Play a game of Master Mind, the rules will shared upon usage.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#fonts'">
-                            <h3>
-                                📜
-                                <span>/fonts</span>
-                            </h3>
-                            <p>
-                                Change your text to a different font.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#encrypt'">
-                            <h3>
-                                🔒
-                                <span>/encrypt</span>
-                            </h3>
-                            <p>
-                                Change text into a cipher.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#confess'">
-                            <h3>
-                                ✉️
-                                <span>/confess</span>
-                            </h3>
-                            <p>
-                                Have Bob DM a user a message.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#new'">
-                            <h3>
-                                ✨
-                                <span>/new</span>
-                            </h3>
-                            <p>
-                                See the latest updates to Bob.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#ping'">
-                            <h3>
-                                🏓
-                                <span>/ping</span>
-                            </h3>
-                            <p>
-                                Find the client's latency.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#random-coin-toss'">
-                            <h3>
-                                🪙
-                                <span>/random coin-toss</span>
-                            </h3>
-                            <p>
-                                Flip a coin.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#support'">
-                            <h3>
-                                🏰
-                                <span>/support</span>
-                            </h3>
-                            <p>
-                                Sends an invite to Bob's support Server.
-                            </p>
-                        </div>
-                        <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#help'">
-                            <h3>
-                                📪
-                                <span>/help</span>
-                            </h3>
-                            <p>
-                                Get DMed a detailed list of all of Bob's commands.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <p id="learn-more"></p>
-                <button class="buttonMain" onclick="window.location.href='/commands.html'">
+        <!-- header content -->
+        <div class="section">
+            <div class="main">
+                <h1 style="animation: fadein 1s;">Add the fun to your server!</h1>
+                <h3>Bob, the bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!</h3>
+                <button style="margin-right: 10px; animation: fadein 1s;" class="buttonMainInvite"
+                    onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands'">
                     <b>
-                        All Commands
+                        Invite Bob
+                    </b>
+                </button>
+                <button style="animation: fadein 1s;" class="buttonMain" onclick="window.location.href='#learn-more'">
+                    <b>
+                        Learn More
                     </b>
                 </button>
             </div>
-            <div class="section">
-                <div class="text">
-                    <div>
-                        <h2>🖊️The Best Quote System</h2>
-                        <p>Making memories is important and with
-                            <span class="commandName">/quote new</span> you can do just that! Bob will
-                            <i>automatically</i> format the message,
-                            <i>and dynamically</i> let you know how long ago a quote was made. On top of that, you can add tags for searching through specific types of quotes.
+        </div>
+        <div class="section">
+            <div class="status">
+                <img alt="" class="decor" style="position: relative; left: 0px; top: 40px;"
+                    src="assets/images/sparkle2.svg">
+                <img alt="Bob" class="pfp" src="assets/images/bob.png">
+                <img alt="" class="decor" style="position: relative; left: 0px; top: -40px;"
+                    src="assets/images/sparkle1.svg">
+            </div>
+        </div>
+    </div>
+    <!-- Stats -->
+    <div class="stats">
+        <div style="padding-right: 10px;" class="growth">
+            <h2 style="margin-block-end: 0; margin-block-start: 0;">🚀Bob is growing daily!</h2>
+        </div>
+        <div class="stat">
+            <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">
+                🤗
+                <span id="number">40,000</span>
+                + Users
+            </h2>
+        </div>
+        <div class="stat" style="padding-left: 10px;">
+            <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">
+                🟢
+                <span id="number2">500</span>
+                + Servers
+            </h2>
+        </div>
+    </div>
+    <!-- body -->
+    <div class="body">
+        <div class="commands" id="features">
+            <h2>
+                🔥Tons of Commands
+            </h2>
+            <div class="stream-holder">
+                <div class="stream">
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#trivia'">
+                        <h3>
+                            ❓
+                            <span>/trivia</span>
+                        </h3>
+                        <p>
+                            Play a game of trivia with or without someone.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#code-preview'">
+                        <h3>
+                            🔎
+                            <span>/code preview</span>
+                        </h3>
+                        <p>
+                            Preview a file from GitHub.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#quote-new'">
+                        <h3>
+                            🖊️
+                            <span>/quote new</span>
+                        </h3>
+                        <p>
+                            Quote someone to remember it forever.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-color'">
+                        <h3>
+                            🎨
+                            <span>/random color</span>
+                        </h3>
+                        <p>
+                            Get a color with Hex, CMYK, HSL, HSV and RGB codes.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#welcome'">
+                        <h3>
+                            👋
+                            <span>/welcome</span>
+                        </h3>
+                        <p>
+                            Have Bob welcome new users.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-dog'">
+                        <h3>
+                            🐶
+                            <span>/random dog</span>
+                        </h3>
+                        <p>
+                            Get a cute doggo image.
+                        </p>
+                    </div>
+                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#ship'">
+                        <h3>
+                            💖
+                            <span>/ship</span>
+                        </h3>
+                        <p>
+                            See how good of a match 2 users are.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-advice'">
+                        <h3>
+                            🦉
+                            <span>/random advice</span>
+                        </h3>
+                        <p>
+                            Get random words of wisdom.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-date'">
+                        <h3>
+                            🗓️
+                            <span>/random date</span>
+                        </h3>
+                        <p>
+                            Get a random date.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#decrypt'">
+                        <h3>
+                            🔓
+                            <span>/decrypt</span>
+                        </h3>
+                        <p>
+                            Change cipher text into plain text.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-dice-roll'">
+                        <h3>
+                            🎲
+                            <span>/random dice-roll</span>
+                        </h3>
+                        <p>
+                            Roll a die with a specified # of sides.
+                        </p>
+                    </div>
+                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#hug'">
+                        <h3>
+                            🤗
+                            <span>/hug</span>
+                        </h3>
+                        <p>
+                            Show your friends some love with a hug.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-quote'">
+                        <h3>
+                            ✍️
+                            <span>/random quote</span>
+                        </h3>
+                        <p>
+                            Get a random quote.
+                        </p>
+                    </div>
+                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#poll'">
+                        <h3>
+                            📊
+                            <span>/poll</span>
+                        </h3>
+                        <p>
+                            Create a poll.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-dad-joke'">
+                        <h3>
+                            😉
+                            <span>/random dad-joke</span>
+                        </h3>
+                        <p>
+                            Get a random dad joke.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#announce'">
+                        <h3>
+                            📣
+                            <span>/announce</span>
+                        </h3>
+                        <p>
+                            Create Fancy embed announcements.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-fact'">
+                        <h3>
+                            🤓
+                            <span>/random fact</span>
+                        </h3>
+                        <p>
+                            Get an outrageous fact.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#analyze-link'">
+                        <h3>
+                            🕵️
+                            <span>/analyze-link</span>
+                        </h3>
+                        <p>
+                            See where a link will take you, and check for rick rolls.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-choose'">
+                        <h3>
+                            🤔
+                            <span>/random choose</span>
+                        </h3>
+                        <p>
+                            Can't decide? Bob will pick for you!
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-8ball'">
+                        <h3>
+                            🎱
+                            <span>/random 8ball</span>
+                        </h3>
+                        <p>
+                            Get an 8 ball response to a prompt.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#rock-paper-scissors'">
+                        <h3>
+                            ✂️
+                            <span>/rock-paper-scissors</span>
+                        </h3>
+                        <p>
+                            Play Rock Paper Scissors vs a bot or user.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#master-mind-new'">
+                        <h3>
+                            🧠
+                            <span>/master-mind</span>
+                        </h3>
+                        <p>
+                            Play a game of Master Mind, the rules will shared upon usage.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#fonts'">
+                        <h3>
+                            📜
+                            <span>/fonts</span>
+                        </h3>
+                        <p>
+                            Change your text to a different font.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#encrypt'">
+                        <h3>
+                            🔒
+                            <span>/encrypt</span>
+                        </h3>
+                        <p>
+                            Change text into a cipher.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#confess'">
+                        <h3>
+                            ✉️
+                            <span>/confess</span>
+                        </h3>
+                        <p>
+                            Have Bob DM a user a message.
+                        </p>
+                    </div>
+                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#new'">
+                        <h3>
+                            ✨
+                            <span>/new</span>
+                        </h3>
+                        <p>
+                            See the latest updates to Bob.
+                        </p>
+                    </div>
+                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#ping'">
+                        <h3>
+                            🏓
+                            <span>/ping</span>
+                        </h3>
+                        <p>
+                            Find the client's latency.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#random-coin-toss'">
+                        <h3>
+                            🪙
+                            <span>/random coin-toss</span>
+                        </h3>
+                        <p>
+                            Flip a coin.
+                        </p>
+                    </div>
+                    <div class="command-card"
+                        onclick="window.location.href='https://bobthebot.net/commands.html#support'">
+                        <h3>
+                            🏰
+                            <span>/support</span>
+                        </h3>
+                        <p>
+                            Sends an invite to Bob's support Server.
+                        </p>
+                    </div>
+                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#help'">
+                        <h3>
+                            📪
+                            <span>/help</span>
+                        </h3>
+                        <p>
+                            Get DMed a detailed list of all of Bob's commands.
                         </p>
                     </div>
                 </div>
-                <div class="img-holder hidden">
-                    <img alt="" src="assets/images/quotes.svg">
-                </div>
             </div>
-            <div class="section">
-                <div class="img-holder hidden">
-                    <img alt="" src="assets/images/rng.svg">
-                </div>
-                <div class="text">
-                    <div>
-                        <h2>🎲All the RNG</h2>
-                        <p>Bob has a
-                            <i>plethora</i> of random commands to either fuel your Dungeons and Dragons experience like
-                            <span class="commandName">/random dice-roll</span>, or simply cure your boredom with
-                            <span class="commandName">/random 8ball</span>,
-                            <span class="commandName">/random dad-joke</span>,
-                            <span class="commandName">/random fact</span>, and
-                            <i>many</i> more!
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="text">
-                    <div>
-                        <h2>🎮Play Games</h2>
-                        <p>With multiple games to choose from like
-                            <span class="commandName">/rock-paper-scissors</span>,
-                            <span class="commandName">/master-mind</span>, <span class="commandName">/tic-tac-toe</span>, and
-                            <i>only more</i> on the way, Bob is ready to keep provide your server with the entertainment it needs to thrive.
-                        </p>
-                    </div>
-                </div>
-                <div class="img-holder hidden">
-                    <img alt="" src="assets/images/games.svg">
-                </div>
-            </div>
-            <div class="section">
-                <div class="img-holder hidden">
-                    <img alt="" src="assets/images/wingman.svg">
-                </div>
-                <div class="text">
-                    <div>
-                        <div>
-                            <h2>🔒 Remain Hidden</h2>
-                            <p>
-                                Too scared to tell someone something? Bob can be your wingman with
-                                <span class="commandName">/encrypt</span>, or by DMing a user with
-                                <span class="commandName">/confess</span>
-                                .
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="future-plans" class="section">
-                <div class="future-plans">
-                    <h3>🔮 Future Plans</h3>
+            <p id="learn-more"></p>
+            <button class="buttonMain" onclick="window.location.href='/commands.html'">
+                <b>
+                    All Commands
+                </b>
+            </button>
+        </div>
+        <div class="section">
+            <div class="text">
+                <div>
+                    <h2>🖊️The Best Quote System</h2>
                     <p>
-                        Bob is constantly being improved, and you can track the development
-                            below, or use
-                        <span class="commandName">/new</span>
-                        to see the most recent updates! If you ever have an idea for a feature feel free to join Bob's official server, and leave a suggestion in the feature-ideas channel.
+                        Making memories is important and with
+                        <span class="commandName">/quote new</span>
+                        you can do just that! Bob will
+                        <i>automatically</i>
+                        format the message,
+                        <i>and dynamically</i>
+                        let you know how long ago a quote was made. On top of that, you can add tags for searching
+                        through specific types of quotes.
                     </p>
-                    <button style="margin-right: 10px;" class="buttonMain" onclick="window.location.href='https://github.com/orgs/bob-el-bot/projects/4'">
-                        <b>
-                            Plans
-                        </b>
-                    </button>
-                    <button class="buttonMain" onclick="window.location.href='https://discord.gg/HvGMRZD8jQ'">
-                        <b>
-                            Bob's Server
-                        </b>
-                    </button>
+                </div>
+            </div>
+            <div class="img-holder hidden">
+                <img alt="" src="assets/images/quotes.svg">
+            </div>
+        </div>
+        <div class="section">
+            <div class="img-holder hidden">
+                <img alt="" src="assets/images/rng.svg">
+            </div>
+            <div class="text">
+                <div>
+                    <h2>🎲All the RNG</h2>
+                    <p>
+                        Bob has a
+                        <i>plethora</i>
+                        of random commands to either fuel your Dungeons and Dragons experience like
+                        <span class="commandName">/random dice-roll</span>
+                        , or simply cure your boredom with
+                        <span class="commandName">/random 8ball</span>
+                        ,
+                        <span class="commandName">/random dad-joke</span>
+                        ,
+                        <span class="commandName">/random fact</span>
+                        , and
+                        <i>many</i>
+                        more!
+                    </p>
                 </div>
             </div>
         </div>
-        <!-- footer -->
-        <footer>
-            <div style="margin: 0px 15px;">
-                <div class="main-content">
-                    <div class="column" style="margin-left: 0; margin-right: auto;">
-                        <h2>Bob.</h2>
-                        The bot for RNG, quoting, fonts, encryption, games, and more!
-                        <br>
-                        <a style="text-decoration: none;" href="https://discord.gg/HvGMRZD8jQ">
-                            <img alt="Join Discord Server" src="assets/images/discordapp-tile.svg">
-                        </a>
-                        <a style="text-decoration: none;" href="https://github.com/bob-el-bot/BobTheBot">
-                            <img alt="View Github" src="assets/images/github-tile.svg">
-                        </a>
-                    </div>
-                    <div class="column">
+        <div class="section">
+            <div class="text">
+                <div>
+                    <h2>🎮Play Games</h2>
+                    <p>
+                        With multiple games to choose from like
+                        <span class="commandName">/trivia</span>
+                        ,
+                        <span class="commandName">/rock-paper-scissors</span>
+                        ,
+                        <span class="commandName">/master-mind</span>,
+                        <span class="commandName">/tic-tac-toe</span>
+                        , and
+                        <i>only more</i>
+                        on the way, Bob is ready to keep provide your server with the entertainment it needs to thrive.
+                    </p>
+                </div>
+            </div>
+            <div class="img-holder hidden">
+                <img alt="" src="assets/images/games.svg">
+            </div>
+        </div>
+        <div class="section">
+            <div class="img-holder hidden">
+                <img alt="" src="assets/images/wingman.svg">
+            </div>
+            <div class="text">
+                <div>
+                    <div>
+                        <h2>🔒 Remain Hidden</h2>
                         <p>
-                            <b>Help</b>
-                            <br>
-                            Use
-                            <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                            Too scared to tell someone something? Bob can be your wingman with
+                            <span class="commandName">/encrypt</span>
+                            , or by DMing a user with
+                            <span class="commandName">/confess</span>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="future-plans" class="section">
+            <div class="future-plans">
+                <h3>🔮 Future Plans</h3>
+                <p>
+                    Bob is constantly being improved, and you can track the development
+                    below, or use
+                    <span class="commandName">/new</span>
+                    to see the most recent updates! If you ever have an idea for a feature feel free to join Bob's
+                    official server, and leave a suggestion in the feature-ideas channel.
+                </p>
+                <button style="margin-right: 10px;" class="buttonMain"
+                    onclick="window.location.href='https://github.com/orgs/bob-el-bot/projects/4'">
+                    <b>
+                        Plans
+                    </b>
+                </button>
+                <button class="buttonMain" onclick="window.location.href='https://discord.gg/HvGMRZD8jQ'">
+                    <b>
+                        Bob's Server
+                    </b>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div style="margin: 0px 15px;">
+            <div class="main-content">
+                <div class="column" style="margin-left: 0; margin-right: auto;">
+                    <h2>Bob.</h2>
+                    The bot for RNG, quoting, fonts, encryption, games, and more!
+                    <br>
+                    <a style="text-decoration: none;" href="https://discord.gg/HvGMRZD8jQ">
+                        <img alt="Join Discord Server" src="assets/images/discordapp-tile.svg">
+                    </a>
+                    <a style="text-decoration: none;" href="https://github.com/bob-el-bot/BobTheBot">
+                        <img alt="View Github" src="assets/images/github-tile.svg">
+                    </a>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Help</b>
+                        <br>
+                        Use
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
                                     text-underline-position: under;
                                     text-decoration-color: #8C52FF;
                                     text-decoration-style: solid;
                                     text-decoration-thickness: 2px;">/help</span>
-                            on Discord
-                            <br>
-                            <a href="https://discord.gg/HvGMRZD8jQ">Join Bob's Server</a>
-                            <br>
-                            <a href="/commands.html">Commands</a>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <p>
-                            <b>Support Bob</b>
-                            <br>
-                            <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
-                            <br>
-                            <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <p>
-                            <b>Contact</b>
-                            <br>
-                            <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
-                            <br>
-                            DM
-                            <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                        on Discord
+                        <br>
+                        <a href="https://discord.gg/HvGMRZD8jQ">Join Bob's Server</a>
+                        <br>
+                        <a href="/commands.html">Commands</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Support Bob</b>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Contact</b>
+                        <br>
+                        <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
+                        <br>
+                        DM
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
                                 text-underline-position: under;
                                 text-decoration-color: #8C52FF;
                                 text-decoration-style: solid;
                                 text-decoration-thickness: 2px;">vorlon.</span>
-                            on Discord
-                        </p>
-                    </div>
-                    <div class="column">
-                        <p>
-                            <b>Legal</b>
-                            <br>
-                            <a href="/privacy.html">Privacy Policy</a>
-                            <br>
-                            <a href="/tos.html">Terms of Service</a>
-                        </p>
-                    </div>
-                </div>
-                <hr color="#5b6069">
-                <div>
-                    <p style="margin-bottom: 0;">
-                        <span style="color: #999999;">Made by ⚡</span>
-                        <a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
-                        ⚡
+                        on Discord
                     </p>
-                    <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
-                        © Zach Goodson 2024, All Rights
-                            Reserved.
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Legal</b>
+                        <br>
+                        <a href="/privacy.html">Privacy Policy</a>
+                        <br>
+                        <a href="/tos.html">Terms of Service</a>
                     </p>
                 </div>
             </div>
-        </footer>
-    </body>
-    <!-- Mobile Navigation Options Modal -->
-    <script>
-        var modal = document.getElementById("nav-modal");
+            <hr color="#5b6069">
+            <div>
+                <p style="margin-bottom: 0;">
+                    <span style="color: #999999;">Made by ⚡</span>
+                    <a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
+                    ⚡
+                </p>
+                <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
+                    © Zach Goodson 2024, All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Mobile Navigation Options Modal -->
+<script>
+    var modal = document.getElementById("nav-modal");
 
-        var btn = document.getElementById("nav-mobile-button");
+    var btn = document.getElementById("nav-mobile-button");
 
-        var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[0];
 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
 
-        span.onclick = function() {
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
             modal.style.display = "none";
         }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+    }
+</script>
+<!-- Take away slide in effect on mobile for performance. -->
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
             }
-        }
-    </script>
-    <!-- Take away slide in effect on mobile for performance. -->
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                   entry.target.classList.add('show');
-                } else {
-                   entry.target.classList.remove('show');
-                }
-            });
-        }, {
-            rootMargin: '100px 0px', // Adjust the values as needed
         });
-    
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((element) => observer.observe(element));
-    </script>
+    }, {
+        rootMargin: '100px 0px', // Adjust the values as needed
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((element) => observer.observe(element));
+</script>
+
 </html>
