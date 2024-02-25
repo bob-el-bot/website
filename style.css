@@ -572,9 +572,9 @@ footer .column {
 
 .hidden {
     opacity: 0;
-    transform: scale(0);
-    transition: all 0.5s;
-    z-index: 1;
+    transition: all 0.6s;
+    z-index: 1; 
+    transform: translateX(-100%);
 }
 
 .hidden:nth-child(1) {
@@ -607,7 +607,7 @@ footer .column {
 
 .show {
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(0);
 }
 
 /* Responsiveness */
