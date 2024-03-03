@@ -729,13 +729,15 @@ footer .column {
     }
 }
 
+@media (max-width: 635px) {
+    .stats {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 630px) {
     .growth {
         display: none;
-    }
-
-    .stats {
-        font-size: 12px;
     }
 }
 
