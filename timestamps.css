@@ -69,7 +69,7 @@
 #snackbar {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
+    transform: translateX(-50%);
     background-color: #181b1d;
     border: solid 2px #36393e;
     color: #fff;
