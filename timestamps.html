@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Timestamp Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale e=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/bobTransparent.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="timestamps.css">
+    <!--  Essential META Tags -->
+    <meta name="description" content="A Discord timestamp generator.">
+    <meta name="keywords" content="Discord timestamp, timestamp generator, timestamp maker, discord timestamp tool">
+    <!--  Embed META Tags -->
+    <meta property="og:title" content="Bob The Bot.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://bobthebot.net/assets/images/bob.png">
+    <meta property="og:url" content="https://bobthebot.net">
+    <meta property="og:description" content="Discord timestamp generator.">
+    <meta data-react-helmet="true" name="theme-color" content="#8C52FF">
+</head>
+
+<body style="margin: 0px; height: 100%;">
+    <!-- Navigation -->
+    <div style="z-index: 100 !important;" class="container">
+        <div class="topnav">
+            <a class="home" href="https://bobthebot.net">Bob</a>
+            <a class="mobile-button" id="nav-mobile-button">
+                <img alt="open menu" style="max-height: 14px;" alt="open menu"
+                    src="assets/images/hamburger-menu-icon.svg">
+            </a>
+            <a class="invite"
+                href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
+                ❤️ Invite
+                Bob
+            </a>
+            <a href="#future-plans">🔮 Future Plans</a>
+            <a href="https://bobthebot.net/commands.html">✨ Commands</a>
+        </div>
+    </div>
+    <!-- Navigation Mobile Options -->
+    <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <br>
+            <a class="invite"
+                href="https://discord.com/oauth2/authorize?client_id=705680059809398804&permissions=1110719392886&scope=bot%20applications.commands">
+                ❤️ Invite
+                Bob
+            </a>
+            <a href="#future-plans">🔮 Future Plans</a>
+            <a href="https://bobthebot.net/commands.html">✨ Commands</a>
+        </div>
+    </div>
+    <!-- body -->
+    <div class="body">
+        <div class="tool-holder">
+            <div class="tool-container">
+                <div class="tool-text">
+                    <h2>📅 Timestamp Generator</h2>
+                    <p>
+                        Use this tool to generate Markdown text that displays times in each user's timezone.
+                    </p>
+                    <div style="padding-bottom: 10px;">
+                        <label for="datetime">Select Date and Time:</label>
+                        <input style="font-family: 'Belanosima', sans-serif; color-scheme: dark;" type="datetime-local"
+                            id="datetime" value="">
+                    </div>
+                </div>
+                <div class="tool-output" id="formattedTimestamps"></div>
+            </div>
+        </div>
+        <div id="snackbar">Timestamp copied to clipboard!</div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div style="margin: 0px 15px;">
+            <div class="main-content">
+                <div class="column" style="margin-left: 0; margin-right: auto;">
+                    <h2>Bob.</h2>
+                    The bot for RNG, quoting, fonts, encryption, games, and more!
+                    <br>
+                    <a style="text-decoration: none;" href="https://discord.gg/HvGMRZD8jQ">
+                        <img alt="Join Discord Server" src="assets/images/discordapp-tile.svg">
+                    </a>
+                    <a style="text-decoration: none;" href="https://github.com/bob-el-bot/BobTheBot">
+                        <img alt="View Github" src="assets/images/github-tile.svg">
+                    </a>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Help</b>
+                        <br>
+                        Use
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                    text-underline-position: under;
+                                    text-decoration-color: #8C52FF;
+                                    text-decoration-style: solid;
+                                    text-decoration-thickness: 2px;">/help</span>
+                        on Discord
+                        <br>
+                        <a href="https://discord.gg/HvGMRZD8jQ">Join Bob's Server</a>
+                        <br>
+                        <a href="/commands.html">Commands</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Support Bob</b>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Contact</b>
+                        <br>
+                        <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
+                        <br>
+                        DM
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                text-underline-position: under;
+                                text-decoration-color: #8C52FF;
+                                text-decoration-style: solid;
+                                text-decoration-thickness: 2px;">vorlon.</span>
+                        on Discord
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Legal</b>
+                        <br>
+                        <a href="/privacy.html">Privacy Policy</a>
+                        <br>
+                        <a href="/tos.html">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+            <hr color="#5b6069">
+            <div>
+                <p style="margin-bottom: 0;">
+                    <span style="color: #999999;">Made by ⚡</span>
+                    <a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
+                    ⚡
+                </p>
+                <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
+                    © Zach Goodson 2024, All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Mobile Navigation Options Modal -->
+<script>
+    var modal = document.getElementById("nav-modal");
+
+    var btn = document.getElementById("nav-mobile-button");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<!-- Datetime picker / timestamp formatting -->
+<script>
+    // Set default value to current local time
+    var now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    document.getElementById("datetime").value = now.toISOString().slice(0, 16);
+
+    // Call getTimestamp() whenever the datetime input changes
+    document.getElementById("datetime").addEventListener("change", getTimestamp);
+
+    getTimestamp();
+
+    function getTimestamp() {
+        var dateTimeInput = document.getElementById("datetime").value;
+        var dateTime = new Date(dateTimeInput);
+        var timestamp = Math.floor(dateTime.getTime() / 1000); // Convert milliseconds to seconds
+
+        var formattedTimestampsHTML = '<table class="timestamp-container">'; // Added border-collapse style
+        var formats = ['F', 'f', 'D', 'd', 't', 'T', 'R'];
+        formats.forEach(function (format) {
+            var formattedTimestamp = formatTimestamp(dateTime, format);
+            var markdownTimestamp = `&lt;t:${timestamp}:${format}&gt;`;
+            var copyButton = `<button class="copy-button" onclick="copySnowflake('${timestamp}', '${format}')">Copy</button>`;
+            formattedTimestampsHTML += `<tr>
+                                    <td style="padding: 5px; text-align: right;"><span>${markdownTimestamp}</span></td>
+                                    <td style="padding: 5px;">${formattedTimestamp}</td>
+                                    <td style="padding: 5px; text-align: right;">${copyButton}</td>
+                                </tr>`;
+        });
+        formattedTimestampsHTML += '</table>';
+
+        document.getElementById("formattedTimestamps").innerHTML = formattedTimestampsHTML;
+    }
+
+    function formatTimestamp(dateTime, format) {
+        switch (format) {
+            case 'F':
+                return formatDateWithDayOfWeek(dateTime);
+            case 'f':
+                return formatDateWithTime(dateTime);
+            case 'D':
+                return formatDateWithoutDayOfWeek(dateTime);
+            case 'd':
+                return formatDateSlash(dateTime);
+            case 't':
+                return dateTime.toLocaleTimeString('default', { hour: 'numeric', minute: 'numeric' });
+            case 'T':
+                return dateTime.toLocaleTimeString('default', { hour: 'numeric', minute: 'numeric', second: 'numeric' });
+            case 'R':
+                return relativeTime(dateTime);
+            default:
+                return '';
+        }
+    }
+
+    function formatDateWithDayOfWeek(dateTime) {
+        var dayOfWeek = dateTime.toLocaleString('default', { weekday: 'long' });
+        var month = dateTime.toLocaleString('default', { month: 'long' });
+        var day = dateTime.getDate();
+        var year = dateTime.getFullYear();
+        var time = dateTime.toLocaleTimeString('default', { hour: 'numeric', minute: 'numeric' });
+        return dayOfWeek + ', ' + month + ' ' + day + ', ' + year + ' ' + time;
+    }
+
+    function formatDateWithTime(dateTime) {
+        var month = dateTime.toLocaleString('default', { month: 'long' });
+        var day = dateTime.getDate();
+        var year = dateTime.getFullYear();
+        var time = dateTime.toLocaleTimeString('default', { hour: 'numeric', minute: 'numeric' });
+        return month + ' ' + day + ', ' + year + ' ' + time;
+    }
+
+    function formatDateWithoutDayOfWeek(dateTime) {
+        var month = dateTime.toLocaleString('default', { month: 'long' });
+        var day = dateTime.getDate();
+        var year = dateTime.getFullYear();
+        return month + ' ' + day + ', ' + year;
+    }
+
+    function formatDateSlash(dateTime) {
+        var month = (dateTime.getMonth() + 1).toString().padStart(2, '0');
+        var day = dateTime.getDate().toString().padStart(2, '0');
+        var year = dateTime.getFullYear();
+        return month + '/' + day + '/' + year;
+    }
+
+    function relativeTime(dateTime) {
+        var now = new Date();
+        var diff = Math.floor((dateTime.getTime() - now.getTime()) / 1000); // Difference in seconds
+
+        if (diff < 0) {
+            diff = -diff; // Convert negative difference to positive
+            if (diff < 60) {
+                return diff === 1 ? 'a second ago' : diff + ' seconds ago';
+            } else if (diff < 3600) {
+                var minutes = Math.floor(diff / 60);
+                return minutes === 1 ? 'a minute ago' : minutes + ' minutes ago';
+            } else if (diff < 86400) {
+                var hours = Math.floor(diff / 3600);
+                return hours === 1 ? 'an hour ago' : hours + ' hours ago';
+            } else if (diff < 2160000) { // 25 days (approximately)
+                var days = Math.floor(diff / 86400);
+                return days === 1 ? 'a day ago' : days + ' days ago';
+            } else if (diff < 63072000) { // 25*30*12 seconds (approximately)
+                var months = Math.floor(diff / 2160000);
+                return months === 1 ? 'a month ago' : months + ' months ago';
+            } else {
+                var years = Math.floor(diff / 31536000);
+                return years === 1 ? 'a year ago' : years + ' years ago';
+            }
+        } else {
+            if (diff < 60) {
+                return 'in ' + diff + ' seconds';
+            } else if (diff < 3600) {
+                var minutes = Math.floor(diff / 60);
+                return minutes === 1 ? 'in a minute' : 'in ' + minutes + ' minutes';
+            } else if (diff < 86400) {
+                var hours = Math.floor(diff / 3600);
+                return hours === 1 ? 'in an hour' : 'in ' + hours + ' hours';
+            } else if (diff < 2160000) { // 25 days (approximately)
+                var days = Math.floor(diff / 86400);
+                return days === 1 ? 'in a day' : 'in ' + days + ' days';
+            } else if (diff < 63072000) { // 25*30*12 seconds (approximately)
+                var months = Math.floor(diff / 2160000);
+                return months === 1 ? 'in a month' : 'in ' + months + ' months';
+            } else {
+                var years = Math.floor(diff / 31536000);
+                return years === 1 ? 'in a year' : 'in ' + years + ' years';
+            }
+        }
+    }
+
+
+    function copySnowflake(timestamp, format) {
+        var snowflakeText = `<t:${timestamp}:${format}>`;
+        copyToClipboard(snowflakeText); // Copy the snowflake timestamp to clipboard
+
+        // Get the snackbar element
+        var snackbar = document.getElementById("snackbar");
+
+        // Add the "show" class to show the snackbar
+        snackbar.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () { snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+    }
+
+    function copyToClipboard(text) {
+        var textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+    }
+</script>
+
+</html>
