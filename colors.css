@@ -1,0 +1,44 @@
+.color-holder {
+    float: left;
+}
+
+.color-box {
+    display: inline-block;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin: 4px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    transform: translateX(-50%);
+    background-color: #181b1d;
+    border: solid 2px #36393e;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
