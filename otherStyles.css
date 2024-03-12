@@ -50,7 +50,7 @@
 
 .other-header .section p {
     padding-top: 0px;
-    font-size: 19px;
+    font-size: 20px;
     color: #f2f2f2;
 }
 
@@ -79,5 +79,11 @@
 @media (max-width: 700px) {
     .other-section {
         padding: 5px 0px;
+    }
+}
+
+@media (max-width: 400px) {
+    .other-header .section p {
+        font-size: 18px;
     }
 }
