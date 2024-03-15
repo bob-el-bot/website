@@ -275,6 +275,40 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="command-info-card" id="quote-set-max-length">
+                            <div class="name">
+                                <h3>
+                                    🖊️
+                                    <span>/quote set-max-length</span>
+                                </h3>
+                                <p>
+                                    Sets the maximum quote length for the server (Discord has a limit of 4096).
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>length</p>
+                                        <p>The amount of characters you want, at most, in a quote.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="quote-set-min-length">
+                            <div class="name">
+                                <h3>
+                                    🖊️
+                                    <span>/quote set-min-length</span>
+                                </h3>
+                                <p>
+                                    Sets the minimum quote length for the server (Must be atleast 0).
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>length</p>
+                                        <p>The amount of characters you want, at least, in a quote.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <p id="games">🎮 Game Commands</p>
                     <div class="stream">
@@ -713,8 +747,81 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="command-info-card" id="welcome-set-message">
+                            <div class="name">
+                                <h3>
+                                    👋
+                                    <span>/welcome set-message</span>
+                                </h3>
+                                <p>
+                                    Set a custom message to welcome new users with.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>message</p>
+                                        <p>The message you want sent to welcome users to your server. Type @ where you want a ping and/or mention to be.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="welcome-remove-message">
+                            <div class="name">
+                                <h3>
+                                    👋
+                                    <span>/welcome remove-message</span>
+                                </h3>
+                                <p>
+                                    Bob will stop using the custom message to welcome users.
+                                </p>
+                            </div>
+                        </div>
                         <p id="info">🗄️ Help / Informational Commands</p>
                         <div class="stream">
+                            <div class="command-info-card" id="premium">
+                                <div class="name">
+                                    <h3>
+                                        🎉
+                                        <span>/premium</span>
+                                    </h3>
+                                    <p>
+                                        Ensures Bob knows you have premium! If not you will be given a button to get it!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="command-info-card" id="pofile-display">
+                                <div class="name">
+                                    <h3>
+                                        👤
+                                        <span>/profile display</span>
+                                    </h3>
+                                    <p>
+                                        Displays the specified user's profile.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>user</p>
+                                            <p>The user whose profile you want to view. If left empty it will display your own.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="command-info-card" id="pofile-set-color">
+                                <div class="name">
+                                    <h3>
+                                        👤
+                                        <span>/profile set-color</span>
+                                    </h3>
+                                    <p>
+                                        Sets your profile color.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>color</p>
+                                            <p>A color name (like "purple"), or a valid hex code (like "#8D52FD")</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="command-info-card" id="new">
                                 <div class="name">
                                     <h3>
