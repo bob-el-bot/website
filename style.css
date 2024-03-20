@@ -107,7 +107,7 @@ html {
     background-color: rgba(139, 82, 255, 0.5);
     border: solid 2px #8C52FF;
     color: #f2f2f2;
-}   
+}
 
 .topnav .invite:hover {
     background: rgba(203, 107, 230, 0.5);
@@ -321,7 +321,6 @@ html {
     flex-flow: row;
     margin-right: 0;
     font-size: 15px;
-    margin-left: auto;
     background: rgb(203, 108, 230);
     background: linear-gradient(-90deg, rgba(203, 108, 230, 1) 0%, rgba(94, 23, 235, 1) 100%);
 }
@@ -353,12 +352,13 @@ html {
 
 body {
     background-color: #121416;
+    display: flex;
+    flex-direction: column;
 }
 
 .body {
     background-color: #121416;
-    display: flex;
-    flex-direction: column;
+    flex: 1 0 auto;
     padding: 15px;
     z-index: 1;
 }
@@ -521,6 +521,7 @@ body {
 }
 
 footer {
+    flex-shrink: 0;
     text-align: center;
     background-color: #1e2124;
     color: #999999;
