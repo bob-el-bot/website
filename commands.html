@@ -69,10 +69,13 @@
                 <h3>
                     An in-depth look at all of Bob's commands.
                 </h3>
+                <!-- Seach bar -->
+                <input type="text" id="search-text" class="search" placeholder="Search Commands...">
+                <!-- Command List -->
                 <div class="stream-holder">
-                    <p id="rng">🎲 Random Commands (RNG)</p>
                     <div class="stream">
-                        <div class="command-info-card"  id="random-color">
+                        <p id="rng">🎲 Random Commands (RNG)</p>
+                        <div class="command-info-card" id="random-color">
                             <div class="name">
                                 <h3>
                                     🎨
@@ -94,7 +97,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-date">
+                        <div class="command-info-card" id="random-date">
                             <div class="name">
                                 <h3>
                                     🗓️
@@ -116,7 +119,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-advice">
+                        <div class="command-info-card" id="random-advice">
                             <div class="name">
                                 <h3>
                                     🦉
@@ -127,7 +130,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-dice-roll">
+                        <div class="command-info-card" id="random-dice-roll">
                             <div class="name">
                                 <h3>
                                     🎲
@@ -144,7 +147,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-dad-joke">
+                        <div class="command-info-card" id="random-dad-joke">
                             <div class="name">
                                 <h3>
                                     😉
@@ -155,7 +158,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-fact">
+                        <div class="command-info-card" id="random-fact">
                             <div class="name">
                                 <h3>
                                     🤓
@@ -166,7 +169,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-choose">
+                        <div class="command-info-card" id="random-choose">
                             <div class="name">
                                 <h3>
                                     🤔
@@ -183,7 +186,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-8ball">
+                        <div class="command-info-card" id="random-8ball">
                             <div class="name">
                                 <h3>
                                     🎱
@@ -200,7 +203,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-quote">
+                        <div class="command-info-card" id="random-quote">
                             <div class="name">
                                 <h3>
                                     ✍️
@@ -218,7 +221,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="command-info-card"  id="random-coin-toss">
+                        <div class="command-info-card" id="random-coin-toss">
                             <div class="name">
                                 <h3>
                                     🪙
@@ -230,8 +233,8 @@
                             </div>
                         </div>
                     </div>
-                    <p id="quoting">🖊️ Quote Commands</p>
                     <div class="stream">
+                        <p id="quoting">🖊️ Quote Commands</p>
                         <div class="command-info-card" id="quote-new">
                             <div class="name">
                                 <h3>
@@ -310,8 +313,8 @@
                             </div>
                         </div>
                     </div>
-                    <p id="games">🎮 Game Commands</p>
                     <div class="stream">
+                        <p id="games">🎮 Game Commands</p>
                         <div class="command-info-card" id="trivia">
                             <div class="name">
                                 <h3>
@@ -392,8 +395,8 @@
                             </div>
                         </div>
                     </div>
-                    <p id="encrypt">🔒 Encryption Commands</p>
                     <div class="stream">
+                        <p id="encrypt">🔒 Encryption Commands</p>
                         <div class="command-info-card" id="encrypt-a1z26">
                             <div class="name">
                                 <h3>
@@ -475,7 +478,7 @@
                                 <p>
                                     Encrypts your message using a specified key.
                                 </p>
-                                <div class="parameters">    
+                                <div class="parameters">
                                     <div class="parameter">
                                         <p>message</p>
                                         <p>The message you want to encrypt.</p>
@@ -488,8 +491,8 @@
                             </div>
                         </div>
                     </div>
-                    <p id="decrypt">🔓 Decryption Commands</p>
                     <div class="stream">
+                        <p id="decrypt">🔓 Decryption Commands</p>
                         <div class="command-info-card" id="decrypt-a1z26">
                             <div class="name">
                                 <h3>
@@ -584,8 +587,8 @@
                             </div>
                         </div>
                     </div>
-                    <p id="other">✨ Other Commands</p>
                     <div class="stream">
+                        <p id="other">✨ Other Commands</p>
                         <div class="command-info-card" id="ship">
                             <div class="name">
                                 <h3>
@@ -615,7 +618,11 @@
                                 <div class="parameters">
                                     <div class="parameter">
                                         <p>link</p>
-                                        <p>The GitHub link you want to share. Character indicators are ignored. Valid formats include:<br><br><span style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/website/blob/main/index.html#L15</span><br><br><span style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/website/blob/main/index.html#L15-L18</span></p>
+                                        <p>The GitHub link you want to share. Character indicators are ignored. Valid
+                                            formats include:<br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/website/blob/main/index.html#L15</span><br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/website/blob/main/index.html#L15-L18</span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -696,7 +703,8 @@
                                     </div>
                                     <div class="parameter">
                                         <p>description</p>
-                                        <p>The in-depth announcement (the embed description). Use "###" for headings and "-" for lists.</p>
+                                        <p>The in-depth announcement (the embed description). Use "###" for headings and
+                                            "-" for lists.</p>
                                     </div>
                                     <div class="parameter">
                                         <p>color</p>
@@ -737,7 +745,7 @@
                                     <span>/welcome toggle</span>
                                 </h3>
                                 <p>
-                                    Have Bob welcome new users in the server's sytem messages channel. 
+                                    Have Bob welcome new users in the server's sytem messages channel.
                                 </p>
                                 <div class="parameters">
                                     <div class="parameter">
@@ -759,7 +767,8 @@
                                 <div class="parameters">
                                     <div class="parameter">
                                         <p>message</p>
-                                        <p>The message you want sent to welcome users to your server. Type @ where you want a ping and/or mention to be.</p>
+                                        <p>The message you want sent to welcome users to your server. Type @ where you
+                                            want a ping and/or mention to be.</p>
                                     </div>
                                 </div>
                             </div>
@@ -775,8 +784,8 @@
                                 </p>
                             </div>
                         </div>
-                        <p id="info">🗄️ Help / Informational Commands</p>
                         <div class="stream">
+                            <p id="info">🗄️ Help / Informational Commands</p>
                             <div class="command-info-card" id="premium">
                                 <div class="name">
                                     <h3>
@@ -800,7 +809,8 @@
                                     <div class="parameters">
                                         <div class="parameter">
                                             <p>user</p>
-                                            <p>The user whose profile you want to view. If left empty it will display your own.</p>
+                                            <p>The user whose profile you want to view. If left empty it will display
+                                                your own.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -851,12 +861,16 @@
                                         <span>/analyze-link</span>
                                     </h3>
                                     <p>
-                                        See where a link will take you, if it has cookies, if it is a short URL, and check for rick rolls.
+                                        See where a link will take you, if it has cookies, if it is a short URL, and
+                                        check for rick rolls.
                                     </p>
                                     <div class="parameters">
                                         <div class="parameter">
                                             <p>link</p>
-                                            <p>The link you want to analyze. Valid formats include:<br><br><span style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">bobthebot.net</span><br><br><span style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://bobthebot.net</span></p>
+                                            <p>The link you want to analyze. Valid formats include:<br><br><span
+                                                    style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">bobthebot.net</span><br><br><span
+                                                    style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://bobthebot.net</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -994,7 +1008,7 @@
                     </p>
                     <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
                         © Zach Goodson 2024, All Rights
-                            Reserved.
+                        Reserved.
                     </p>
                 </div>
             </div>
@@ -1021,6 +1035,37 @@
             modal.style.display = "none";
         }
     }
+</script>
+<!-- Command Filtering -->
+<script>
+    function filterCommands() {
+        const searchText = document.getElementById('search-text').value.toLowerCase();
+
+        const groupLabels = document.querySelectorAll('.stream > p');
+        groupLabels.forEach(groupLabel => {
+            const groupId = groupLabel.id;
+            const groupCommands = document.querySelectorAll(`#${groupId} ~ .command-info-card`);
+            let hasVisibleCommands = false;
+
+            groupCommands.forEach(command => {
+                const commandName = command.querySelector('h3 span').innerText.toLowerCase();
+                const description = command.querySelector('p').innerText.toLowerCase();
+                const matchesSearch = commandName.includes(searchText) || description.includes(searchText);
+
+                command.style.display = matchesSearch ? 'block' : 'none';
+
+                if (matchesSearch) {
+                    hasVisibleCommands = true;
+                }
+            });
+
+            groupLabel.style.display = hasVisibleCommands ? 'block' : 'none';
+        });
+    }
+
+    document.getElementById('search-text').addEventListener('input', filterCommands);
+
+    filterCommands();
 </script>
 
 </html>
