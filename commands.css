@@ -36,11 +36,23 @@ input[type=text]:focus {outline:none;}
     flex-direction: column;
 }
 
+.command-info .stream-holder .stream p:hover {
+    cursor: pointer;
+}
+
 .command-info .stream-holder .stream .command-info-card h3 {
     margin-top: 0;
     margin-bottom: 10px;
     white-space: nowrap;
     text-align: left;
+}
+
+.command-info .stream-holder .stream .command-info-card h3:hover {
+    cursor: pointer;
+}
+
+.command-info .stream-holder .stream .command-info-card p {
+    cursor: text;
 }
 
 .command-info .stream-holder .stream .command-info-card h3 span {
