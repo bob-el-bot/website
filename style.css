@@ -378,7 +378,13 @@ body {
     justify-content: center;
 }
 
-.body .section:nth-child(odd) {
+.body .section:nth-child(3) {
+    border-radius: 20px;
+    background-color: #181b1d;
+    border: solid 2px #36393e;
+}
+
+.body .section:nth-child(5) {
     border-radius: 20px;
     background-color: #181b1d;
     border: solid 2px #36393e;
@@ -389,7 +395,6 @@ body {
     align-items: center;
     width: 100%;
 }
-
 
 .body .section:last-child {
     margin: 0px;
@@ -578,7 +583,7 @@ footer .column {
 .hidden {
     opacity: 0;
     transition: all 0.6s;
-    z-index: 1; 
+    z-index: 1;
     transform: translateX(-100%);
 }
 
@@ -615,8 +620,66 @@ footer .column {
     transform: translateX(0);
 }
 
-/* Responsiveness */
+.body .premium-section {
+    margin-bottom: 15px;
+    color: #f2f2f2;
+    max-width: 80%;
+}
 
+.body .premium-section h3 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+
+.body .premium-section p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    background-color: #1e2124;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 16px;
+}
+
+th:first-child,
+td:first-child {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #121416;
+}
+
+.fa-check {
+    color: rgb(61, 231, 61);
+}
+
+.fa-remove {
+    color: rgb(255, 43, 43);
+}
+
+.premiumButton:hover b {
+    display: none;
+}
+
+.premiumButton:hover:before {
+    content: "Thanks so much!";
+    font-weight: bold;
+}
+
+/* Responsiveness */
 @media (max-width: 1200px) {
     .body .section .text h2 {
         font-size: 25px;
@@ -632,6 +695,14 @@ footer .column {
     }
 
     .body .future-plans p {
+        font-size: 20px;
+    }
+
+    .body .premium-section h3 {
+        font-size: 25px;
+    }
+
+    .body .premium-section p {
         font-size: 20px;
     }
 
@@ -682,6 +753,14 @@ footer .column {
         font-size: 18px;
     }
 
+    .body .premium-section h3 {
+        font-size: 22px;
+    }
+
+    .body .premium-section p {
+        font-size: 18px;
+    }
+
     .body .commands h2 {
         font-size: 22px;
     }
@@ -691,6 +770,10 @@ footer .column {
     }
 
     .buttonMain {
+        font-size: 14px;
+    }
+
+    .buttonMainInvite {
         font-size: 14px;
     }
 
