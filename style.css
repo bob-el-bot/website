@@ -638,7 +638,7 @@ footer .column {
     font-size: 24px;
 }
 
-table {
+.body .premium-section table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
@@ -647,18 +647,16 @@ table {
     margin-bottom: 15px;
 }
 
-th,
-td {
+.body .premium-section th, .body .premium-section td {
     text-align: center;
     padding: 16px;
 }
 
-th:first-child,
-td:first-child {
+.body .premium-section th:first-child, .body .premium-section td:first-child {
     text-align: left;
 }
 
-tr:nth-child(even) {
+.body .premium-section tr:nth-child(even) {
     background-color: #121416;
 }
 
