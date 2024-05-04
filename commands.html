@@ -740,27 +740,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="command-info-card" id="code-preview">
-                            <div class="name">
-                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#code-preview')">
-                                    🔎
-                                    <span>/code preview</span>
-                                </h3>
-                                <p>
-                                    Get a formatted preview of specific lines in a file from GitHub.
-                                </p>
-                                <div class="parameters">
-                                    <div class="parameter">
-                                        <p>link</p>
-                                        <p>The GitHub link you want to share. Character indicators are ignored. Valid
-                                            formats include:<br><br><span
-                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/website/blob/main/index.html#L15</span><br><br><span
-                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/website/blob/main/index.html#L15-L18</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="command-info-card" id="hug">
                             <div class="name">
                                 <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#hug')">
@@ -872,138 +851,258 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="stream">
-                            <p id="auto" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#auto')">🖨️
-                                Auto Commands</p>
-                            <div class="command-info-card" id="auto-publish-announcements">
-                                <div class="name">
-                                    <h3
-                                        onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#auto-publish-announcements')">
-                                        📢
-                                        <span>/auto publish announcements</span>
-                                    </h3>
-                                    <p>
-                                        Bob will publish all messages sent in the given channel.
-                                    </p>
-                                    <div class="parameters">
-                                        <div class="parameter">
-                                            <p>publish</p>
-                                            <p>Choose from: True, False.</p>
-                                        </div>
-                                        <div class="parameter">
-                                            <p>channel</p>
-                                            <p>The announcement channel you want to edit.</p>
-                                        </div>
+                    </div>
+                    <div class="stream">
+                        <p id="auto" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#auto')">🖨️
+                            Auto Commands</p>
+                        <div class="command-info-card" id="auto-publish-announcements">
+                            <div class="name">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#auto-publish-announcements')">
+                                    📢
+                                    <span>/auto publish announcements</span>
+                                </h3>
+                                <p>
+                                    Bob will publish all messages sent in the given channel.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>publish</p>
+                                        <p>Choose from: True, False.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>channel</p>
+                                        <p>The announcement channel you want to edit.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="stream">
-                                <p id="info" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#info')">
-                                    🗄️
-                                    Help / Informational Commands</p>
-                                <div class="command-info-card" id="premium">
-                                    <div class="name">
-                                        <h3
-                                            onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#premium')">
-                                            🎉
-                                            <span>/premium</span>
-                                        </h3>
-                                        <p>
-                                            Ensures Bob knows you have premium! If not you will be given a button to get
-                                            it!
+                        </div>
+                        <div class="command-info-card" id="auto-preview-github">
+                            <div class="name">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#auto-preview-github')">
+                                    🖥️
+                                    <span>/auto preview-github</span>
+                                </h3>
+                                <p>
+                                    Bob will preview all valid github links (code files, issues, and pull requests).
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>preview</p>
+                                        <p>Choose from: True, False.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="auto-preview-messages">
+                            <div class="name">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#auto-preview-messages')">
+                                    💬
+                                    <span>/auto preview-messages</span>
+                                </h3>
+                                <p>
+                                    Bob will preview all valid Discord message links.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>preview</p>
+                                        <p>Choose from: True, False.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stream">
+                        <p id="preview" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#preview')">👀
+                            Preview Commands</p>
+                        <div class="command-info-card" id="preview-code">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#preview-code')">
+                                    🔎
+                                    <span>/preview code</span>
+                                </h3>
+                                <p>
+                                    Get a formatted preview of specific lines in a file from GitHub.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>link</p>
+                                        <p>The GitHub link you want to share. Character indicators are ignored. Valid
+                                            formats include:<br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/website/blob/main/index.html#L15</span><br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/website/blob/main/index.html#L15-L18</span>
                                         </p>
                                     </div>
                                 </div>
-                                <div class="command-info-card" id="new">
-                                    <div class="name">
-                                        <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#new')">
-                                            ✨
-                                            <span>/new</span>
-                                        </h3>
-                                        <p>
-                                            See the latest updates to Bob. Including: dev-notes, git commits, and more.
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="preview-issue">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#preview-issue')">
+                                    🔎
+                                    <span>/preview issue</span>
+                                </h3>
+                                <p>
+                                    Get a formatted preview of a specific issue from GitHub.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>link</p>
+                                        <p>The GitHub link you want to share. Valid
+                                            formats include:<br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/BobTheBot/issues/153</span><br>
                                         </p>
                                     </div>
                                 </div>
-                                <div class="command-info-card" id="quote-prompts">
-                                    <div class="name">
-                                        <h3
-                                            onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#quote-prompts')">
-                                            🧾
-                                            <span>/quote-prompts</span>
-                                        </h3>
-                                        <p>
-                                            See all valid prompts for /quote.
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="preview-pull-request">
+                            <div class="name">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#preview-pull-request')">
+                                    🔎
+                                    <span>/preview pull-request</span>
+                                </h3>
+                                <p>
+                                    Get a formatted preview of a specific pull request from GitHub.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>link</p>
+                                        <p>The GitHub link you want to share. Character indicators are ignored. Valid
+                                            formats include:<br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://github.com/bob-el-bot/BobTheBot/pull/149</span><br><br>
                                         </p>
                                     </div>
                                 </div>
-                                <div class="command-info-card" id="analyze-link">
-                                    <div class="name">
-                                        <h3
-                                            onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#analyze-link')">
-                                            🕵️
-                                            <span>/analyze-link</span>
-                                        </h3>
-                                        <p>
-                                            See where a link will take you, if it has cookies, if it is a short URL, and
-                                            check for rick rolls.
-                                        </p>
-                                        <div class="parameters">
-                                            <div class="parameter">
-                                                <p>link</p>
-                                                <p>The link you want to analyze. Valid formats include:<br><br><span
-                                                        style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">bobthebot.net</span><br><br><span
-                                                        style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://bobthebot.net</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="command-info-card" id="ping">
-                                    <div class="name">
-                                        <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#ping')">
-                                            🏓
-                                            <span>/ping</span>
-                                        </h3>
-                                        <p>
-                                            Find the client's latency.
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="preview-message">
+                            <div class="name">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#preview-message')">
+                                    🔎
+                                    <span>/preview message</span>
+                                </h3>
+                                <p>
+                                    Get a preview of a message from a Discord message Link as long as Bob is in the
+                                    originating server.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>link</p>
+                                        <p>The Discord messagew link you want to share. Valid
+                                            formats include:<br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://discord.com/channels/1058077635692994651/1058081599222186074/1111715651476799619</span><br><br>
                                         </p>
                                     </div>
                                 </div>
-                                <div class="command-info-card" id="info">
-                                    <div class="name">
-                                        <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#info')">
-                                            🤖
-                                            <span>/info</span>
-                                        </h3>
-                                        <p>
-                                            Learn about Bob.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stream">
+                        <p id="info" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#info')">
+                            🗄️
+                            Help / Informational Commands</p>
+                        <div class="command-info-card" id="premium">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#premium')">
+                                    🎉
+                                    <span>/premium</span>
+                                </h3>
+                                <p>
+                                    Ensures Bob knows you have premium! If not you will be given a button to get
+                                    it!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="new">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#new')">
+                                    ✨
+                                    <span>/new</span>
+                                </h3>
+                                <p>
+                                    See the latest updates to Bob. Including: dev-notes, git commits, and more.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="quote-prompts">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#quote-prompts')">
+                                    🧾
+                                    <span>/quote-prompts</span>
+                                </h3>
+                                <p>
+                                    See all valid prompts for /quote.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="analyze-link">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#analyze-link')">
+                                    🕵️
+                                    <span>/analyze-link</span>
+                                </h3>
+                                <p>
+                                    See where a link will take you, if it has cookies, if it is a short URL, and
+                                    check for rick rolls.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>link</p>
+                                        <p>The link you want to analyze. Valid formats include:<br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">bobthebot.net</span><br><br><span
+                                                style="background-color: #121416; border-radius: 3px; padding-left: 2px; padding-right: 2px;">https://bobthebot.net</span>
                                         </p>
                                     </div>
                                 </div>
-                                <div class="command-info-card" id="support">
-                                    <div class="name">
-                                        <h3
-                                            onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#support')">
-                                            🏰
-                                            <span>/support</span>
-                                        </h3>
-                                        <p>
-                                            Sends an invite to Bob's support Server.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="command-info-card" id="help">
-                                    <div class="name">
-                                        <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#help')">
-                                            📪
-                                            <span>/help</span>
-                                        </h3>
-                                        <p>
-                                            Get DMed a detailed list of all of Bob's commands.
-                                        </p>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="ping">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#ping')">
+                                    🏓
+                                    <span>/ping</span>
+                                </h3>
+                                <p>
+                                    Find the client's latency.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="info">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#info')">
+                                    🤖
+                                    <span>/info</span>
+                                </h3>
+                                <p>
+                                    Learn about Bob.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="support">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#support')">
+                                    🏰
+                                    <span>/support</span>
+                                </h3>
+                                <p>
+                                    Sends an invite to Bob's support Server.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="help">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#help')">
+                                    📪
+                                    <span>/help</span>
+                                </h3>
+                                <p>
+                                    Get DMed a detailed list of all of Bob's commands.
+                                </p>
                             </div>
                         </div>
                     </div>
