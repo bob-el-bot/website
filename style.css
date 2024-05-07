@@ -557,6 +557,10 @@ footer .main-content {
     flex-direction: row;
 }
 
+footer div {
+    margin: 0px 15px;
+}
+
 footer img {
     width: 24px;
     height: 24px;
@@ -578,7 +582,6 @@ footer .quantam:hover {
 
 footer .column {
     text-align: left;
-    padding-left: 15px;
 }
 
 .hidden {
@@ -650,6 +653,7 @@ footer .column {
 
 .body .premium-section th, .body .premium-section td {
     text-align: center;
+    font-size: 24px;
     padding: 16px;
 }
 
@@ -720,6 +724,10 @@ footer .column {
     .body .section {
         margin: 0 0px;
     }
+
+    .body .premium-section th, .body .premium-section td {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 920px) {
@@ -732,6 +740,10 @@ footer .column {
     footer .main-content {
         justify-content: flex-start;
         flex-direction: column;
+    }
+
+    footer div .main-content .column {
+        margin: 0px;
     }
 }
 
@@ -895,6 +907,10 @@ footer .column {
     .header .section {
         flex-wrap: wrap;
         align-content: flex-end;
+    }
+
+    .body .premium-section th, .body .premium-section td {
+        padding: 8px 8px;
     }
 }
 
