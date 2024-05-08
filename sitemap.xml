@@ -12,6 +12,11 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://docs.bobthebot.net</loc>
+  <lastmod>2024-03-12T16:24:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://bobthebot.net/commands.html</loc>
   <lastmod>2024-03-12T16:24:54+00:00</lastmod>
   <priority>0.80</priority>
