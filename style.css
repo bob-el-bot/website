@@ -235,7 +235,7 @@ html {
 }
 
 .header .section h1 {
-    font-size: 40px;
+    font-size: 50px;
     background: rgb(203, 108, 230);
     background: linear-gradient(-90deg, rgba(203, 108, 230, 1) 0%, rgba(94, 23, 235, 1) 100%);
     -webkit-background-clip: text;
