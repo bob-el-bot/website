@@ -736,7 +736,7 @@ footer .column {
     }
 }
 
-@media (max-width: 936px) {
+@media (max-width: 1030px) {
     footer .main-content {
         justify-content: flex-start;
         flex-direction: column;
