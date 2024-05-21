@@ -761,5 +761,26 @@
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((element) => observer.observe(element));
 </script>
+<script>
+    const url = 'https://discord.com/api/v9/application-directory-static/applications/705680059809398804?locale=en-US';
+
+    // Fetch the data from the API
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            let guildCount = data.directory_entry.guild_count;
+            guildCount = Math.round(guildCount / 50) * 50;
+
+            document.getElementById('number2').textContent = guildCount;
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
+</script>
 
 </html>
