@@ -80,10 +80,22 @@
     .other-section {
         padding: 5px 0px;
     }
+
+    .other-header .section h1 {
+        font-size: 35px;
+    }
+
+    .other-section h2 {
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 400px) {
     .other-header .section p {
         font-size: 18px;
+    }
+
+    .other-header .section h1 {
+        font-size: 25px;
     }
 }
