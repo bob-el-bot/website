@@ -118,6 +118,94 @@ input[type=text]:focus {outline:none;}
     font-weight: normal;
 }
 
+/* Premium Variant Styles */
+.command-info .stream .premium .command-info-card premium-tag {
+    font-weight: bold;
+    font-style: italic;
+    background-color: #8C52FF;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+}
+
+.command-info .stream .premium .command-info-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.command-info .stream .premium .command-info-card h3:hover {
+    cursor: pointer;
+}
+
+.command-info .stream .premium .command-info-card p {
+    cursor: text;
+}
+
+.command-info .stream .premium .command-info-card h3 span {
+    font-weight: bold;
+    background-color: #121416;
+    border-radius: 5px;
+    padding: 2px;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #8C52FF;
+    text-decoration-style: solid;
+    text-align: left;
+    text-decoration-thickness: 2px;
+}
+
+.command-info .stream .premium .command-info-card {
+    display: flexbox;
+    flex-direction: column;
+    background-color: #181b1d;
+    border: solid 2px #8C52FF;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: normal;
+}
+
+.command-info .stream .premium .command-info-card .name .parameters {
+    background-color: #36393e;
+    border-radius: 10px;
+}
+
+.command-info .stream .premium .command-info-card .name .parameters .parameter:nth-child(1) p {
+    border-radius: 10px 10px 0 0;
+    text-align: left;
+}
+
+.command-info .stream .premium .command-info-card .name .parameters .parameter p:nth-child(1) {
+    background-color: #121416;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    white-space: nowrap;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.command-info .stream .premium .command-info-card .name .parameters .parameter p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.command-info .stream .premium .command-info-card .name p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+}
 
 @media (max-width: 580px) {
     .command-info .stream-holder .stream .command-info-card .name p {
@@ -137,6 +225,26 @@ input[type=text]:focus {outline:none;}
     }
 
     .command-info h3 {
+        text-align: center;
+    }
+
+    .command-info .stream .premium .command-info-card .name p {
+        font-size: 15px;
+    }
+
+    .command-info .stream .premium .command-info-card .name .parameters .parameter p {
+        font-size: 15px;
+    }
+
+    .command-info .stream .premium p {
+        text-align: center;
+    }
+
+    .command-info .stream .premium h2 {
+        text-align: center;
+    }
+
+    .command-info .stream .premium h3 {
         text-align: center;
     }
 }
