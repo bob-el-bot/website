@@ -1,0 +1,15 @@
+{
+    "title": "🎉 Announcing New Auto-Moderation Features!",
+    "tags": [
+        "Features",
+        "Moderation"
+    ],
+    "description": "New auto-moderation features for your Discord server! Effortlessly manage and filter unwanted content with commands to block phone numbers, links, zalgo-text, bad words, and invite links. Ensure you and your bot, Bob, have the Manage Server permission to use these commands. Enhance your community's safety and enjoy a better server experience!",
+    "author": {
+        "name": "Zach Goodson",
+        "discord_username": "vorlon.",
+        "role": "Creator",
+        "profile_url": "https://cdn.discordapp.com/avatars/444592456369963009/5cbe9a0ff4dabcc361a5691ea6fb1228.webp?size=128"
+    },
+    "date_of_publication": "2024-06-15"
+}

@@ -1,0 +1,18 @@
+.blog-tile {
+    background-color: #181b1d;
+    border: solid 2px #36393e;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.blog-tile span {
+    background-color: #121416;
+    margin-left: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.blog-tile span:first {
+    margin-left: 0px;
+}
