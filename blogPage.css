@@ -5,17 +5,17 @@ body {
 
 article {
     max-width: 900px;
-    margin: 20px auto;
+    margin: 0px auto;
+    margin-top: 50px;
     padding: 20px;
     font-size: 18px;
-    border-radius: 8px;
 }
 
-article footnote {
-    border-top: solid 2px #36393e;
+.footnote {
+    border-top: 2px solid #36393e;
 }
 
-article footnote p {
+.footnote p {
     margin-top: 20px;
     font-style: italic;
     font-size: 18px;
