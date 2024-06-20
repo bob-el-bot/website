@@ -7,6 +7,7 @@ article {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
+    font-size: 18px;
     border-radius: 8px;
 }
 
@@ -17,6 +18,7 @@ article footnote {
 article footnote p {
     margin-top: 20px;
     font-style: italic;
+    font-size: 18px;
     color: #cccccc;
 }
 
@@ -32,9 +34,19 @@ h1 {
 }
 
 .author-info {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     margin-top: 10px;
+    background-color: #181b1d;
+    border: solid 2px #36393e;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.author-info a img {
+    width: 24px;
+    height: 24px;
+    margin: 0px;
 }
 
 .author-info img {
