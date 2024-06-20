@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🎉 Announcing New Auto-Moderation Features!</title>
+        <link rel="stylesheet" href="../../../blogPage.css">
+        <title>Bob's Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale e=1">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/bobTransparent.svg">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="stylesheet" type="text/css" href="/blogBrowser.css">
+        <!--  Essential META Tags -->
+        <meta name="description" content="New auto-moderation features for your Discord server! Effortlessly manage and filter unwanted content with commands to block phone numbers, links, zalgo-text, bad words, and invite links. Enhance your community's safety and enjoy a better server experience!">
+        <!--  Embed META Tags -->
+        <meta property="og:title" content="Bob's Blog.">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="https://bobthebot.net/assets/images/bob.png">
+        <meta property="og:url" content="https://bobthebot.net/">
+        <meta property="og:description" content="A collection of announcements and articles detailing the features and development of Bob.">
+        <meta data-react-helmet="true" name="theme-color" content="#8C52FF">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <div style="z-index: 100 !important;" class="container">
+            <div class="topnav">
+                <a class="home" href="https://bobthebot.net">Bob</a>
+                <a class="mobile-button" id="nav-mobile-button">
+                    <img alt="open menu" style="max-height: 18px;" src="/assets/images/hamburger-menu-icon.svg">
+                </a>
+                <a class="invite" href="https://invite.bobthebot.net">
+                    ❤️ Invite
+                Bob
+                </a>
+                <a href="https://bobthebot.net#premium">✨ Premium</a>
+                <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
+            </div>
+        </div>
+        <!-- Navigation Mobile Options -->
+        <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <br>
+                <a class="invite" href="https://invite.bobthebot.net">
+                    ❤️ Invite
+                Bob
+                </a>
+                <a href="https://bobthebot.net#premium">✨ Premium</a>
+                <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
+            </div>
+        </div>
+        <article>
+            <header>
+                <h1>🎉 Announcing New Auto-Moderation Features!</h1>
+                <div class="author-info">
+                    <img src="https://cdn.discordapp.com/avatars/444592456369963009/5cbe9a0ff4dabcc361a5691ea6fb1228.webp?size=128" alt="Zach Goodson">
+                    <div>
+                        <p>
+                            Written by
+                            <strong>Zach Goodson</strong>
+                            (
+                            <a href="https://discordapp.com/users/444592456369963009">vorlon.</a>
+                            )
+                        </p>
+                        <p>Role: Creator</p>
+                        <p>Date of Publication: June 15, 2024</p>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <p>We are happy to introduce new auto-moderation features to enhance the safety of your server. With these new commands, you can effortlessly manage and filter out unwanted content, ensuring a better experience for you and your members. Here are the details of the new commands:</p>
+                <h2>📞 /automod phone-numbers</h2>
+                <p>Automatically moderate phone numbers in your server. This feature prevents phone numbers from being sent, protecting privacy and reducing the risk of spam.</p>
+                <p>
+                    <strong>Options:</strong>
+                </p>
+                <ul>
+                    <li>
+                        <strong>strict:</strong>
+                        If checked (
+                        <code>true</code>
+                        ), numbers like
+                        <code>1234567890</code>
+                        will be blocked. Otherwise, only formatted phone numbers will be moderated.
+                    </li>
+                </ul>
+                <h2>🔗 /automod links</h2>
+                <p>Add link auto-moderation to prevent any links from being sent in your server. This helps in reducing spam and protecting members from potentially harmful links.</p>
+                <h2>⁉️ /automod zalgo-text</h2>
+                <p>Prevent zalgo-text, also known as glitchy text, from being sent in your server. This keeps your chats clean and readable.</p>
+                <h2>🤬 /automod bad-words</h2>
+                <p>Automatically moderate bad words in your server. This feature helps in maintaining a respectful and welcoming environment for everyone.</p>
+                <h2>🏰 /automod invite-links</h2>
+                <p>Prevent Discord invite links from being sent in your server. This helps in controlling unwanted promotions and server raids.</p>
+            </section>
+            <footnote>
+                <p>These new commands are designed to give you more control and peace of mind. Implement them today to keep your community safe and enjoyable!</p>
+                <p>Feel free to reach out if you have any questions or need assistance in setting up these features. Happy moderating!</p>
+                <p>
+                    <strong>Note:</strong>
+                    Ensure you and Bob have the
+                    <strong>Manage Server</strong>
+                    permission to use these commands in your server.
+                </p>
+            </footnote>
+        </article>
+    </body>
+    <!-- footer -->
+    <footer>
+        <div>
+            <div class="main-content">
+                <div class="column" style="margin-left: 0; margin-right: auto;">
+                    <h2>Bob.</h2>
+                    The bot for RNG, quoting, fonts, encryption, games, and more!
+                    <br>
+                    <a style="text-decoration: none;" href="https://discord.gg/HvGMRZD8jQ">
+                        <img alt="Join Discord Server" src="/assets/images/discordapp-tile.svg">
+                    </a>
+                    <a style="text-decoration: none;" href="https://github.com/bob-el-bot/BobTheBot">
+                        <img alt="View Github" src="/assets/images/github-tile.svg">
+                    </a>
+                    <a style="text-decoration: none;" href="https://www.instagram.com/bobtheb0t/">
+                        <img alt="View Instagram" src="/assets/images/instagram-tile.svg">
+                    </a>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Tools</b>
+                        <br>
+                        <a href="/timestamps.html">Timestamps</a>
+                        <br>
+                        <a href="/colors.html">Discord Colors</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Support Bob</b>
+                        <br>
+                        <a href="/#premium">Premium</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Help</b>
+                        <br>
+                        Use
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                    text-underline-position: under;
+                                    text-decoration-color: #8C52FF;
+                                    text-decoration-style: solid;
+                                    text-decoration-thickness: 2px;">/help</span>
+                        on Discord
+                        <br>
+                        <a href="https://discord.gg/HvGMRZD8jQ">Support Server</a>
+                        <br>
+                        <a href="/commands.html">Commands</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Contact</b>
+                        <br>
+                        <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
+                        <br>
+                        DM
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                text-underline-position: under;
+                                text-decoration-color: #8C52FF;
+                                text-decoration-style: solid;
+                                text-decoration-thickness: 2px;">vorlon.</span>
+                        on Discord
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Policies</b>
+                        <br>
+                        <a href="/privacy.html">Privacy Policy</a>
+                        <br>
+                        <a href="/tos.html">Terms of Service</a>
+                        <br>
+                        <a href="/community.html">Community</a>
+                    </p>
+                </div>
+            </div>
+            <hr color="#5b6069">
+            <div>
+                <p style="margin-bottom: 0;">
+                    <span style="color: #999999;">Made by ⚡</span>
+                    <a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
+                    ⚡
+                </p>
+                <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
+                    © Zach Goodson 2024, All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Mobile Navigation Options Modal -->
+<script>
+    var modal = document.getElementById("nav-modal");
+
+    var btn = document.getElementById("nav-mobile-button");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</html>
