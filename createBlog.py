@@ -11,7 +11,7 @@ def generate_blog_card(metadata):
     description = metadata["description"]
     date_of_publication = datetime.fromisoformat(metadata["date_of_publication"]).strftime('%Y-%m-%d')
     html_name = metadata.get("html_name", "page")  # Default to 'page.html' if not specified
-    blog_path = f"./blogs/{os.path.basename(BLOGS_DIR)}/{html_name}.html"
+    blog_path = f"./blogs{os.path.basename(BLOGS_DIR)}/{html_name}.html"
     
     blog_card_html = f'''
     <div class="blog-card" onclick="window.location.href='{blog_path}'">
@@ -32,7 +32,6 @@ if __name__ == '__main__':
         if os.path.isdir(blog_dir_path):
             metadata_file = os.path.join(blog_dir_path, 'details.json')
             if os.path.exists(metadata_file):
-                print(f"Processing {metadata_file}")
                 with open(metadata_file, 'r', encoding='utf-8') as f:
                     try:
                         metadata = json.load(f)
@@ -54,19 +53,15 @@ if __name__ == '__main__':
     
     # Locate the position of blog-stream in the HTML content
     start_pos = html_content.find(start_marker)
-    end_pos = html_content.find(end_marker, start_pos + len(start_marker)) if start_pos != -1 else -1
+    end_pos = html_content.find(end_marker, start_pos + len(start_marker))
     
     if start_pos != -1 and end_pos != -1:
-        # Remove existing blog cards between start and end markers
+        # Remove old blog cards
         updated_html_content = (
             html_content[:start_pos + len(start_marker)]
             + blog_cards_html
             + html_content[end_pos:]
         )
-        
-        # Print the updated HTML content for debugging
-        print("Updated HTML Content:")
-        print(updated_html_content)
         
         # Save the updated HTML content back to the file
         with open('blog.html', 'w', encoding='utf-8') as f:
