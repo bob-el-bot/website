@@ -33,6 +33,53 @@ h1 {
     color: #ffffff;
 }
 
+.social-share-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.share-button {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #f2f2f2;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.share-button.copy {
+    background-color: transparent;
+    border: solid 2px #36393e;
+}
+
+.share-button.copy:hover {
+    background: #36393e;
+    border: solid 2px #999999;
+}
+
+.share-button.facebook {
+    background-color: #26375c;
+    border: solid 2px #3b5998;
+}
+
+.share-button.facebook:hover {
+    background-color: #3b5998;
+    border: solid 2px #6595fc;
+}
+
+.share-button.x {
+    background-color: #000000;
+    border: solid 2px #474747;
+}
+
+.share-button.x:hover {
+    background-color: #212121;
+    border: solid 2px #696969;
+}
+
 .author-info {
     display: inline-flex;
     align-items: center;

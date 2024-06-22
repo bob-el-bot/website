@@ -13,6 +13,8 @@
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/style.css">
         <link rel="stylesheet" href="../../blogPage.css">
+        <!-- JS -->
+        <script src="../assets/scripts/sharingPage.js" defer></script>
         <!--  Essential META Tags -->
         <meta name="description" content="New auto-moderation features for your Discord server! Effortlessly manage and filter unwanted content with commands to block phone numbers, links, zalgo-text, bad words, and invite links. Enhance your community's safety and enjoy a better server experience!">
         <!--  Embed META Tags -->
@@ -57,6 +59,11 @@
             <header>
                 <h1>🎉 Announcing New Auto-Moderation Features!</h1>
                 <p>Date of Publication: June 15, 2024</p>
+                <div class="social-share-buttons">
+                    <a class="share-button facebook" onclick="shareOnFacebook()">Share on Facebook</a>
+                    <a class="share-button x" onclick="shareOnX()">Share on X</a>
+                    <a class="share-button copy" onclick="copyLink()">Copy Link</a>
+                </div>
             </header>
             <section>
                 <p>We are happy to introduce new auto-moderation features to enhance the safety of your server. With these new commands, you can effortlessly manage and filter out unwanted content, ensuring a better experience for you and your members. Here are the details of the new commands:</p>
