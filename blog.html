@@ -1,121 +1,124 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-<title>Bob's Blog</title>
-<meta content="width=device-width, initial-scale e=1" name="viewport"/>
-<!-- Favicon -->
-<link href="assets/images/bobTransparent.svg" rel="icon" type="image/x-icon"/>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Belanosima&amp;display=swap" rel="stylesheet"/>
-<!-- CSS -->
-<link href="/style.css" rel="stylesheet" type="text/css"/>
-<link href="/otherStyles.css" rel="stylesheet" type="text/css"/>
-<link href="/blogBrowser.css" rel="stylesheet" type="text/css"/>
-<!--  Essential META Tags -->
-<meta content="Bob's Blog." name="description"/>
-<!--  Embed META Tags -->
-<meta content="Bob's Blog." property="og:title"/>
-<meta content="article" property="og:type"/>
-<meta content="https://bobthebot.net/assets/images/bob.png" property="og:image"/>
-<meta content="https://bobthebot.net/blog" property="og:url"/>
-<meta content="A collection of announcements and articles detailing the features and development of Bob." property="og:description"/>
-<meta content="#8C52FF" data-react-helmet="true" name="theme-color"/>
-</head>
-<body style="margin: 0px; height: 100%;">
-<!-- Header Section -->
-<div class="other-header">
-<!-- Navigation -->
-<div class="container" style="z-index: 100 !important;">
-<div class="topnav">
-<a class="home" href="https://bobthebot.net">Bob</a>
-<a class="mobile-button" id="nav-mobile-button">
-<img alt="open menu" src="/assets/images/hamburger-menu-icon.svg" style="max-height: 18px;"/>
-</a>
-<a class="invite" href="https://invite.bobthebot.net">
+    <head>
+        <title>Bob's Blog</title>
+        <meta content="width=device-width, initial-scale e=1" name="viewport">
+        <!-- Favicon -->
+        <link href="assets/images/bobTransparent.svg" rel="icon" type="image/x-icon">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Belanosima&amp;display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link href="/style.css" rel="stylesheet" type="text/css">
+        <link href="/otherStyles.css" rel="stylesheet" type="text/css">
+        <link href="/blogBrowser.css" rel="stylesheet" type="text/css">
+        <!-- JS -->
+        <script src="assets/scripts/mobileNavigation.js" defer></script>
+        <!--  Essential META Tags -->
+        <meta content="Bob's Blog." name="description">
+        <!--  Embed META Tags -->
+        <meta content="Bob's Blog." property="og:title">
+        <meta content="article" property="og:type">
+        <meta content="https://bobthebot.net/assets/images/bob.png" property="og:image">
+        <meta content="https://bobthebot.net/blog" property="og:url">
+        <meta content="A collection of announcements and articles detailing the features and development of Bob." property="og:description">
+        <meta content="#8C52FF" data-react-helmet="true" name="theme-color">
+    </head>
+    <body style="margin: 0px; height: 100%;">
+        <!-- Header Section -->
+        <div class="other-header">
+            <!-- Navigation -->
+            <div class="container" style="z-index: 100 !important;">
+                <div class="topnav">
+                    <a class="home" href="https://bobthebot.net">Bob</a>
+                    <a class="mobile-button" id="nav-mobile-button">
+                        <img alt="open menu" src="/assets/images/hamburger-menu-icon.svg" style="max-height: 18px;">
+                    </a>
+                    <a class="invite" href="https://invite.bobthebot.net">
                         ❤️ Invite
                     Bob
                     </a>
-<a href="https://bobthebot.net#premium">✨ Premium</a>
-<a href="https://bobthebot.net/commands.html">🔥 Commands</a>
-</div>
-</div>
-<!-- Navigation Mobile Options -->
-<div class="nav-modal" id="nav-modal" style="z-index: 101 !important;">
-<!-- Modal content -->
-<div class="modal-content">
-<span class="close">×</span>
-<br/>
-<a class="invite" href="https://invite.bobthebot.net">
+                    <a href="https://bobthebot.net#premium">✨ Premium</a>
+                    <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
+                </div>
+            </div>
+            <!-- Navigation Mobile Options -->
+            <div class="nav-modal" id="nav-modal" style="z-index: 101 !important;">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">×</span>
+                    <br>
+                    <a class="invite" href="https://invite.bobthebot.net">
                         ❤️ Invite
                     Bob
                     </a>
-<a href="https://bobthebot.net#premium">✨ Premium</a>
-<a href="https://bobthebot.net/commands.html">🔥 Commands</a>
-</div>
-</div>
-<div class="section">
-<div class="main">
-<h1>Bob's Blog.</h1>
-</div>
-</div>
-</div>
-<div class="stats"></div>
-<!-- body -->
-<div class="body">
-<div class="blog-stream">
-    <div class="blog-card" onclick="window.location.href='./blogs/announcing-new-auto-moderation-features.html'">
-        <h2>🎉 Announcing New Auto-Moderation Features!</h2>
-        <p>New auto-moderation features for your Discord server! Effortlessly manage and filter unwanted content with commands to block phone numbers, links, zalgo-text, bad words, and invite links. Enhance your community's safety and enjoy a better server experience!</p>
-        <p class="publication-date"><span>2024-06-15</span></p>
+                    <a href="https://bobthebot.net#premium">✨ Premium</a>
+                    <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="main">
+                    <h1>Bob's Blog.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="stats"></div>
+        <!-- body -->
+        <div class="body">
+            <div class="blog-stream">
+                <div class="blog-card" onclick="window.location.href='./blogs/announcing-new-auto-moderation-features.html'">
+                    <h2>🎉 Announcing New Auto-Moderation Features!</h2>
+                    <p>New auto-moderation features for your Discord server! Effortlessly manage and filter unwanted content with commands to block phone numbers, links, zalgo-text, bad words, and invite links. Enhance your community's safety and enjoy a better server experience!</p>
+                    <p class="publication-date">
+                        <span>2024-06-15</span>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-</div>
-</div>
-<!-- footer -->
-<footer>
-<div>
-<div class="main-content">
-<div class="column" style="margin-left: 0; margin-right: auto;">
-<h2>Bob.</h2>
+    <!-- footer -->
+    <footer>
+        <div>
+            <div class="main-content">
+                <div class="column" style="margin-left: 0; margin-right: auto;">
+                    <h2>Bob.</h2>
                     The bot for RNG, quoting, fonts, encryption, games, and more!
-                    <br/>
-<a href="https://discord.gg/HvGMRZD8jQ" style="text-decoration: none;">
-<img alt="Join Discord Server" src="/assets/images/discordapp-tile.svg"/>
-</a>
-<a href="https://github.com/bob-el-bot/BobTheBot" style="text-decoration: none;">
-<img alt="View Github" src="/assets/images/github-tile.svg"/>
-</a>
-<a href="https://www.instagram.com/bobtheb0t/" style="text-decoration: none;">
-<img alt="View Instagram" src="/assets/images/instagram-tile.svg"/>
-</a>
-</div>
-<div class="column">
-<p>
-<b>Tools</b>
-<br/>
-<a href="/timestamps.html">Timestamps</a>
-<br/>
-<a href="/colors.html">Discord Colors</a>
-</p>
-</div>
-<div class="column">
-<p>
-<b>Support Bob</b>
-<br/>
-<a href="/#premium">Premium</a>
-<br/>
-<a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
-<br/>
-<a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
-</p>
-</div>
-<div class="column">
-<p>
-<b>Help</b>
-<br/>
+                    <br>
+                    <a href="https://discord.gg/HvGMRZD8jQ" style="text-decoration: none;">
+                        <img alt="Join Discord Server" src="/assets/images/discordapp-tile.svg">
+                    </a>
+                    <a href="https://github.com/bob-el-bot/BobTheBot" style="text-decoration: none;">
+                        <img alt="View Github" src="/assets/images/github-tile.svg">
+                    </a>
+                    <a href="https://www.instagram.com/bobtheb0t/" style="text-decoration: none;">
+                        <img alt="View Instagram" src="/assets/images/instagram-tile.svg">
+                    </a>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Tools</b>
+                        <br>
+                        <a href="/timestamps.html">Timestamps</a>
+                        <br>
+                        <a href="/colors.html">Discord Colors</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Support Bob</b>
+                        <br>
+                        <a href="/#premium">Premium</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Help</b>
+                        <br>
                         Use
                         <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
                                     text-underline-position: under;
@@ -123,18 +126,18 @@
                                     text-decoration-style: solid;
                                     text-decoration-thickness: 2px;">/help</span>
                         on Discord
-                        <br/>
-<a href="https://discord.gg/HvGMRZD8jQ">Support Server</a>
-<br/>
-<a href="/commands.html">Commands</a>
-</p>
-</div>
-<div class="column">
-<p>
-<b>Contact</b>
-<br/>
-<a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
-<br/>
+                        <br>
+                        <a href="https://discord.gg/HvGMRZD8jQ">Support Server</a>
+                        <br>
+                        <a href="/commands.html">Commands</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Contact</b>
+                        <br>
+                        <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
+                        <br>
                         DM
                         <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
                                 text-underline-position: under;
@@ -143,54 +146,32 @@
                                 text-decoration-thickness: 2px;">vorlon.</span>
                         on Discord
                     </p>
-</div>
-<div class="column">
-<p>
-<b>Policies</b>
-<br/>
-<a href="/privacy.html">Privacy Policy</a>
-<br/>
-<a href="/tos.html">Terms of Service</a>
-<br/>
-<a href="/community.html">Community</a>
-</p>
-</div>
-</div>
-<hr color="#5b6069"/>
-<div>
-<p style="margin-bottom: 0;">
-<span style="color: #999999;">Made by ⚡</span>
-<a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Policies</b>
+                        <br>
+                        <a href="/privacy.html">Privacy Policy</a>
+                        <br>
+                        <a href="/tos.html">Terms of Service</a>
+                        <br>
+                        <a href="/community.html">Community</a>
+                    </p>
+                </div>
+            </div>
+            <hr color="#5b6069">
+            <div>
+                <p style="margin-bottom: 0;">
+                    <span style="color: #999999;">Made by ⚡</span>
+                    <a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
                     ⚡
                 </p>
-<p style="margin: 0; padding-bottom: 15px; line-height: normal;">
+                <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
                     © Zach Goodson 2024, All Rights
                     Reserved.
                 </p>
-</div>
-</div>
-</footer>
+            </div>
+        </div>
+    </footer>
 </body>
-<!-- Mobile Navigation Options Modal -->
-<script>
-    var modal = document.getElementById("nav-modal");
-
-    var btn = document.getElementById("nav-mobile-button");
-
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
 </html>
