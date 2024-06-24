@@ -1,81 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Bob's Blog</title>
-        <meta content="width=device-width, initial-scale e=1" name="viewport">
-        <!-- Favicon -->
-        <link href="assets/images/bobTransparent.svg" rel="icon" type="image/x-icon">
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com" rel="preconnect">
-        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-        <link href="https://fonts.googleapis.com/css2?family=Belanosima&amp;display=swap" rel="stylesheet">
-        <!-- CSS -->
-        <link href="/style.css" rel="stylesheet" type="text/css">
-        <link href="/otherStyles.css" rel="stylesheet" type="text/css">
-        <link href="/blogBrowser.css" rel="stylesheet" type="text/css">
-        <!-- JS -->
-        <script src="assets/scripts/mobileNavigation.js" defer></script>
-        <!--  Essential META Tags -->
-        <meta content="Bob's Blog." name="description">
-        <!--  Embed META Tags -->
-        <meta content="Bob's Blog." property="og:title">
-        <meta content="article" property="og:type">
-        <meta content="https://bobthebot.net/assets/images/bob.png" property="og:image">
-        <meta content="https://bobthebot.net/blog" property="og:url">
-        <meta content="A collection of announcements and articles detailing the features and development of Bob." property="og:description">
-        <meta content="#8C52FF" data-react-helmet="true" name="theme-color">
-    </head>
-    <body style="margin: 0px; height: 100%;">
-        <!-- Header Section -->
-        <div class="other-header">
-            <!-- Navigation -->
-            <div class="container" style="z-index: 100 !important;">
-                <div class="topnav">
-                    <a class="home" href="https://bobthebot.net">Bob</a>
-                    <a class="mobile-button" id="nav-mobile-button">
-                        <img alt="open menu" src="/assets/images/hamburger-menu-icon.svg" style="max-height: 18px;">
-                    </a>
-                    <a class="invite" href="https://invite.bobthebot.net">
-                        ❤️ Invite
+
+<head>
+    <title>Bob's Blog</title>
+    <meta content="width=device-width, initial-scale e=1" name="viewport">
+    <!-- Favicon -->
+    <link href="assets/images/bobTransparent.svg" rel="icon" type="image/x-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&amp;display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <link href="/otherStyles.css" rel="stylesheet" type="text/css">
+    <link href="/blogBrowser.css" rel="stylesheet" type="text/css">
+    <!-- JS -->
+    <script src="assets/scripts/mobileNavigation.js" defer></script>
+    <!--  Essential META Tags -->
+    <meta content="Bob's Blog." name="description">
+    <!--  Embed META Tags -->
+    <meta content="Bob's Blog." property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="https://bobthebot.net/assets/images/bob.png" property="og:image">
+    <meta content="https://bobthebot.net/blog" property="og:url">
+    <meta content="A collection of announcements and articles detailing the features and development of Bob."
+        property="og:description">
+    <meta content="#8C52FF" data-react-helmet="true" name="theme-color">
+</head>
+
+<body style="margin: 0px; height: 100%;">
+    <!-- Header Section -->
+    <div class="other-header">
+        <!-- Navigation -->
+        <div class="container" style="z-index: 100 !important;">
+            <div class="topnav">
+                <a class="home" href="https://bobthebot.net">Bob</a>
+                <a class="mobile-button" id="nav-mobile-button">
+                    <img alt="open menu" src="/assets/images/hamburger-menu-icon.svg" style="max-height: 18px;">
+                </a>
+                <a class="invite" href="https://invite.bobthebot.net">
+                    ❤️ Invite
                     Bob
-                    </a>
-                    <a href="https://bobthebot.net#premium">✨ Premium</a>
-                    <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
-                </div>
-            </div>
-            <!-- Navigation Mobile Options -->
-            <div class="nav-modal" id="nav-modal" style="z-index: 101 !important;">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">×</span>
-                    <br>
-                    <a class="invite" href="https://invite.bobthebot.net">
-                        ❤️ Invite
-                    Bob
-                    </a>
-                    <a href="https://bobthebot.net#premium">✨ Premium</a>
-                    <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
-                </div>
-            </div>
-            <div class="section">
-                <div class="main">
-                    <h1>Bob's Blog.</h1>
-                </div>
+                </a>
+                <a href="https://bobthebot.net#premium">✨ Premium</a>
+                <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
             </div>
         </div>
-        <div class="stats"></div>
-        <!-- body -->
-        <div class="body">
-            <div class="blog-stream">
-                <div class="blog-card" onclick="window.location.href='./blogs/announcing-new-auto-moderation-features.html'">
-                    <h2>🎉 Announcing New Auto-Moderation Features!</h2>
-                    <p>New auto-moderation features for your Discord server! Effortlessly manage and filter unwanted content with commands to block phone numbers, links, zalgo-text, bad words, and invite links. Enhance your community's safety and enjoy a better server experience!</p>
-                    <p class="publication-date">
-                        <span>2024-06-15</span>
-                    </p>
-                </div>
+        <!-- Navigation Mobile Options -->
+        <div class="nav-modal" id="nav-modal" style="z-index: 101 !important;">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">×</span>
+                <br>
+                <a class="invite" href="https://invite.bobthebot.net">
+                    ❤️ Invite
+                    Bob
+                </a>
+                <a href="https://bobthebot.net#premium">✨ Premium</a>
+                <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
             </div>
         </div>
+        <div class="section">
+            <div class="main">
+                <h1>Bob's Blog.</h1>
+            </div>
+        </div>
+    </div>
+    <div class="stats"></div>
+    <!-- body -->
+    <div class="body">
+        <div class="search-bar">
+            <input class="search" type="text" id="searchInput" placeholder="Search Blogs...">
+        </div>
+        <div class="blog-stream">
+            <div class="blog-card"
+                onclick="window.location.href='./blogs/announcing-new-auto-moderation-features.html'">
+                <h2>🎉 Announcing New Auto-Moderation Features!</h2>
+                <p>New auto-moderation features for your Discord server! Effortlessly manage and filter unwanted content
+                    with commands to block phone numbers, links, zalgo-text, bad words, and invite links. Enhance your
+                    community's safety and enjoy a better server experience!</p>
+                <p class="publication-date">
+                    <span>2024-06-15</span>
+                </p>
+            </div>
+        </div>
+    </div>
     </div>
     <!-- footer -->
     <footer>
@@ -176,4 +185,24 @@
         </div>
     </footer>
 </body>
+<!-- Searching Blog -->
+<script>
+    function searchCards() {
+        var query = document.getElementById('searchInput').value.toLowerCase();
+        var cards = document.getElementsByClassName('blog-card');
+
+        for (var i = 0; i < cards.length; i++) {
+            var title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+            var content = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+            if (title.includes(query) || content.includes(query)) {
+                cards[i].style.display = '';
+            } else {
+                cards[i].style.display = 'none';
+            }
+        }
+    }
+
+    document.getElementById('searchInput').addEventListener('input', searchCards);
+</script>
 </html>

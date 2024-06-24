@@ -1,3 +1,24 @@
+input[type=text]:focus {outline:none;}
+
+.search-bar {
+    margin: 0px 30px;
+    margin-top: 20px;
+}
+
+.search {
+    width: 100%;
+    color: #f2f2f2;
+    font-family: 'Belanosima', sans-serif;
+    box-sizing: border-box;
+    border: 2px solid #36393e;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #181b1d;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 10px;
+}
+
 .blog-stream {
     margin: auto;
     padding: 0px 30px;
