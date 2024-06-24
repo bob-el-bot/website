@@ -87,3 +87,18 @@ input[type=text]:focus {outline:none;}
     border-radius: 5px;
     padding: 2px;
 }
+
+@media (max-width: 580px) {
+    .search-bar {
+        margin: 0px 0px;
+    }
+
+    .blog-stream {
+        padding: 0px 0px;
+    }
+
+    .body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
