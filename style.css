@@ -555,6 +555,7 @@ footer .main-content {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    margin: 0px;
 }
 
 footer div {
@@ -582,6 +583,11 @@ footer .quantam:hover {
 
 footer .column {
     text-align: left;
+    text-wrap: nowrap;
+}
+
+footer .column:nth-child(1) {
+    text-wrap: wrap;
 }
 
 .hidden {
@@ -736,7 +742,7 @@ footer .column {
     }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 980px) {
     footer .main-content {
         justify-content: flex-start;
         flex-direction: column;
