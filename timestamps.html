@@ -13,6 +13,8 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="stylesheet" type="text/css" href="/timestamps.css">
+    <!-- JS -->
+    <script src="assets/scripts/mobileNavigation.js" defer></script>
     <!--  Essential META Tags -->
     <meta name="description" content="A Discord timestamp generator.">
     <meta name="keywords" content="Discord timestamp, timestamp generator, timestamp maker, discord timestamp tool">
@@ -123,7 +125,7 @@
                 </div>
                 <div class="column">
                     <p>
-                        <b>Help</b>
+                        <b>Resources</b>
                         <br>
                         Use
                         <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
@@ -136,6 +138,8 @@
                         <a href="https://discord.gg/HvGMRZD8jQ">Support Server</a>
                         <br>
                         <a href="/commands.html">Commands</a>
+                        <br>
+                        <a href="/blog.html">Blog</a>
                     </p>
                 </div>
                 <div class="column">
@@ -180,28 +184,6 @@
         </div>
     </footer>
 </body>
-<!-- Mobile Navigation Options Modal -->
-<script>
-    var modal = document.getElementById("nav-modal");
-
-    var btn = document.getElementById("nav-mobile-button");
-
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
 <!-- Datetime picker / timestamp formatting -->
 <script>
     // Set default value to current local time

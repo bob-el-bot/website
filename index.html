@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <!-- JS -->
+    <script src="assets/scripts/mobileNavigation.js" defer></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--  Essential META Tags -->
@@ -703,7 +705,7 @@
                 </div>
                 <div class="column">
                     <p>
-                        <b>Help</b>
+                        <b>Resources</b>
                         <br>
                         Use
                         <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
@@ -716,6 +718,8 @@
                         <a href="https://discord.gg/HvGMRZD8jQ">Support Server</a>
                         <br>
                         <a href="/commands.html">Commands</a>
+                        <br>
+                        <a href="/blog.html">Blog</a>
                     </p>
                 </div>
                 <div class="column">
@@ -760,28 +764,6 @@
         </div>
     </footer>
 </body>
-<!-- Mobile Navigation Options Modal -->
-<script>
-    var modal = document.getElementById("nav-modal");
-
-    var btn = document.getElementById("nav-mobile-button");
-
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
 <!-- Take away slide in effect on mobile for performance. -->
 <script>
     const observer = new IntersectionObserver((entries) => {
