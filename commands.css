@@ -10,6 +10,18 @@
     scrollbar-width: none;  /* Firefox */
 }
 
+.body .commands {
+    margin: 0 40px;
+}
+
+.body .commands h2 {
+    font-size: 30px;
+}
+
+.body .commands p {
+    font-size: 24px;
+}
+
 input[type=text]:focus {outline:none;}
 
 .search {
@@ -207,6 +219,26 @@ input[type=text]:focus {outline:none;}
     font-weight: normal;
 }
 
+@media (max-width: 1200px) {
+    .body .commands h2 {
+        font-size: 25px;
+    }
+
+    .body .commands p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 840px) {
+    .body .commands h2 {
+        font-size: 22px;
+    }
+
+    .body .commands p {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 580px) {
     .command-info .stream-holder .stream .command-info-card .name p {
         font-size: 15px;
@@ -246,6 +278,10 @@ input[type=text]:focus {outline:none;}
 
     .command-info .stream .premium h3 {
         text-align: center;
+    }
+
+    .body .commands {
+        margin: 0;
     }
 }
 
