@@ -11,12 +11,12 @@ article {
     font-size: 18px;
 }
 
-article a {
+article section a {
     color: #8C52FF;
     text-decoration: none;
 }
 
-article a:hover {
+article section a:hover {
     color: #CB6CE6;
 }
 
