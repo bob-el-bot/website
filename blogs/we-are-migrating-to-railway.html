@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>🚄 We are Migrating to Railway!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/images/bobTransparent.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/commonStyles.css">
+    <link rel="stylesheet" href="../../blogPage.css">
+    <!-- JS -->
+    <script src="../assets/scripts/sharingPage.js" defer></script>
+    <script src="../assets/scripts/mobileNavigation.js" defer></script>
+    <!--  Essential META Tags -->
+    <meta name="description"
+        content="We are migrating Bob to Railway for better scalability, ease of deployment, and minimal downtime.">
+    <!--  Embed META Tags -->
+    <meta property="og:title" content="🚄 We are Migrating to Railway!">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://bobthebot.net/assets/images/bob.png">
+    <meta property="og:url" content="https://bobthebot.net/blogs/we-are-migrating-to-railway.html">
+    <meta property="og:description"
+        content="We are migrating Bob to Railway for better scalability, ease of deployment, and minimal downtime.">
+    <meta data-react-helmet="true" name="theme-color" content="#8C52FF">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div style="z-index: 100 !important;" class="container">
+        <div class="topnav">
+            <a class="home" href="https://bobthebot.net">Bob</a>
+            <a class="mobile-button" id="nav-mobile-button">
+                <img alt="open menu" style="max-height: 18px;" src="/assets/images/hamburger-menu-icon.svg">
+            </a>
+            <a class="invite" href="https://invite.bobthebot.net">
+                ❤️ Invite Bob
+            </a>
+            <a href="https://bobthebot.net#premium">✨ Premium</a>
+            <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
+        </div>
+    </div>
+    <!-- Navigation Mobile Options -->
+    <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <br>
+            <a class="invite" href="https://invite.bobthebot.net">
+                ❤️ Invite Bob
+            </a>
+            <a href="https://bobthebot.net#premium">✨ Premium</a>
+            <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
+        </div>
+    </div>
+    <article>
+        <header>
+            <h1>🚄 We are Migrating to Railway!</h1>
+            <p>Date of Publication: July 7, 2024</p>
+            <div class="social-share-buttons">
+                <a class="share-button facebook" onclick="shareOnFacebook()">Share on Facebook</a>
+                <a class="share-button x" onclick="shareOnX()">Share on X</a>
+                <a class="share-button copy" onclick="copyLink()">Copy Link</a>
+            </div>
+        </header>
+        <section>
+            <p>Hello, everyone!</p>
+            <p>We're excited to announce that we are migrating Bob away from the Raspberry Pi and onto <a
+                    href="https://railway.app">Railway</a> for hosting. After much consideration we believe this move
+                will bring numerous benefits to both Bob's uptime and the overall user experience. Let’s dive into the
+                reasons behind this decision and the advantages you can expect.</p>
+            <h2>📊 Why the Move?</h2>
+            <h3>1. Scalability</h3>
+            <p>One of the significant advantages of Railway is its ability to scale. As Bob continues to gain more
+                users, it's crucial to have a hosting solution that can grow with the demand. Railway provides the
+                flexibility to scale resources up or down based on real-time needs, ensuring that Bob remains responsive
+                and reliable as our community grows.</p>
+            <h3>2. Ease of Deployment</h3>
+            <p>Railway simplifies the deployment process via its integration with GitHub. This means we can implement
+                updates and new features for Bob more quickly and efficiently. Automatic deployments ensure that Bob is
+                always running the latest version with minimal downtime.</p>
+            <h2>✨ What Does This Mean for You?</h2>
+            <h3>More Features</h3>
+            <p>With the ease of deployment and better resource management, we’ll be able to roll out new features and
+                updates more frequently. Expect new commands and improvements coming your way!</p>
+            <h3>Minimal Downtime</h3>
+            <p>Thanks to Railway’s infrastructure, we anticipate minimal downtime for Bob! Yes, even when new updates
+                are added! This also means you won't have to worry about internet or power outages affecting Bob's
+                status.</p>
+            <h2>👋 Farewell to the Raspberry Pi</h2>
+            <p>The Raspberry Pi 4 served us well and certainly made Bob feel cozy! In fact, Bob called the Raspberry Pi
+                home not only for the last year but also for two previous versions, which weren't even written in C# but
+                in JavaScript—a long time ago indeed! We, along with Bob, cherish the experiences and milestones we
+                achieved while using it. However, as Bob's community has grown, we've realized the need for a more
+                scalable and robust solution. Railway offers the uptime and continuous integration features we greatly
+                missed with the Raspberry Pi 4. And so, with that, we say fondly, "goodbye Raspberry Pi!"
+            </p>
+        </section>
+        <div class="footnote">
+            <p>We’re thrilled about this transition and the positive impact it will have on Bob and the community.
+                Moving to Railway marks a significant step forward in Bob's quality and usability.</p>
+            <p>Thank you for your continued support. Stay tuned for more updates, and as always, feel free to reach out
+                with any questions or feedback.</p>
+        </div>
+        <div class="author-info">
+            <img src="/assets/images/authors/vorlon.webp" alt="Zach Goodson">
+            <div>
+                <p>
+                    Written by
+                    <strong>Zach Goodson</strong>
+                </p>
+                <a style="text-decoration: none;" href="https://discordapp.com/users/444592456369963009">
+                    <img alt="Zach's Discord" src="/assets/images/discordapp-tile.svg">
+                </a>
+                <a style="text-decoration: none;" href="https://github.com/Quantam-Studios">
+                    <img alt="Zach's Github" src="/assets/images/github-tile.svg">
+                </a>
+            </div>
+        </div>
+    </article>
+    <!-- footer -->
+    <footer>
+        <div>
+            <div class="main-content">
+                <div class="column" style="margin-left: 0; margin-right: auto;">
+                    <h2>Bob.</h2>
+                    The bot for RNG, quoting, fonts, encryption, games, and more!
+                    <br>
+                    <a style="text-decoration: none;" href="https://discord.gg/HvGMRZD8jQ">
+                        <img alt="Join Discord Server" src="/assets/images/discordapp-tile.svg">
+                    </a>
+                    <a style="text-decoration: none;" href="https://github.com/bob-el-bot/BobTheBot">
+                        <img alt="View Github" src="/assets/images/github-tile.svg">
+                    </a>
+                    <a style="text-decoration: none;" href="https://www.instagram.com/bobtheb0t/">
+                        <img alt="View Instagram" src="/assets/images/instagram-tile.svg">
+                    </a>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Tools</b>
+                        <br>
+                        <a href="/timestamps.html">Timestamps</a>
+                        <br>
+                        <a href="/colors.html">Discord Colors</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Support Bob</b>
+                        <br>
+                        <a href="/#premium">Premium</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Resources</b>
+                        <br>
+                        Use
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                    text-underline-position: under;
+                                    text-decoration-color: #8C52FF;
+                                    text-decoration-style: solid;
+                                    text-decoration-thickness: 2px;">/help</span>
+                        on Discord
+                        <br>
+                        <a href="https://discord.gg/HvGMRZD8jQ">Support Server</a>
+                        <br>
+                        <a href="/commands.html">Commands</a>
+                        <br>
+                        <a href="/blog.html">Blog</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Contact</b>
+                        <br>
+                        <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
+                        <br>
+                        DM
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                            text-underline-position: under;
+                            text-decoration-color: #8C52FF;
+                            text-decoration-style: solid;
+                            text-decoration-thickness: 2px;">vorlon.</span>
+                        on Discord
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Policies</b>
+                        <br>
+                        <a href="/privacy.html">Privacy Policy</a>
+                        <br>
+                        <a href="/tos.html">Terms of Service</a>
+                        <br>
+                        <a href="/community.html">Community</a>
+                    </p>
+                </div>
+            </div>
+            <hr color="#5b6069">
+            <div>
+                <p style="margin-bottom: 0;">
+                    <span style="color: #999999;">Made by ⚡</span>
+                    <a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
+                    ⚡
+                </p>
+                <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
+                    © Zach Goodson 2024, All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+    "title": "🎉 We are Migrating to Railway!",
+    "html_name": "we-are-migrating-to-railway",
+    "tags": [
+        "Deployment",
+        "Engineering"
+    ],
+    "description": "We are migrating Bob to Railway for better scalability, ease of deployment, and minimal downtime.",
+    "author": {
+        "name": "Zach Goodson",
+        "discord_username": "vorlon.",
+        "role": "Creator",
+        "discord_url": "https://discordapp.com/users/444592456369963009", 
+        "github_url": "https://github.com/Quantam-Studios",
+        "profile_url": "https://cdn.discordapp.com/avatars/444592456369963009/5cbe9a0ff4dabcc361a5691ea6fb1228.webp?size=128"
+    },
+    "date_of_publication": "2024-07-08T16:24:54+00:00"
+}

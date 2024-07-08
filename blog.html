@@ -73,14 +73,20 @@
             <input class="search" type="text" id="searchInput" placeholder="Search Blogs...">
         </div>
         <div class="blog-stream">
-            <div class="blog-card"
-                onclick="window.location.href='/blogs/announcing-new-auto-moderation-features.html'">
+            <div class="blog-card" onclick="window.location.href='/blogs/announcing-new-auto-moderation-features.html'">
                 <h2>🎉 Announcing New Auto-Moderation Features!</h2>
                 <p>New auto-moderation features for your Discord server! Effortlessly manage and filter unwanted content
                     with commands to block phone numbers, links, zalgo-text, bad words, and invite links. Enhance your
                     community's safety and enjoy a better server experience!</p>
                 <p class="publication-date">
                     <span>2024-06-15</span>
+                </p>
+            </div>
+            <div class="blog-card" onclick="window.location.href='/blogs/we-are-migrating-to-railway.html'">
+                <h2>🚄 We are Migrating to Railway!</h2>
+                <p>We are migrating Bob to Railway for better scalability, ease of deployment, and minimal downtime.</p>
+                <p class="publication-date">
+                    <span>2024-07-08</span>
                 </p>
             </div>
         </div>
@@ -205,4 +211,5 @@
 
     document.getElementById('searchInput').addEventListener('input', searchCards);
 </script>
+
 </html>
