@@ -96,9 +96,4 @@ input[type=text]:focus {outline:none;}
     .blog-stream {
         padding: 0px 0px;
     }
-
-    .body {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
 }
