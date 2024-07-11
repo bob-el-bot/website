@@ -68,7 +68,6 @@ input[type=text]:focus {outline:none;}
 }
 
 .command-info .stream-holder .stream .command-info-card h3 span {
-    font-weight: bold;
     background-color: #121416;
     border-radius: 5px;
     padding: 2px;
@@ -78,6 +77,10 @@ input[type=text]:focus {outline:none;}
     text-decoration-style: solid;
     text-align: left;
     text-decoration-thickness: 2px
+}
+
+h3 {
+    font-weight: 500;
 }
 
 .command-info .stream-holder .stream .command-info-card {
@@ -110,7 +113,6 @@ input[type=text]:focus {outline:none;}
     white-space: nowrap;
     font-size: 20px;
     text-align: left;
-    font-weight: bold;
 }
 
 .command-info .stream-holder .stream .command-info-card .name .parameters .parameter p {
@@ -157,7 +159,6 @@ input[type=text]:focus {outline:none;}
 }
 
 .command-info .stream .premium .command-info-card h3 span {
-    font-weight: bold;
     background-color: #121416;
     border-radius: 5px;
     padding: 2px;
@@ -199,7 +200,6 @@ input[type=text]:focus {outline:none;}
     white-space: nowrap;
     font-size: 20px;
     text-align: left;
-    font-weight: bold;
 }
 
 .command-info .stream .premium .command-info-card .name .parameters .parameter p {
