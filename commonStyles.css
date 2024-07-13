@@ -167,6 +167,31 @@ body {
     background-color: #36393e;
 }
 
+#status-indicator {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+}
+
+#status-link {
+    color: #000;
+    text-decoration: none;
+}
+
+#status-text {
+    font-weight: bold;
+}
+
+#status-indicator.online {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#status-indicator.offline {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
 footer {
     flex-shrink: 0;
     text-align: center;
