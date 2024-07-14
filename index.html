@@ -683,10 +683,11 @@
                         <img alt="View Instagram" src="/assets/images/instagram-tile.svg">
                     </a>
                     <br>
-                    <div id="status-indicator">
-                        <a id="status-link" href="https://status.bobthebot.net" target="_blank">
-                            <span id="status-text">Status: Loading...</span>
-                        </a>
+                    <div class="status-indicator" id="status-indicator">
+                        <button class="status-link" id="status-link"
+                            onclick="window.open('https://status.bobthebot.net', '_blank')">
+                            <span class="status-text" id="status-text">Loading...</span>
+                        </button>
                     </div>
                 </div>
                 <div class="column">
@@ -809,30 +810,41 @@
         });
 </script>
 <script>
- document.addEventListener('DOMContentLoaded', function () {
-  const statusText = document.getElementById('status-text');
-  const statusIndicator = document.getElementById('status-indicator');
+    document.addEventListener('DOMContentLoaded', function () {
+        const statusText = document.getElementById('status-text');
+        const statusIndicator = document.getElementById('status-indicator');
 
-  fetch('https://uptime.betterstack.com/api/v2/monitors/2426553', {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer Pzbgg4CBEcHZFU5oYY5hdLvH'
-    }
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'operational') {
-        statusText.textContent = 'Status: Online';
-        statusIndicator.classList.add('online');
-      } else {
-        statusText.textContent = `Status: ${data.status}`;
-        statusIndicator.classList.add('offline');
-      }
-    })
-    .catch(error => {
-      statusText.textContent = 'Status: Error fetching status';
-      statusIndicator.classList.add('error');
+        fetch('/api/fetchStatus')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Fetched data:', data); // Debugging line
+                const status = data.data.attributes.status;
+                var label = "";
+                switch (status) {
+                    case "up":
+                        label = "⬤ Online.";
+                        break;
+                    case "down":
+                        label = "⬤ Offline.";
+                        break;
+                    case "paused":
+                    case "error":
+                    case "validating":
+                    case "pending":
+                        label = "⬤ Unknown.";
+                        break;
+                    case "maintenance":
+                        label = "⬤ Maintenance.";
+                        break;
+                }
+                statusText.textContent = label;
+                statusIndicator.classList.add(status);
+            })
+            .catch(error => {
+                console.error('Error fetching status:', error);
+                statusText.textContent = '⬤ Error';
+                statusIndicator.classList.add('error');
+            });
     });
-});
 </script>
 </html>
