@@ -1,8 +1,7 @@
-const fetch = require('node-fetch');
-
 module.exports = async (req, res) => {
-    const monitorId = '2426553';
+    const monitorId = '2426553'; // Replace with your actual monitor ID
     const apiKey = process.env.BETTERSTACK_TOKEN;
+
     if (!apiKey) {
         console.error('API key is missing');
         return res.status(500).json({ error: 'API key is missing' });
@@ -18,14 +17,17 @@ module.exports = async (req, res) => {
             }
         });
 
-        if (!response.ok) {
-            const errorText = await response.text();
-            console.error('Error fetching from BetterStack API:', errorText);
-            return res.status(response.status).json({ error: 'Network response was not ok' });
-        }
+        const contentType = response.headers.get('content-type');
+        console.log('Response content-type:', contentType);
 
-        const data = await response.json();
-        return res.status(200).json(data);
+        if (contentType && contentType.includes('application/json')) {
+            const data = await response.json();
+            return res.status(200).json(data);
+        } else {
+            const text = await response.text();
+            console.error('Unexpected response format:', text);
+            return res.status(response.status).json({ error: 'Unexpected response format', detail: text });
+        }
     } catch (error) {
         console.error('Error in fetchStatus function:', error);
         return res.status(500).json({ error: 'Failed to fetch status' });
