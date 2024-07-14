@@ -527,6 +527,58 @@ body {
     font-size: 24px;
 }
 
+/* Status indicator styles */
+.status-indicator {
+    margin: 0px;
+}
+
+.status-indicator button {
+    background-color: #121416;
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    color: #f2f2f2;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.status-indicator button:hover {
+    background-color: #36393e;
+}
+
+.status-indicator.paused .status-text {
+    color: #007bff;
+}
+
+.status-indicator.pending .status-text {
+    color: #007bff;
+}
+
+.status-indicator.maintenance .status-text {
+    color: #d7a614;
+}
+
+.status-indicator.up .status-text {
+    color: #28a745;
+}
+
+.status-indicator.validating .status-text {
+    color: #007bff;
+}
+
+.status-indicator.down .status-text {
+    color: #dc3545;
+}
+
+.status-indicator.error .status-text {
+    color: #d7a614;
+}
+
 footer {
     flex-shrink: 0;
     text-align: center;
@@ -658,13 +710,15 @@ footer .column:nth-child(1) {
     margin-bottom: 15px;
 }
 
-.body .premium-section th, .body .premium-section td {
+.body .premium-section th,
+.body .premium-section td {
     text-align: center;
     font-size: 24px;
     padding: 16px;
 }
 
-.body .premium-section th:first-child, .body .premium-section td:first-child {
+.body .premium-section th:first-child,
+.body .premium-section td:first-child {
     text-align: left;
 }
 
@@ -732,7 +786,8 @@ footer .column:nth-child(1) {
         margin: 0 0px;
     }
 
-    .body .premium-section th, .body .premium-section td {
+    .body .premium-section th,
+    .body .premium-section td {
         font-size: 16px;
     }
 }
@@ -743,7 +798,7 @@ footer .column:nth-child(1) {
     }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1030px) {
     footer .main-content {
         justify-content: flex-start;
         flex-direction: column;
@@ -916,7 +971,8 @@ footer .column:nth-child(1) {
         align-content: flex-end;
     }
 
-    .body .premium-section th, .body .premium-section td {
+    .body .premium-section th,
+    .body .premium-section td {
         padding: 8px 8px;
     }
 }
