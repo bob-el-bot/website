@@ -833,21 +833,19 @@
                 var label = "";
                 switch (status) {
                     case "up":
-                        label = "Online.";
+                        label = "⬤ Online";
                         break;
                     case "down":
-                        label = "Offline.";
+                        label = "⬤ Offline";
                         break;
                     case "paused":
-                        label = "Paused.";
-                        break;
                     case "error":
                     case "validating":
                     case "pending":
-                        label = "Unknown.";
+                        label = "⬤ Unknown";
                         break;
                     case "maintenance":
-                        label = "Maintenance.";
+                        label = "⬤ Maintenance";
                         break;
                 }
                 statusText.textContent = label;
@@ -855,7 +853,7 @@
             })
             .catch(error => {
                 console.error('Error fetching status:', error);
-                statusText.textContent = 'Status: Error fetching status';
+                statusText.textContent = '⬤ Error';
                 statusIndicator.classList.add('error');
             });
     });

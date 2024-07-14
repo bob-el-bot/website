@@ -560,7 +560,7 @@ body {
 }
 
 .status-indicator.maintenance .status-text {
-    color: #ffc107;
+    color: #d7a614;
 }
 
 .status-indicator.up .status-text {
@@ -576,7 +576,7 @@ body {
 }
 
 .status-indicator.error .status-text {
-    color: #856404;
+    color: #d7a614;
 }
 
 footer {
