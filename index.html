@@ -817,7 +817,7 @@
 
         // Function to fetch status
         const fetchStatus = () => {
-            const apiKey = process.env.NEXT_PUBLIC_BETTERSTACK_API_KEY;
+            const apiKey = process.env.BETTERSTACK_TOKEN;
 
             if (!apiKey) {
                 console.error('API key is missing');
