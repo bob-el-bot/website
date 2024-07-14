@@ -813,19 +813,31 @@
     document.addEventListener('DOMContentLoaded', function () {
         const statusText = document.getElementById('status-text');
         const statusIndicator = document.getElementById('status-indicator');
+        const monitorId = '2426553';
 
-        fetch('/api/fetchStatus')
-            .then(response => response.json())
+        // Function to fetch status
+        const fetchStatus = () => {
+            const apiKey = process.env.BETTERSTACK_TOKEN;
+
+            const url = `https://uptime.betterstack.com/api/v2/monitors/${monitorId}`;
+
+            fetch(url, {
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then(data => {
                 console.log('Fetched data:', data); // Debugging line
-                if (data.error) {
-                    console.error('Error detail:', data.detail);
-                    statusText.textContent = 'Error fetching status';
-                    statusIndicator.classList.add('error');
-                    return;
-                }
+
                 const status = data.data.attributes.status;
                 var label = "";
+
                 switch (status) {
                     case "up":
                         label = "Online.";
@@ -845,6 +857,7 @@
                         label = "Maintenance.";
                         break;
                 }
+
                 statusText.textContent = label;
                 statusIndicator.classList.add(status);
             })
@@ -853,6 +866,10 @@
                 statusText.textContent = 'Status: Error fetching status';
                 statusIndicator.classList.add('error');
             });
+        };
+
+        // Call fetchStatus on page load
+        fetchStatus();
     });
 </script>
 </html>
