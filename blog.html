@@ -16,6 +16,7 @@
     <link href="/blogBrowser.css" rel="stylesheet" type="text/css">
     <!-- JS -->
     <script src="/assets/scripts/mobileNavigation.js" defer></script>
+    <script src="/assets/scripts/status.js" defer></script>
     <!--  Essential META Tags -->
     <meta content="Bob's Blog." name="description">
     <!--  Embed META Tags -->
@@ -109,6 +110,13 @@
                     <a href="https://www.instagram.com/bobtheb0t/" style="text-decoration: none;">
                         <img alt="View Instagram" src="/assets/images/instagram-tile.svg">
                     </a>
+                    <br>
+                    <div class="status-indicator" id="status-indicator">
+                        <button class="status-link" id="status-link"
+                            onclick="window.open('https://status.bobthebot.net', '_blank')">
+                            <span class="status-text" id="status-text">Loading...</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="column">
                     <p>
