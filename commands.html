@@ -686,7 +686,8 @@
                         </div>
                         <div class="command-info-card" id="encrypt-binary">
                             <div class="name">
-                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#encrypt-binary')">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#encrypt-binary')">
                                     🔒
                                     <span>/encrypt binary</span>
                                 </h3>
@@ -803,12 +804,14 @@
                         </div>
                         <div class="command-info-card" id="decrypt-binary">
                             <div class="name">
-                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#decrypt-binary')">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#decrypt-binary')">
                                     🔓
                                     <span>/decrypt binary</span>
                                 </h3>
                                 <p>
-                                    Decrypts your message byswapping binary representations to their corresponding characters.
+                                    Decrypts your message byswapping binary representations to their corresponding
+                                    characters.
                                 </p>
                                 <div class="parameters">
                                     <div class="parameter">
@@ -970,6 +973,125 @@
                                 <p>
                                     Get a link to review Bob on Top.GG.
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stream">
+                        <p id="schedule" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#schedule')">
+                            🕖
+                            Schedule Commands</p>
+                        <div class="command-info-card" id="schedule-message">
+                            <div class="name">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#schedule-message')">
+                                    💬
+                                    <span>/schedule message</span>
+                                </h3>
+                                <p>
+                                    Bob will send your message at a specified time.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>message</p>
+                                        <p>The message you want to send. Markdown still works!</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>channel</p>
+                                        <p>The channel for the message to be sent in.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>month</p>
+                                        <p>The month you want your message sent.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>day</p>
+                                        <p>The day you want your message sent.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>hour</p>
+                                        <p>The hour you want your message sent, in military time (add 12 if the time is
+                                            PM).</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>minute</p>
+                                        <p>The minute you want your message sent.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>timezone</p>
+                                        <p>Your timezone (choice).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="premium">
+                            <div class="command-info-card" id="schedule-announcement">
+                                <div class="name">
+                                    <h3
+                                        onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#schedule-announcement')">
+                                        📢
+                                        <span>/schedule announcement</span>
+                                        <premium-tag>Premium</premium-tag>
+                                    </h3>
+                                    <p>
+                                        Bob will send an embed at a specified time.
+                                    </p>
+                                    <div class="parameters">
+                                        <div class="parameter">
+                                            <p>title</p>
+                                            <p>The title of the announcement (the title of the embed).</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>description</p>
+                                            <p>The anouncement (the description of the embed).</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>color</p>
+                                            <p>A color name (purple), or valid hex code (#8D52FD).</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>channel</p>
+                                            <p>The channel for the message to be sent in.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>month</p>
+                                            <p>The month you want your message sent.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>day</p>
+                                            <p>The day you want your message sent.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>hour</p>
+                                            <p>The hour you want your message sent, in military time (add 12 if the time
+                                                is PM).</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>minute</p>
+                                            <p>The minute you want your message sent.</p>
+                                        </div>
+                                        <div class="parameter">
+                                            <p>timezone</p>
+                                            <p>Your timezone (choice).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="schedule-edit">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#schedule-edit')">
+                                    ✍️
+                                    <span>/schedule edit</span>
+                                </h3>
+                                <p>
+                                    Bob will allow you to edit any messages or announcements you have scheduled.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>id</p>
+                                        <p>The ID of the scheduled message or announcement.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
