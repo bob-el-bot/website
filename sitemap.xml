@@ -32,6 +32,12 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://bobthebot.net/premium.html</loc>
+        <lastmod>2024-09-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://bobthebot.net/privacy.html</loc>
         <lastmod>2024-06-23</lastmod>
         <changefreq>weekly</changefreq>
@@ -55,7 +61,7 @@
         <changefreq>weekly</changefreq>
         <priority>0.3</priority>
     </url>
-        <url>
+    <url>
         <loc>https://bobthebot.net/blogs/we-are-migrating-to-railway</loc>
         <lastmod>2024-07-8</lastmod>
         <changefreq>weekly</changefreq>
