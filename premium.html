@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Premium</title>
+    <meta name="viewport" content="width=device-width, initial-scale e=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/bobTransparent.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/commonStyles.css">
+    <link rel="stylesheet" type="text/css" href="/premium.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JS -->
+    <script src="/assets/scripts/mobileNavigation.js" defer></script>
+    <script src="/assets/scripts/status.js" defer></script>
+    <!--  Essential META Tags -->
+    <meta name="description" content="Upgrade your experience with one of Bob's premium plans.">
+    <meta name="keywords"
+        content="Bob premium, Bob The Bot premium, bob the bot premium, bobthebot premium, BobTheBot premium, bob premium, bob price, bob premium price, bob bot premium">
+    <!-- Twitter META Tags -->
+    <meta name="twitter:title" content="Bob's Premium Plans.">
+    <meta name="twitter:description" content="Upgrade your experience with one of Bob's premium plans.">
+    <meta name="twitter:image" content="https://bobthebot.net/assets/images/bob.png">
+    <meta name="twitter:url" content="https://bobthebot.net/premium.html">
+    <!--  Embed META Tags -->
+    <meta property="og:title" content="Bob's Premium Plans.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://bobthebot.net/assets/images/bob.png">
+    <meta property="og:url" content="https://bobthebot.net/premium.html">
+    <meta property="og:description" content="Upgrade your experience with one of Bob's premium plans.">
+    <meta data-react-helmet="true" name="theme-color" content="#8C52FF">
+</head>
+
+<body style="margin: 0px; height: 100%;">
+    <!-- Navigation -->
+    <div style="z-index: 100 !important;" class="container">
+        <div class="topnav">
+            <a class="home" href="https://bobthebot.net">Bob</a>
+            <a class="mobile-button" id="nav-mobile-button">
+                <img alt="open menu" style="max-height: 18px;" src="/assets/images/hamburger-menu-icon.svg">
+            </a>
+            <a class="invite" href="https://invite.bobthebot.net">
+                ❤️ Invite
+                Bob
+            </a>
+            <a href="">✨ Premium</a>
+            <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
+        </div>
+    </div>
+    <!-- Navigation Mobile Options -->
+    <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <br>
+            <a class="invite" href="https://invite.bobthebot.net">
+                ❤️ Invite
+                Bob
+            </a>
+            <a href="">✨ Premium</a>
+            <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
+        </div>
+    </div>
+    <!-- body -->
+    <div class="body" style="padding: 10; padding-top: 100px;">
+        <div class="premium-container">
+            <!-- Monthly Premium Card -->
+            <div class="premium-card">
+                <h2>Monthly Premium</h2>
+                <p><strong>$2.99 / month</strong></p>
+                <p>Unlock all premium features on a monthly subscription.</p>
+                <button style="margin-right: 10px; animation: fadein 1s;" class="buttonMainInvite premiumButton"
+                    onclick="window.location.href='https://discord.com/application-directory/705680059809398804/store/1169107771673812992'">
+                    <b>
+                        Get Monthly!
+                    </b>
+                </button>
+            </div>
+            <!-- Lifetime Premium Card -->
+            <div class="premium-card" id="lifetime">
+                <h2>Lifetime Premium<span class="ribbon">BEST VALUE</span></h2>
+                <p><strong>$4.99</strong></p>
+                <p>Pay once and get access to premium features forever.</p>
+                <button style="margin-right: 10px; animation: fadein 1s;" class="buttonMainInvite premiumButton"
+                    onclick="window.location.href='https://discord.com/application-directory/705680059809398804/store/1282452500913328180'">
+                    <b>
+                        Get Lifetime!
+                    </b>
+                </button>
+            </div>
+        </div>
+        <div id="premium" class="section">
+            <div class="premium-section">
+                <h3>✨ Premium</h3>
+                <p>
+                    Unlock
+                    <i>all</i>
+                    of these features and support development with Premium!
+                </p>
+                <table>
+                    <tr>
+                        <th style="width:60%">Features</th>
+                        <th>Basic</th>
+                        <th>Premium</th>
+                    </tr>
+                    <tr>
+                        <td>Unlimited multiplayer challenges at a time</td>
+                        <td>
+                            <b>1</b>
+                        </td>
+                        <td>
+                            <b>ထ</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Schedule Messages</td>
+                        <td>
+                            <b>1</b>
+                        </td>
+                        <td>
+                            <b>ထ</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Schedule Announcements</td>
+                        <td>
+                            <i class="fa fa-remove"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Automatically publish in announcement channels</td>
+                        <td>
+                            <i class="fa fa-remove"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Automatically preview code, issues and pull requests from GitHub</td>
+                        <td>
+                            <i class="fa fa-remove"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Automatically preview Discord message links</td>
+                        <td>
+                            <i class="fa fa-remove"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Set minimum and maximum lengths for quotes</td>
+                        <td>
+                            <i class="fa fa-remove"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Create custom welcome messages</td>
+                        <td>
+                            <i class="fa fa-remove"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Add tags to quotes</td>
+                        <td>
+                            <i class="fa fa-remove"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Profile customization</td>
+                        <td>
+                            <i class="fa fa-remove"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check"></i>
+                        </td>
+                    </tr>
+                </table>
+                <button style="margin-right: 10px; animation: fadein 1s;" class="buttonMainInvite premiumButton"
+                    onclick="window.location.href='https://discord.com/application-directory/705680059809398804/premium'">
+                    <b>
+                        Get Premium!
+                    </b>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div>
+            <div class="main-content">
+                <div class="column" style="margin-left: 0; margin-right: auto;">
+                    <h2>Bob.</h2>
+                    The bot for RNG, quoting, fonts, encryption, games, and more!
+                    <br>
+                    <a style="text-decoration: none;" href="https://discord.gg/HvGMRZD8jQ">
+                        <img alt="Join Discord Server" src="/assets/images/discordapp-tile.svg">
+                    </a>
+                    <a style="text-decoration: none;" href="https://github.com/bob-el-bot/BobTheBot">
+                        <img alt="View Github" src="/assets/images/github-tile.svg">
+                    </a>
+                    <a style="text-decoration: none;" href="https://www.instagram.com/bobtheb0t/">
+                        <img alt="View Instagram" src="/assets/images/instagram-tile.svg">
+                    </a>
+                    <br>
+                    <div class="status-indicator" id="status-indicator">
+                        <button class="status-link" id="status-link"
+                            onclick="window.open('https://status.bobthebot.net', '_blank')">
+                            <span class="status-text" id="status-text">Loading...</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Tools</b>
+                        <br>
+                        <a href="/timestamps.html">Timestamps</a>
+                        <br>
+                        <a href="/colors.html">Discord Colors</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Support Bob</b>
+                        <br>
+                        <a href="/#premium">Premium</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
+                        <br>
+                        <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Resources</b>
+                        <br>
+                        Use
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                    text-underline-position: under;
+                                    text-decoration-color: #8C52FF;
+                                    text-decoration-style: solid;
+                                    text-decoration-thickness: 2px;">/help</span>
+                        on Discord
+                        <br>
+                        <a href="https://discord.gg/HvGMRZD8jQ">Support Server</a>
+                        <br>
+                        <a href="/commands.html">Commands</a>
+                        <br>
+                        <a href="/blog.html">Blog</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Contact</b>
+                        <br>
+                        <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
+                        <br>
+                        DM
+                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
+                                text-underline-position: under;
+                                text-decoration-color: #8C52FF;
+                                text-decoration-style: solid;
+                                text-decoration-thickness: 2px;">vorlon.</span>
+                        on Discord
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <b>Policies</b>
+                        <br>
+                        <a href="/privacy.html">Privacy Policy</a>
+                        <br>
+                        <a href="/tos.html">Terms of Service</a>
+                        <br>
+                        <a href="/community.html">Community</a>
+                    </p>
+                </div>
+            </div>
+            <hr color="#5b6069">
+            <div>
+                <p style="margin-bottom: 0;">
+                    <span style="color: #999999;">Made by ⚡</span>
+                    <a class="quantam" href="https://quantamstudios.dev">Quantam Studios</a>
+                    ⚡
+                </p>
+                <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
+                    © Zach Goodson 2024, All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
