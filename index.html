@@ -15,6 +15,7 @@
     <!-- JS -->
     <script src="/assets/scripts/mobileNavigation.js" defer></script>
     <script src="/assets/scripts/status.js" defer></script>
+    <script src="/assets/scripts/visibilityChange.js" defer></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--  Essential META Tags -->
@@ -704,6 +705,7 @@
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((element) => observer.observe(element));
 </script>
+<!-- Fetch the server count from the API -->
 <script>
     const url = 'https://discord.com/api/v9/application-directory-static/applications/705680059809398804?locale=en-US';
 
