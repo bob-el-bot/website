@@ -219,6 +219,25 @@ body {
     color: #d7a614;
 }
 
+.buttonMain {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #f2f2f2;
+    border: solid 2px #36393e;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.buttonMain:hover {
+    color: #f2f2f2;
+    background: #36393e;
+    border: solid 2px #999999;
+}
+
 footer {
     flex-shrink: 0;
     text-align: center;
@@ -291,6 +310,12 @@ footer .column:nth-child(1) {
 
     footer div .main-content .column {
         margin: 0px;
+    }
+}
+
+@media (max-width: 840px) {
+    .buttonMain {
+        font-size: 14px;
     }
 }
 
