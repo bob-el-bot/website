@@ -469,12 +469,14 @@
                                     <span>/mastermind new-game</span>
                                 </h3>
                                 <p>
-                                    Start a new game of Mastermind, the rules will shared upon usage. You may only have one game per channel.
+                                    Start a new game of Mastermind, the rules will shared upon usage. You may only have
+                                    one game per channel.
                                 </p>
                                 <div class="parameters">
                                     <div class="parameter">
                                         <p>mode</p>
-                                        <p>Choose between: Classic | Positional feedback (⬛⬜🟫⬜) and Numeric | Aggregate feedback (Correct: 1, Misplaced: 2, Incorrect: 1).</p>
+                                        <p>Choose between: Classic | Positional feedback (⬛⬜🟫⬜) and Numeric | Aggregate
+                                            feedback (Correct: 1, Misplaced: 2, Incorrect: 1).</p>
                                     </div>
                                 </div>
                             </div>
@@ -511,8 +513,7 @@
                         </div>
                         <div class="command-info-card" id="wordle-guess">
                             <div class="name">
-                                <h3
-                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#wordle-guess')">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#wordle-guess')">
                                     💬
                                     <span>/wordle guess</span>
                                 </h3>
@@ -861,6 +862,58 @@
                         </div>
                     </div>
                     <div class="stream">
+                        <p id="generate" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#generate')">
+                            🪄
+                            Generate Commands</p>
+                        <div class="command-info-card" id="generate-youtube-comment">
+                            <div class="name">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#generate-youtube-comment')">
+                                    💬
+                                    <span>/generate youtube-comment</span>
+                                </h3>
+                                <p>
+                                    Bob will generate a Youtube comment image!
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>comment</p>
+                                        <p>The comment content.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>username</p>
+                                        <p>The username for the commenter (between 1 and 50 characters). Defaults to
+                                            your Discord username.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>avatar-url</p>
+                                        <p>The URL of an image you want to have as the profile picture. Defaults to your
+                                            Discord PFP.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>likes</p>
+                                        <p>The like count for the comment (between 0 and 999,999,999). Defaults to 1000.
+                                        </p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>time</p>
+                                        <p>The amount of time of the specified unit (between 0 and 999,999,999).
+                                            Defaults to 1.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>time-unit</p>
+                                        <p>The unit of time (choose from: Second, Minute, Hour, Day, Week, Month, Year).
+                                            Defaults to Hour.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>theme</p>
+                                        <p>The theme of the comment (choose from Dark, Light). Defaults to Dark.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stream">
                         <p id="other" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#other')">✨
                             Other Commands</p>
                         <div class="command-info-card" id="ship">
@@ -875,7 +928,8 @@
                                 <div class="parameters">
                                     <div class="parameter">
                                         <p>person*2</p>
-                                        <p>The people you want to match together. If left empty Bob will choose a random user.</p>
+                                        <p>The people you want to match together. If left empty Bob will choose a random
+                                            user.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1053,7 +1107,8 @@
                         </div>
                         <div class="command-info-card" id="convert-timezones">
                             <div class="name">
-                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#convert-timezones')">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#convert-timezones')">
                                     🕗
                                     <span>/convert timezones</span>
                                 </h3>
@@ -1090,7 +1145,8 @@
                         </div>
                         <div class="command-info-card" id="convert-qr-code">
                             <div class="name">
-                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#convert-qr-code')">
+                                <h3
+                                    onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#convert-qr-code')">
                                     🔳
                                     <span>/convert qr-code</span>
                                 </h3>
