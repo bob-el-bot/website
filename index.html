@@ -1475,13 +1475,13 @@
                         const status = data?.data?.attributes?.status;
 
                         if (status === 'up') {
-                            text.textContent = "Network: Online";
+                            text.textContent = "Online";
                             statusDot.className = "status-dot up";
                         } else if (status === 'maintenance' || status === 'paused') {
-                            text.textContent = "Network: Maintenance";
+                            text.textContent = "Maintenance";
                             statusDot.className = "status-dot maintenance";
                         } else {
-                            text.textContent = "Network: Issues Reported";
+                            text.textContent = "Issues Detected";
                             statusDot.className = "status-dot down";
                         }
                     })
