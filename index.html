@@ -3,743 +3,1145 @@
 
 <head>
     <title>Bob The Bot</title>
-    <meta name="viewport" content="width=device-width, initial-scale e=1">
-    <!-- Favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="assets/images/bobTransparent.svg">
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <!-- JS -->
-    <script src="/assets/scripts/mobileNavigation.js" defer></script>
-    <script src="/assets/scripts/status.js" defer></script>
-    <script src="/assets/scripts/visibilityChange.js" defer></script>
-    <!-- Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--  Essential META Tags -->
-    <meta name="description"
-        content="Bob, the bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
-    <meta name="keywords"
-        content="Bob, Bob The Bot, Bob Bot, bob the bot, bobthebot, BobTheBot, bot for shipping, bot for games, bot for fonts, RNG, RNG bot, rng bot, dice roll, dungeons and dragons">
-    <!-- Twitter META Tags -->
-    <meta name="twitter:title" content="Bob The Bot.">
-    <meta name="twitter:description"
-        content="The bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
-    <meta name="twitter:image" content="https://bobthebot.net/assets/images/bob.png">
-    <meta name="twitter:url" content="https://bobthebot.net">
-    <!--  Embed META Tags -->
-    <meta property="og:title" content="Bob The Bot.">
-    <meta property="og:site_name" content="Bob The Bot">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="https://bobthebot.net/assets/images/bob.png">
-    <meta property="og:url" content="https://bobthebot.net">
-    <meta property="og:description"
-        content="The bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!">
-    <meta data-react-helmet="true" name="theme-color" content="#8C52FF">
+
+    <style>
+        :root {
+            --bg-dark: #020203;
+            --accent-purple: #8C52FF;
+            --soft-purple: #d4c1ff;
+            --soft-pink: #ffadd2;
+            --soft-gold: #ffebad;
+            --quantam: #ff9900;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-muted: rgba(255, 255, 255, 0.6);
+        }
+
+        /* --- GLOBAL FLOW --- */
+        html {
+            background-color: var(--bg-dark);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            background: transparent !important;
+            overflow-x: hidden;
+        }
+
+        /* --- RESTORED STAR ENGINE --- */
+        .space-container {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: #010102;
+            overflow: hidden;
+        }
+
+        .nebula-layer {
+            position: absolute;
+            width: 150vmax;
+            height: 150vmax;
+            top: -25%;
+            left: -25%;
+            filter: blur(120px);
+            opacity: 0.2;
+            mix-blend-mode: screen;
+            animation: nebula-drift 60s ease-in-out infinite alternate;
+        }
+
+        .nebula-1 {
+            background: radial-gradient(circle at 50% 50%, var(--accent-purple) 0%, transparent 60%);
+        }
+
+        .nebula-2 {
+            background: radial-gradient(circle at 20% 80%, #3b0764 0%, transparent 50%);
+            animation-duration: 45s;
+        }
+
+        .stars-wrap {
+            position: absolute;
+            inset: -500px;
+        }
+
+        .stars-layer {
+            position: absolute;
+            inset: 0;
+            background-repeat: repeat;
+        }
+
+        /* 1. Deep Field (Thousands of micro dots) */
+        .stars-deep {
+            background-image:
+                radial-gradient(1px 1px at 10% 10%, #fff, transparent),
+                radial-gradient(1px 1px at 20% 50%, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(1px 1px at 45% 20%, #fff, transparent),
+                radial-gradient(1px 1px at 60% 85%, rgba(255, 255, 255, 0.3), transparent),
+                radial-gradient(1px 1px at 85% 40%, #fff, transparent);
+            background-size: 250px 250px;
+            /* Small tile = massive density */
+            opacity: 0.3;
+            animation: stars-drift 300s linear infinite;
+        }
+
+        /* 2. Mid Field (Colored distant stars) */
+        .stars-mid {
+            background-image:
+                radial-gradient(1.5px 1.5px at 15% 15%, var(--soft-purple), transparent),
+                radial-gradient(1.5px 1.5px at 65% 35%, var(--soft-pink), transparent),
+                radial-gradient(1.5px 1.5px at 45% 75%, var(--soft-gold), transparent);
+            background-size: 450px 450px;
+            opacity: 0.5;
+            animation: stars-drift 180s linear infinite reverse;
+        }
+
+        /* 3. Front Field (Emitters with varied sizes and soft glows) */
+        .stars-front {
+            background-image:
+                /* Star 1: Large Purple Emit */
+                radial-gradient(8px 8px at 10% 20%, rgba(140, 82, 255, 0.2), transparent),
+                radial-gradient(2px 2px at 10% 20%, #fff, transparent),
+                /* Star 2: Soft Pink Emit */
+                radial-gradient(10px 10px at 80% 50%, rgba(255, 173, 210, 0.15), transparent),
+                radial-gradient(2.5px 2.5px at 80% 50%, #fff, transparent),
+                /* Star 3: Warm Gold Emit */
+                radial-gradient(7px 7px at 40% 85%, rgba(255, 235, 173, 0.2), transparent),
+                radial-gradient(1.5px 1.5px at 40% 85%, #fff, transparent);
+            background-size: 900px 900px;
+            animation: stars-drift 100s linear infinite;
+        }
+
+        @keyframes stars-drift {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-1000px);
+            }
+        }
+
+        /* --- NAVIGATION --- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 40px;
+            gap: 40px;
+            z-index: 1000;
+            /* High z-index to stay above content */
+
+            /* Glassmorphism Effect */
+            background: rgba(2, 2, 3, 0.5);
+            /* Semi-transparent dark base */
+            backdrop-filter: blur(12px);
+            /* Blur behind the bar */
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+
+            transition: all 0.3s ease;
+        }
+
+        .navbar a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        /* --- FIX NAVBAR INVITE HOVER --- */
+        .navbar a.nav-invite {
+            background: var(--accent-purple) !important;
+            /* Force white background */
+            color: #000 !important;
+            /* Force black text */
+            padding: 8px 20px;
+            border-radius: 99px;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            animation: nav-glow 4s ease-in-out infinite;
+            border: none;
+        }
+
+        /* Clear the underline effect for the invite button specifically */
+        .navbar a.nav-invite::after {
+            display: none !important;
+        }
+
+        .navbar a.nav-invite:hover {
+            transform: translateY(-2px);
+            /* Single clean color shift */
+            color: #000 !important;
+            box-shadow: 0 5px 20px rgba(140, 82, 255, 0.4);
+        }
+
+        .navbar a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px var(--accent-purple);
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent-purple);
+            transition: 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        /* --- HERO (Pushed down to hide commands) --- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            min-height: 70vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-icon {
+            width: 110px;
+            height: 110px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 12vw, 6rem);
+            font-weight: 800;
+            letter-spacing: -5px;
+            margin: 5px 0;
+            line-height: 0.95;
+
+            /* Updated Gradient: More vivid purple at the bottom */
+            background: linear-gradient(to bottom, #ffffff 20%, var(--accent-purple) 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Optional: subtle purple glow to make the letters "emit" light */
+            filter: drop-shadow(0 0 15px rgba(140, 82, 255, 0.3));
+        }
+
+        .tagline {
+            color: var(--accent-purple);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 15px;
+            font-weight: 800;
+            margin-top: 25px;
+        }
+
+        .description {
+            color: var(--text-muted);
+            /* Uses the existing 60% white color */
+            max-width: 600px;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-top: 25px;
+            font-weight: 400;
+            /* Standard weight makes it look cleaner */
+        }
+
+        /* --- STATS PILL --- */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 60px auto 60px;
+            /* Reduced top margin from 100px to 20px */
+            padding: 20px 50px;
+            /* Slimmer padding */
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            border-radius: 100px;
+            width: fit-content;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .stat-val {
+            font-size: 1.6rem;
+            font-weight: 800;
+            display: block;
+            color: #fff;
+        }
+
+        .stat-lab {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 50px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #000;
+            padding: 16px 35px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: 0.4s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-secondary,
+        .buttonMain {
+            background: var(--glass-bg);
+            color: #fff;
+            padding: 16px 35px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover,
+        .buttonMain:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-5px);
+        }
+
+        /* --- COMMAND CARDS --- */
+        .commands-section h2 {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .section .text h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+            display: flex;
+            /* Keeps emoji and text on the same line */
+            align-items: center;
+            /* Centers emoji vertically with the text */
+            gap: 15px;
+            /* Adds a nice gap between emoji and text */
+            color: #fff;
+            /* Base color for the emoji */
+        }
+
+        /* This applies the gradient ONLY to the text span */
+        .commands-section h2 span,
+        .section .text h2 span {
+            background: linear-gradient(to bottom, #ffffff 40%, var(--soft-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .stream-holder {
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+
+        .stream {
+            display: flex;
+            width: max-content;
+            animation: scroll 35s linear infinite;
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .stream:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .command-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 30px;
+            min-width: 260px;
+            max-width: 260px;
+            transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .command-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--accent-purple);
+            background: rgba(140, 82, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .command-card h3 {
+            margin: 0;
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .command-card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            white-space: normal;
+        }
+
+        /* --- FEATURE SECTIONS --- */
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            margin: 120px auto;
+            max-width: 1100px;
+            padding: 0 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .section .text {
+            flex: 1;
+        }
+
+        .section .text h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+        .section .text h2 span {
+            background: linear-gradient(to bottom, #fff, var(--soft-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section .text p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 480px;
+            filter: drop-shadow(0 0 40px rgba(140, 82, 255, 0.1));
+            transition: 0.5s ease;
+        }
+
+        .section:hover img {
+            transform: translateY(-10px);
+        }
+
+        .commandName {
+            background: rgba(140, 82, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 6px;
+            color: #fff;
+            border-bottom: 1px solid var(--accent-purple);
+            font-size: 0.95em;
+        }
+
+        /* --- FUTURE PLANS --- */
+        #future-plans {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(25px);
+            border-radius: 40px;
+            margin: 100px auto;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 850px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Fix Future Plans Header alignment and gradient */
+        #future-plans h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Center emoji + text */
+            gap: 15px;
+            color: #fff;
+        }
+
+        #future-plans h3 span {
+            background: linear-gradient(to bottom, #fff, var(--soft-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Fix Explore Button from stretching too wide */
+        .explore-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        /* Reset the button to only be as wide as its text */
+        .explore-container .buttonMain {
+            width: auto !important;
+            min-width: 200px;
+            padding: 12px 35px;
+            display: inline-flex;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 80px 30px 40px;
+            border-top: 1px solid var(--glass-border);
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer b {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            line-height: 2.3;
+            transition: 0.2s;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* --- REFINED FOOTER DIVIDER --- */
+        .copyright-bar {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            position: relative;
+        }
+
+        /* The Inset Line Effect */
+        .copyright-bar::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 15%;
+            /* Indent from left */
+            right: 15%;
+            /* Indent from right */
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--glass-border), transparent);
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- STATUS BUTTON STYLING --- */
+        .status-indicator-footer {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 10px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .status-indicator-footer:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #9ca3af;
+            /* Default Gray */
+            border-radius: 50%;
+            position: relative;
+        }
+
+        /* Pulse Animation Classes */
+        .status-dot.up {
+            background: #4ade80;
+            box-shadow: 0 0 10px #4ade80;
+        }
+
+        .status-dot.down {
+            background: #f87171;
+            box-shadow: 0 0 10px #f87171;
+        }
+
+        .status-dot.maintenance {
+            background: #fbbf24;
+            box-shadow: 0 0 10px #fbbf24;
+        }
+
+        .status-dot.up::after,
+        .status-dot.down::after,
+        .status-dot.maintenance::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 2px solid currentColor;
+            animation: status-pulse 2s infinite;
+            opacity: 0;
+        }
+
+        /* Link the border color of the pulse to the dot color */
+        .status-dot.up::after {
+            border-color: #4ade80;
+        }
+
+        .status-dot.down::after {
+            border-color: #f87171;
+        }
+
+        .status-dot.maintenance::after {
+            border-color: #fbbf24;
+        }
+
+        @keyframes status-pulse {
+            0% {
+                transform: scale(0.5);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        .status-text-footer {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        /* --- RESPONSIVENESS --- */
+        /* --- UNIFIED RESPONSIVENESS --- */
+        @media (max-width: 850px) {
+
+            .section,
+            .section.reverse {
+                flex-direction: column !important;
+                text-align: center;
+                gap: 40px;
+                margin: 60px auto;
+            }
+
+            /* 5. Feature Sections: Ensure centered headers & wrap text */
+            .section .text h2 {
+                display: block !important;
+                /* Forces it to act like normal text */
+                text-align: center !important;
+                /* Now this will work */
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .section .text h2 span {
+                display: inline !important;
+                /* Allows the text to wrap under the emoji if needed */
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+
+            /* Make sure the container doesn't have any leftover padding/margin pushing it left */
+            .section .text {
+                width: 100% !important;
+                text-align: center !important;
+                padding: 0 !important;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                text-align: center;
+            }
+
+            .footer-grid .column:first-child {
+                grid-column: span 2;
+            }
+
+            .status-indicator-footer {
+                justify-content: center;
+            }
+        }
+
+        /* THE 450PX "TINY PHONE" FIX */
+        @media (max-width: 450px) {
+
+            /* 1. Navbar: Shrink gaps and prevent overlapping */
+            .navbar {
+                padding: 15px 10px;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .navbar a {
+                font-size: 10px;
+                letter-spacing: 0.5px;
+            }
+
+            .navbar a.nav-invite {
+                padding: 6px 12px;
+            }
+
+            /* 2. Hero: Scale down typography */
+            .hero {
+                padding-top: 40px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+                letter-spacing: -2px;
+            }
+
+            .hero .description {
+                font-size: 1rem;
+            }
+
+            /* 3. Stats Bar: Change to vertical pill */
+            .stats-bar {
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 30px;
+                width: 85%;
+                padding: 30px 20px;
+                margin-bottom: 40px;
+            }
+
+            .stats-bar div[style*="width:1px"] {
+                display: none;
+            }
+
+            /* Hide vertical lines */
+
+            /* 4. Command Cards: Resize for small screen */
+            .command-card {
+                min-width: 210px;
+                max-width: 210px;
+                padding: 20px;
+            }
+
+            .commands-section h2 {
+                font-size: 2.2rem;
+            }
+
+            /* 5. Feature Sections: Ensure centered headers & wrap text */
+            .section .text h2 {
+                display: block !important;
+                /* Forces it to act like normal text */
+                text-align: center !important;
+                /* Now this will work */
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .section .text h2 span {
+                display: inline !important;
+                /* Allows the text to wrap under the emoji if needed */
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+
+            /* Make sure the container doesn't have any leftover padding/margin pushing it left */
+            .section .text {
+                width: 100% !important;
+                text-align: center !important;
+                padding: 0 !important;
+            }
+
+            .section img {
+                max-width: 85%;
+            }
+
+            /* 6. Buttons: Stack them for easy thumb-tapping */
+            .hero .btn-group, #future-plans .btn-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-primary,
+            .btn-secondary,
+            .buttonMain {
+                box-sizing: border-box;
+                padding: 12px 35px;
+                justify-content: center;
+            }
+
+            /* 7. Footer: Single column */
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-grid .column {
+                grid-column: span 1 !important;
+            }
+
+            .copyright-bar::before {
+                left: 5%;
+                right: 5%;
+            }
+
+            #future-plans {
+                padding: 40px 20px;
+                margin: 60px 15px;
+                border-radius: 30px;
+            }
+
+            #future-plans h3 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 
-<body style="margin: 0px; height: 100%;">
-    <!-- Header Section -->
-    <div class="header">
-        <!-- Navigation -->
-        <div style="z-index: 100 !important;" class="container">
-            <div class="topnav">
-                <a class="home" href="">Bob</a>
-                <a class="mobile-button" id="nav-mobile-button">
-                    <img alt="open menu" style="max-height: 18px;" src="/assets/images/hamburger-menu-icon.svg">
-                </a>
-                <a class="invite" href="https://invite.bobthebot.net">
-                    ❤️ Invite
-                    Bob
-                </a>
-                <a href="https://bobthebot.net/premium.html">✨ Premium</a>
-                <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
-            </div>
-        </div>
-        <!-- Navigation Mobile Options -->
-        <div style="z-index: 101 !important;" id="nav-modal" class="nav-modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <br>
-                <a class="invite" href="https://invite.bobthebot.net">
-                    ❤️ Invite
-                    Bob
-                </a>
-                <a href="https://bobthebot.net/premium.html">✨ Premium</a>
-                <a href="https://bobthebot.net/commands.html">🔥 Commands</a>
-            </div>
-        </div>
-        <!-- header content -->
-        <div class="section">
-            <div class="main">
-                <h1 style="animation: fadein 1s;">Add the fun to your server!</h1>
-                <h3>Bob, the bot for 🎲 RNG, 🖊️ quoting, 📜 fonts, 🔒 encryption, 🎮 games, and ✨ more!</h3>
-                <button style="margin-right: 10px; animation: fadein 1s;" class="buttonMainInvite"
-                    onclick="window.location.href='https://invite.bobthebot.net'">
-                    <b>
-                        Invite Bob
-                    </b>
-                </button>
-                <button style="animation: fadein 1s;" class="buttonMain" onclick="window.location.href='#learn-more'">
-                    <b>
-                        Learn More
-                    </b>
-                </button>
-            </div>
-        </div>
-        <div class="section">
-            <div class="status">
-                <img alt="" class="decor" style="position: relative; left: 0px; top: 40px;"
-                    src="assets/images/sparkle2.svg">
-                <img alt="Bob" class="pfp" src="assets/images/bob.png">
-                <img alt="" class="decor" style="position: relative; left: 0px; top: -40px;"
-                    src="assets/images/sparkle1.svg">
-            </div>
+<body>
+    <div class="space-container">
+        <!-- Living Nebula Background -->
+        <div class="nebula-layer nebula-1"></div>
+        <div class="nebula-layer nebula-2"></div>
+
+        <!-- High-Density Parallax Starfield -->
+        <div class="stars-wrap">
+            <div class="stars-layer stars-deep"></div> <!-- Densely packed distant stars -->
+            <div class="stars-layer stars-mid"></div> <!-- Medium density colored stars -->
+            <div class="stars-layer stars-front"></div> <!-- Individual bright emitters -->
         </div>
     </div>
-    <!-- Stats -->
-    <div class="stats">
-        <div style="padding-right: 10px;" class="growth">
-            <h2 style="margin-block-end: 0; margin-block-start: 0;">🚀Bob is growing daily!</h2>
+
+    <nav class="navbar">
+        <a href="/commands.html">Commands</a>
+        <a href="/premium.html">Premium</a>
+        <a href="https://discord.gg/HvGMRZD8jQ">Support</a>
+        <a href="https://invite.bobthebot.net" class="nav-invite">Invite Bob</a>
+    </nav>
+
+    <section class="hero">
+        <img src="assets/images/bobTransparent.svg" class="hero-icon" alt="Bob">
+        <h1>Bob<i>The</i> Bot.</h1>
+        <p class="tagline">Add the fun to your server!</p>
+        <p class="description">Play games, Make Memories, Schedule Messages, and so much more.</p>
+        <div class="btn-group">
+            <a href="https://invite.bobthebot.net" class="btn-primary">Invite Bob</a>
+            <a href="#features" class="btn-secondary">Explore Features</a>
         </div>
-        <div class="stat">
-            <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">
-                🤗
-                <span id="number">100,000</span>+ Users
-            </h2>
+        <div class="stats-bar">
+            <div class="stat-item"><span class="stat-val"><span id="number">100,000</span>+</span><span
+                    class="stat-lab">Users</span></div>
+            <div style="width:1px; background:rgba(255,255,255,0.1); height:30px;"></div>
+            <div class="stat-item"><span class="stat-val"><span id="number2">2600</span>+</span><span
+                    class="stat-lab">Servers</span></div>
+            <div style="width:1px; background:rgba(255,255,255,0.1); height:30px;"></div>
+            <div class="stat-item"><span class="stat-val">100+</span><span class="stat-lab">Commands</span></div>
         </div>
-        <div class="stat" style="padding-left: 10px;">
-            <h2 style="margin-block-end: 0; margin-block-start: 0;" class="number">
-                🟢
-                <span id="number2">800</span>+ Servers
-            </h2>
+    </section>
+
+    <div class="commands-section" id="features">
+        <h2>🔥 <span>Tons of Commands</span></h2>
+        <div class="stream-holder">
+            <div class="stream">
+                <div class="command-card" onclick="location.href='/commands.html#quote'">
+                    <h3>🖊️ /quote new</h3>
+                    <p>Never forget a moment with Bob's automatic quote formatting and memory tracking.</p>
+                </div>
+                <div class="command-card" onclick="location.href='/commands.html#trivia'">
+                    <h3>❓ /trivia</h3>
+                    <p>Test your knowledge with global trivia challenges directly in your text channels.</p>
+                </div>
+                <div class="command-card" onclick="location.href='/commands.html#rng'">
+                    <h3>🎲 /dice-roll</h3>
+                    <p>Fuel your D&D sessions with customizable, transparent RNG dice rolling mechanics.</p>
+                </div>
+                <div class="command-card" onclick="location.href='/commands.html#dog'">
+                    <h3>🐶 /random dog</h3>
+                    <p>Instantly cure server boredom with high-quality, adorable canine imagery.</p>
+                </div>
+                <!-- Duplicate for Loop -->
+                <div class="command-card" onclick="location.href='/commands.html#quote'">
+                    <h3>🖊️ /quote new</h3>
+                    <p>Never forget a moment with Bob's automatic quote formatting and memory tracking.</p>
+                </div>
+                <div class="command-card" onclick="location.href='/commands.html#trivia'">
+                    <h3>❓ /trivia</h3>
+                    <p>Test your knowledge with global trivia challenges directly in your text channels.</p>
+                </div>
+                <div class="command-card" onclick="location.href='/commands.html#rng'">
+                    <h3>🎲 /dice-roll</h3>
+                    <p>Fuel your D&D sessions with customizable, transparent RNG dice rolling mechanics.</p>
+                </div>
+                <div class="command-card" onclick="location.href='/commands.html#dog'">
+                    <h3>🐶 /random dog</h3>
+                    <p>Instantly cure server boredom with high-quality, adorable canine imagery.</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group"><a href="/commands.html" class="buttonMain">Explore all commands &nbsp; →</a></div>
+    </div>
+
+    <!-- SECTION: Quotes (Right) -->
+    <div class="section">
+        <div class="text">
+            <h2>🖊️ <span>The Best Quote System</span></h2>
+            <p>
+                Making memories is important and with <span class="commandName">/quote new</span> you can do just that!
+                Bob will <i>automatically</i> format the message, and <i>dynamically</i> let you know how long ago a
+                quote was made.
+                On top of that, you can add tags for searching through specific types of quotes.
+            </p>
+        </div>
+        <div class="img-holder hidden">
+            <img alt="Quote System" src="assets/images/quotes.svg">
         </div>
     </div>
-    <!-- body -->
-    <div class="body">
-        <div class="commands" id="features">
-            <h2>
-                🔥Tons of Commands
-            </h2>
-            <div class="stream-holder">
-                <div class="stream">
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#schedule-message'">
-                        <h3>
-                            🕖
-                            <span>/schedule message</span>
-                        </h3>
-                        <p>
-                            Have Bob send a message at a specified time.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#trivia'">
-                        <h3>
-                            ❓
-                            <span>/trivia</span>
-                        </h3>
-                        <p>
-                            Play a game of trivia with or without someone.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#preview-code'">
-                        <h3>
-                            🔎
-                            <span>/preview code</span>
-                        </h3>
-                        <p>
-                            Preview a file from GitHub.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#quote-new'">
-                        <h3>
-                            🖊️
-                            <span>/quote new</span>
-                        </h3>
-                        <p>
-                            Quote someone to remember it forever.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#connect4'">
-                        <h3>
-                            🔵
-                            <span>/connect4</span>
-                        </h3>
-                        <p>
-                            Play Bob or a user in a game of Connect 4.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#automod-links'">
-                        <h3>
-                            ⚖️
-                            <span>/automod links</span>
-                        </h3>
-                        <p>
-                            Prevent links from being sent in this server.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-color'">
-                        <h3>
-                            🎨
-                            <span>/random color</span>
-                        </h3>
-                        <p>
-                            Get a color with Hex, CMYK, HSL, HSV and RGB codes.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#welcome'">
-                        <h3>
-                            👋
-                            <span>/welcome</span>
-                        </h3>
-                        <p>
-                            Have Bob welcome new users.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#wordle-new-game'">
-                        <h3>
-                            💬
-                            <span>/wordle new-game</span>
-                        </h3>
-                        <p>
-                            Play a game of Wordle.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-dog'">
-                        <h3>
-                            🐶
-                            <span>/random dog</span>
-                        </h3>
-                        <p>
-                            Get a cute doggo image.
-                        </p>
-                    </div>
-                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#ship'">
-                        <h3>
-                            💖
-                            <span>/ship</span>
-                        </h3>
-                        <p>
-                            See how good of a match 2 users are.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-advice'">
-                        <h3>
-                            🦉
-                            <span>/random advice</span>
-                        </h3>
-                        <p>
-                            Get random words of wisdom.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-date'">
-                        <h3>
-                            🗓️
-                            <span>/random date</span>
-                        </h3>
-                        <p>
-                            Get a random date.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#automod-bad-words'">
-                        <h3>
-                            ⚖️
-                            <span>/automod bad-words</span>
-                        </h3>
-                        <p>
-                            Prevent bad words from being sent in this server.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#decrypt'">
-                        <h3>
-                            🔓
-                            <span>/decrypt</span>
-                        </h3>
-                        <p>
-                            Change cipher text into plain text.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-dice-roll'">
-                        <h3>
-                            🎲
-                            <span>/random dice-roll</span>
-                        </h3>
-                        <p>
-                            Roll a die with a specified # of sides.
-                        </p>
-                    </div>
-                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#hug'">
-                        <h3>
-                            🤗
-                            <span>/hug</span>
-                        </h3>
-                        <p>
-                            Show your friends some love with a hug.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-quote'">
-                        <h3>
-                            ✍️
-                            <span>/random quote</span>
-                        </h3>
-                        <p>
-                            Get a random quote.
-                        </p>
-                    </div>
-                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#poll'">
-                        <h3>
-                            📊
-                            <span>/poll</span>
-                        </h3>
-                        <p>
-                            Create a poll.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-dad-joke'">
-                        <h3>
-                            😉
-                            <span>/random dad-joke</span>
-                        </h3>
-                        <p>
-                            Get a random dad joke.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#announce'">
-                        <h3>
-                            📣
-                            <span>/announce</span>
-                        </h3>
-                        <p>
-                            Create Fancy embed announcements.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-fact'">
-                        <h3>
-                            🤓
-                            <span>/random fact</span>
-                        </h3>
-                        <p>
-                            Get an outrageous fact.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#analyze-link'">
-                        <h3>
-                            🕵️
-                            <span>/analyze-link</span>
-                        </h3>
-                        <p>
-                            See where a link will take you, and check for rick rolls.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-choose'">
-                        <h3>
-                            🤔
-                            <span>/random choose</span>
-                        </h3>
-                        <p>
-                            Can't decide? Bob will pick for you!
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-8ball'">
-                        <h3>
-                            🎱
-                            <span>/random 8ball</span>
-                        </h3>
-                        <p>
-                            Get an 8 ball response to a prompt.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#rock-paper-scissors'">
-                        <h3>
-                            ✂️
-                            <span>/rock-paper-scissors</span>
-                        </h3>
-                        <p>
-                            Play Rock Paper Scissors vs a bot or user.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#mastermind-new-game'">
-                        <h3>
-                            🧠
-                            <span>/mastermind new-game</span>
-                        </h3>
-                        <p>
-                            Play a game of Mastermind.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#fonts'">
-                        <h3>
-                            📜
-                            <span>/fonts</span>
-                        </h3>
-                        <p>
-                            Change your text to a different font.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#encrypt'">
-                        <h3>
-                            🔒
-                            <span>/encrypt</span>
-                        </h3>
-                        <p>
-                            Change text into a cipher.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#confess'">
-                        <h3>
-                            ✉️
-                            <span>/confess</span>
-                        </h3>
-                        <p>
-                            Have Bob DM a user a message.
-                        </p>
-                    </div>
-                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#new'">
-                        <h3>
-                            ✨
-                            <span>/new</span>
-                        </h3>
-                        <p>
-                            See the latest updates to Bob.
-                        </p>
-                    </div>
-                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#ping'">
-                        <h3>
-                            🏓
-                            <span>/ping</span>
-                        </h3>
-                        <p>
-                            Find the client's latency.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#random-coin-toss'">
-                        <h3>
-                            🪙
-                            <span>/random coin-toss</span>
-                        </h3>
-                        <p>
-                            Flip a coin.
-                        </p>
-                    </div>
-                    <div class="command-card"
-                        onclick="window.location.href='https://bobthebot.net/commands.html#support'">
-                        <h3>
-                            🏰
-                            <span>/support</span>
-                        </h3>
-                        <p>
-                            Sends an invite to Bob's support Server.
-                        </p>
-                    </div>
-                    <div class="command-card" onclick="window.location.href='https://bobthebot.net/commands.html#help'">
-                        <h3>
-                            📪
-                            <span>/help</span>
-                        </h3>
-                        <p>
-                            Get a category-sorted list of Bob's commands.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <p id="learn-more"></p>
-            <button class="buttonMain" onclick="window.location.href='/commands.html'">
-                <b>
-                    All Commands
-                </b>
-            </button>
+
+    <!-- SECTION: RNG (Left) -->
+    <div class="section reverse">
+        <div class="text">
+            <h2>🎲 <span>All the RNG</span></h2>
+            <p>
+                Bob has a <i>plethora</i> of random commands to either fuel your Dungeons and Dragons experience like
+                <span class="commandName">/random dice-roll</span>, or simply cure your boredom with
+                <span class="commandName">/random 8ball</span>, <span class="commandName">/random dad-joke</span>,
+                <span class="commandName">/random fact</span>, and many more!
+            </p>
         </div>
-        <div class="section">
-            <div class="text">
-                <div>
-                    <h2>🖊️ The Best Quote System</h2>
-                    <p>
-                        Making memories is important and with
-                        <span class="commandName">/quote new</span>
-                        you can do just that! Bob will
-                        <i>automatically</i>
-                        format the message,
-                        <i>and dynamically</i>
-                        let you know how long ago a quote was made. On top of that, you can add tags for searching
-                        through specific types of quotes.
-                    </p>
-                </div>
-            </div>
-            <div class="img-holder hidden">
-                <img alt="" src="assets/images/quotes.svg">
-            </div>
-        </div>
-        <div class="section">
-            <div class="img-holder hidden">
-                <img alt="" src="assets/images/rng.svg">
-            </div>
-            <div class="text">
-                <div>
-                    <h2>🎲 All the RNG</h2>
-                    <p>
-                        Bob has a
-                        <i>plethora</i>
-                        of random commands to either fuel your Dungeons and Dragons experience like
-                        <span class="commandName">/random dice-roll</span>
-                        , or simply cure your boredom with
-                        <span class="commandName">/random 8ball</span>
-                        ,
-                        <span class="commandName">/random dad-joke</span>
-                        ,
-                        <span class="commandName">/random fact</span>
-                        , and
-                        <i>many</i>
-                        more!
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="text">
-                <div>
-                    <h2>🎮 Play Games</h2>
-                    <p>
-                        With multiple games to choose from like
-                        <span class="commandName">/trivia</span>
-                        ,
-                        <span class="commandName">/connect4</span>
-                        ,
-                        <span class="commandName">/tic-tac-toe</span>
-                        ,
-                        <span class="commandName">/wordle</span>
-                        ,
-                        <span class="commandName">/rock-paper-scissors</span>
-                        ,
-                        <span class="commandName">/mastermind</span>
-                        , and
-                        <i>only more</i>
-                        on the way, Bob is ready to keep provide your server with the entertainment it needs to thrive.
-                    </p>
-                </div>
-            </div>
-            <div class="img-holder hidden">
-                <img alt="" src="assets/images/games.svg">
-            </div>
-        </div>
-        <div class="section">
-            <div class="img-holder hidden">
-                <img alt="" src="assets/images/wingman.svg">
-            </div>
-            <div class="text">
-                <div>
-                    <div>
-                        <h2>🔒 Remain Hidden</h2>
-                        <p>
-                            Too scared to tell someone something? Bob can be your wingman with
-                            <span class="commandName">/encrypt</span>
-                            , or by DMing a user with
-                            <span class="commandName">/confess</span>
-                            .
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="future-plans" class="section">
-            <div class="future-plans">
-                <h3>🔮 Future Plans</h3>
-                <p>
-                    Bob is constantly being improved, and you can track the development
-                    below, or use
-                    <span class="commandName">/new</span>
-                    to see the most recent updates! If you ever have an idea for a feature feel free to join Bob's
-                    official server, and leave a suggestion in the feature-ideas channel.
-                </p>
-                <button style="margin-right: 10px;" class="buttonMain"
-                    onclick="window.location.href='https://github.com/orgs/bob-el-bot/projects/4'">
-                    <b>
-                        Plans
-                    </b>
-                </button>
-                <button class="buttonMain" onclick="window.location.href='https://discord.gg/HvGMRZD8jQ'">
-                    <b>
-                        Bob's Server
-                    </b>
-                </button>
-            </div>
+        <div class="img-holder hidden">
+            <img alt="RNG Commands" src="assets/images/rng.svg">
         </div>
     </div>
-    <!-- footer -->
+
+    <!-- SECTION: Games (Right) -->
+    <div class="section">
+        <div class="text">
+            <h2>🎮 <span>Play Games</span></h2>
+            <p>
+                With multiple games to choose from like <span class="commandName">/trivia</span>,
+                <span class="commandName">/connect4</span>, <span class="commandName">/tic-tac-toe</span>,
+                <span class="commandName">/wordle</span>, <span class="commandName">/rock-paper-scissors</span>,
+                <span class="commandName">/mastermind</span>, and only more on the way, Bob is ready to provide
+                your server with the entertainment it needs to thrive.
+            </p>
+        </div>
+        <div class="img-holder hidden">
+            <img alt="Interactive Games" src="assets/images/games.svg">
+        </div>
+    </div>
+
+    <!-- SECTION: Remain Hidden (Left) -->
+    <div class="section reverse">
+        <div class="text">
+            <h2>🔒 <span>Remain Hidden</span></h2>
+            <p>
+                Too scared to tell someone something? Bob can be your wingman with
+                <span class="commandName">/encrypt</span>, or by DMing a user with
+                <span class="commandName">/confess</span>.
+            </p>
+        </div>
+        <div class="img-holder hidden">
+            <img alt="Encryption and Confessions" src="assets/images/wingman.svg">
+        </div>
+    </div>
+
+    <!-- SECTION: Future Plans (Center) -->
+    <!-- Inside the Commands Section -->
+    <div class="explore-container">
+        <a href="/commands.html" class="buttonMain">Explore all commands &nbsp; →</a>
+    </div>
+
+    <!-- Future Plans Section -->
+    <div id="future-plans" class="hidden">
+        <h3>🔮 <span>Future Plans</span></h3>
+        <p>
+            Bob is constantly being improved, and you can track the development below, or use
+            <span class="commandName">/new</span> to see the most recent updates!
+        </p>
+        <div class="btn-group">
+            <a href="https://github.com/orgs/bob-el-bot/projects/4" class="btn-primary">View Plans</a>
+            <a href="https://discord.gg/HvGMRZD8jQ" class="btn-secondary">Bob's Server</a>
+        </div>
+    </div>
+
     <footer>
-        <div>
-            <div class="main-content">
-                <div class="column" style="margin-left: 0; margin-right: auto;">
-                    <h2>Bob.</h2>
-                    The bot for RNG, quoting, fonts, encryption, games, and more!
-                    <br>
-                    <a style="text-decoration: none;" href="https://discord.gg/HvGMRZD8jQ">
-                        <img alt="Join Discord Server" src="/assets/images/discordapp-tile.svg">
-                    </a>
-                    <a style="text-decoration: none;" href="https://github.com/bob-el-bot/BobTheBot">
-                        <img alt="View Github" src="/assets/images/github-tile.svg">
-                    </a>
-                    <a style="text-decoration: none;" href="https://www.instagram.com/bobtheb0t/">
-                        <img alt="View Instagram" src="/assets/images/instagram-tile.svg">
-                    </a>
-                    <br>
-                    <div class="status-indicator" id="status-indicator">
-                        <button class="status-link" id="status-link"
-                            onclick="window.open('https://status.bobthebot.net', '_blank')">
-                            <span class="status-text" id="status-text">Loading...</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="column">
-                    <p>
-                        <b>Tools</b>
-                        <br>
-                        <a href="/timestamps.html">Timestamps</a>
-                        <br>
-                        <a href="/colors.html">Discord Colors</a>
-                    </p>
-                </div>
-                <div class="column">
-                    <p>
-                        <b>Support Bob</b>
-                        <br>
-                        <a href="/premium.html">Premium</a>
-                        <br>
-                        <a href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a>
-                        <br>
-                        <a href="https://top.gg/bot/705680059809398804#reviews">Review on Top.GG</a>
-                    </p>
-                </div>
-                <div class="column">
-                    <p>
-                        <b>Resources</b>
-                        <br>
-                        Use
-                        <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
-                                    text-underline-position: under;
-                                    text-decoration-color: #8C52FF;
-                                    text-decoration-style: solid;
-                                    text-decoration-thickness: 2px;">/help</span>
-                        on Discord
-                        <br>
-                        <a href="https://discord.gg/HvGMRZD8jQ">Support Server</a>
-                        <br>
-                        <a href="/commands.html">Commands</a>
-                        <br>
-                        <a href="/blog.html">Blog</a>
-                    </p>
-                </div>
-                <div class="column">
-                    <p>
-                        <b>Contact</b>
-                        <br>
-                        <a href="mailto:quantamstudios@gmail.com">QuantamStudios@gmail.com</a>
-                        <br>
-                        <a href="https://discord.com/users/444592456369963009">
-                            DM
-                            <span style="background-color: #181b1d; border-radius: 5px; padding: 2px; text-decoration: underline;
-                                        text-underline-position: under;
-                                        text-decoration-color: #8C52FF;
-                                        text-decoration-style: solid;
-                                        text-decoration-thickness: 2px;">vorlon.</span>
-                            on Discord
-                        </a>
-                    </p>
-                </div>
-                <div class="column">
-                    <p>
-                        <b>Policies</b>
-                        <br>
-                        <a href="/privacy.html">Privacy Policy</a>
-                        <br>
-                        <a href="/tos.html">Terms of Service</a>
-                        <br>
-                        <a href="/community.html">Community</a>
-                    </p>
-                </div>
-            </div>
-            <hr color="#5b6069">
-            <div>
-                <p style="margin-bottom: 0;">
-                    <span style="color: #999999;">Made by ⚡</span>
-                    <a class="quantam" href="https://zachgoodson.dev">Quantam Studios</a>
-                    ⚡
+        <div class="footer-grid">
+            <div class="column">
+                <h2 style="margin-top:0">Bob.</h2>
+                <p style="color:var(--text-muted); font-size:0.85rem; line-height: 1.5; margin-bottom: 25px;">
+                    The ultimate utility for RNG, quoting, and games.
                 </p>
-                <p style="margin: 0; padding-bottom: 15px; line-height: normal;">
-                    © Zach Goodson 2026, All Rights
-                    Reserved.
-                </p>
+                <a href="https://status.bobthebot.net" class="status-indicator-footer" target="_blank">
+                    <span class="status-dot" id="status-dot"></span>
+                    <span class="status-text-footer" id="status-text">Loading...</span>
+                </a>
             </div>
+            <div class="column"><b>Tools</b><a href="/timestamps.html">Timestamps</a><a href="/colors.html">Colors</a>
+            </div>
+            <div class="column"><b>Support Bob</b><a href="/premium.html">Premium</a><a
+                    href="https://top.gg/bot/705680059809398804/vote">Vote on Top.GG</a></div>
+            <div class="column"><b>Resources</b><a href="/commands.html">Commands</a><a
+                    href="https://discord.gg/HvGMRZD8jQ">Support Server</a><a href="/blog.html">Blog</a></div>
+            <div class="column"><b>Policies</b><a href="/privacy.html">Privacy Policy</a><a href="/tos.html">Terms of
+                    Service</a><a href="/community.html">Community</a></div>
+        </div>
+        <div class="copyright-bar">
+            <p>Made by ⚡ <a href="https://zachgoodson.dev"
+                    style="display:inline; color:var(--quantam); font-weight:700; text-decoration:none;">Quantam
+                    Studios</a> ⚡</p>
+            <p style="margin-top: 10px; opacity:0.5; font-size: 0.85rem;">© Zach Goodson 2026. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Intersection Observer for Fade-ins
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('show'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
+
+        // Fetch BetterStack Status via your server-side API
+        // Ensure the path below matches the endpoint where you deployed your JS function
+        fetch('/api/fetchStatus')
+            .then(res => res.json())
+            .then(data => {
+                const statusText = document.getElementById('status-text');
+                const statusDot = document.getElementById('status-dot');
+
+                // BetterStack returns 'up', 'down', 'maintenance', or 'paused'
+                const status = data.data.attributes.status;
+
+                if (status === 'up') {
+                    statusText.textContent = "Network: Online";
+                    statusDot.className = "status-dot up";
+                } else if (status === 'maintenance' || status === 'paused') {
+                    statusText.textContent = "Network: Maintenance";
+                    statusDot.className = "status-dot maintenance";
+                } else {
+                    statusText.textContent = "Network: Issues Reported";
+                    statusDot.className = "status-dot down";
+                }
+            })
+            .catch(err => {
+                console.error('Status fetch error:', err);
+                document.getElementById('status-text').textContent = "Network: Status Unknown";
+            });
+
+        // Dynamic Server Count Fetch
+        fetch('https://discord.com/api/v9/application-directory-static/applications/705680059809398804?locale=en-US')
+            .then(r => r.json())
+            .then(data => {
+                if (data.directory_entry && data.directory_entry.guild_count) {
+                    let count = Math.round(data.directory_entry.guild_count / 50) * 50;
+                    document.getElementById('number2').textContent = count.toLocaleString();
+                }
+            });
+    </script>
 </body>
-<!-- Take away slide in effect on mobile for performance. -->
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show');
-            }
-        });
-    }, {
-        rootMargin: '100px 0px', // Adjust the values as needed
-    });
-
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((element) => observer.observe(element));
-</script>
-<!-- Fetch the server count from the API -->
-<script>
-    const url = 'https://discord.com/api/v9/application-directory-static/applications/705680059809398804?locale=en-US';
-
-    // Fetch the data from the API
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            let guildCount = data.directory_entry.guild_count;
-            guildCount = Math.round(guildCount / 50) * 50;
-
-            document.getElementById('number2').textContent = guildCount;
-        })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
-        });
-</script>
 
 </html>
