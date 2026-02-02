@@ -796,7 +796,25 @@
             }
         }
 
-        /* THE 450PX "TINY PHONE" FIX */
+        @media (max-width: 680px) {
+            .hero {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .stats-bar {
+                padding: 20px 20px;
+                gap: 20px;
+                margin-bottom: 30px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .stats-bar .stat-item .stat-val {
+                font-size: 20px;
+            }
+        }
+
         @media (max-width: 450px) {
 
             /* 1. Navbar: Shrink gaps and prevent overlapping */
