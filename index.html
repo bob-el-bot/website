@@ -1117,19 +1117,19 @@
                 const status = data.data.attributes.status;
 
                 if (status === 'up') {
-                    statusText.textContent = "Network: Online";
+                    statusText.textContent = "Online";
                     statusDot.className = "status-dot up";
                 } else if (status === 'maintenance' || status === 'paused') {
-                    statusText.textContent = "Network: Maintenance";
+                    statusText.textContent = "Maintenance";
                     statusDot.className = "status-dot maintenance";
                 } else {
-                    statusText.textContent = "Network: Issues Reported";
+                    statusText.textContent = "Issues Reported";
                     statusDot.className = "status-dot down";
                 }
             })
             .catch(err => {
                 console.error('Status fetch error:', err);
-                document.getElementById('status-text').textContent = "Network: Status Unknown";
+                document.getElementById('status-text').textContent = "Unknown";
             });
 
         // Dynamic Server Count Fetch
