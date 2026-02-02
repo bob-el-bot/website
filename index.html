@@ -1461,36 +1461,31 @@
             setTimeout(() => {
                 // Fetch BetterStack Status via your server-side API
                 fetch('/api/fetchStatus')
-                    .then(res => {
-                        // Check if the response is actually JSON
-                        const contentType = res.headers.get("content-type");
-                        if (!res.ok || !contentType || !contentType.includes("application/json")) {
-                            throw new Error("Not a JSON response");
-                        }
-                        return res.json();
-                    })
-                    .then(data => {
+                    .then(res => res.json())
+                    .then(json => {
                         const text = document.getElementById('status-text');
                         const dot = document.getElementById('status-dot');
-                        const status = data?.data?.attributes?.status;
+
+                        if (!text || !dot) return; // Safety check
+
+                        const status = json?.data?.attributes?.status;
 
                         if (status === 'up') {
                             text.textContent = "Online";
-                            statusDot.className = "status-dot up";
+                            dot.className = "status-dot up";
                         } else if (status === 'maintenance' || status === 'paused') {
                             text.textContent = "Maintenance";
-                            statusDot.className = "status-dot maintenance";
+                            dot.className = "status-dot maintenance";
                         } else {
                             text.textContent = "Issues Detected";
-                            statusDot.className = "status-dot down";
+                            dot.className = "status-dot down";
                         }
                     })
-                    .catch(err => {
-                        // Local/Network Error Fallback: Default to a "Clean" state for testing
-                        console.log('API not reachable (expected in local dev)');
+                    .catch((err) => {
+                        console.log(err);
                         const text = document.getElementById('status-text');
                         const dot = document.getElementById('status-dot');
-                        if (text) text.textContent = "Network: Online";
+                        if (text) text.textContent = "Unknown";
                         if (dot) dot.className = "status-dot up";
                     });
 
