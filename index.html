@@ -3,6 +3,11 @@
 
 <head>
     <title>Bob The Bot</title>
+        <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/bobTransparent.svg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -1472,7 +1477,7 @@
 
                         if (status === 'up') {
                             text.textContent = "Online";
-                            dot.className = "status-dot up";
+                            dot.className = "status-dot up";    
                         } else if (status === 'maintenance' || status === 'paused') {
                             text.textContent = "Maintenance";
                             dot.className = "status-dot maintenance";
