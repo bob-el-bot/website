@@ -862,7 +862,8 @@
             }
 
             /* 6. Buttons: Stack them for easy thumb-tapping */
-            .hero .btn-group, #future-plans .btn-group {
+            .hero .btn-group,
+            #future-plans .btn-group {
                 flex-direction: column;
                 gap: 12px;
             }
@@ -934,13 +935,20 @@
             <a href="#features" class="btn-secondary">Explore Features</a>
         </div>
         <div class="stats-bar">
-            <div class="stat-item"><span class="stat-val"><span id="number">100,000</span>+</span><span
-                    class="stat-lab">Users</span></div>
+            <div class="stat-item">
+                <span class="stat-val"><span id="number" data-target="100000">0</span>+</span>
+                <span class="stat-lab">Users</span>
+            </div>
             <div style="width:1px; background:rgba(255,255,255,0.1); height:30px;"></div>
-            <div class="stat-item"><span class="stat-val"><span id="number2">2600</span>+</span><span
-                    class="stat-lab">Servers</span></div>
+            <div class="stat-item">
+                <span class="stat-val"><span id="number2" data-target="2600">0</span>+</span>
+                <span class="stat-lab">Servers</span>
+            </div>
             <div style="width:1px; background:rgba(255,255,255,0.1); height:30px;"></div>
-            <div class="stat-item"><span class="stat-val">100+</span><span class="stat-lab">Commands</span></div>
+            <div class="stat-item">
+                <span class="stat-val"><span id="number3" data-target="100">0</span>+</span>
+                <span class="stat-lab">Commands</span>
+            </div>
         </div>
     </section>
 
@@ -1136,11 +1144,55 @@
         fetch('https://discord.com/api/v9/application-directory-static/applications/705680059809398804?locale=en-US')
             .then(r => r.json())
             .then(data => {
-                if (data.directory_entry && data.directory_entry.guild_count) {
+                if (data.directory_entry) {
                     let count = Math.round(data.directory_entry.guild_count / 50) * 50;
-                    document.getElementById('number2').textContent = count.toLocaleString();
+                    const serverCountEl = document.getElementById('number2');
+
+                    // Update the target and re-trigger animation if count changes
+                    serverCountEl.setAttribute('data-target', count);
+                    animateValue(serverCountEl, 0, count, 2000);
                 }
             });
+
+        // Function to animate the counter
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+                // Use a math floor to keep it an integer
+                const currentCount = Math.floor(progress * (end - start) + start);
+
+                // Use toLocaleString() for the commas (e.g., 100,000)
+                obj.innerHTML = currentCount.toLocaleString();
+
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Trigger the animation for each stat
+        function startCounter() {
+            const stats = [
+                { id: 'number', duration: 1500 },
+                { id: 'number2', duration: 1000 },
+                { id: 'number3', duration: 750 }
+            ];
+
+            stats.forEach(stat => {
+                const el = document.getElementById(stat.id);
+                if (el) {
+                    const target = parseInt(el.getAttribute('data-target'));
+                    animateValue(el, 0, target, stat.duration);
+                }
+            });
+        }
+
+        // Start the animation when the page loads
+        window.addEventListener('DOMContentLoaded', startCounter);
     </script>
 </body>
 
