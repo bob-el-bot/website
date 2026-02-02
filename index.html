@@ -1488,6 +1488,7 @@
                     .catch(err => {
                         // Local/Network Error Fallback: Default to a "Clean" state for testing
                         console.log('API not reachable (expected in local dev)');
+                        console.log(err);
                         const text = document.getElementById('status-text');
                         const dot = document.getElementById('status-dot');
                         if (text) text.textContent = "Network: Online";
