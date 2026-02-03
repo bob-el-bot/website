@@ -122,7 +122,6 @@
             background-size: 250px 250px;
             /* Small tile = massive density */
             opacity: 0.3;
-            animation: stars-drift 300s linear infinite;
         }
 
         /* 2. Mid Field (Colored distant stars) */
@@ -133,7 +132,6 @@
                 radial-gradient(1.5px 1.5px at 45% 75%, var(--soft-gold), transparent);
             background-size: 450px 450px;
             opacity: 0.5;
-            animation: stars-drift 180s linear infinite reverse;
         }
 
         /* 3. Front Field (Emitters with varied sizes and soft glows) */
@@ -149,17 +147,6 @@
                 radial-gradient(7px 7px at 40% 85%, rgba(255, 235, 173, 0.2), transparent),
                 radial-gradient(1.5px 1.5px at 40% 85%, #fff, transparent);
             background-size: 900px 900px;
-            animation: stars-drift 100s linear infinite;
-        }
-
-        @keyframes stars-drift {
-            from {
-                transform: translateY(0);
-            }
-
-            to {
-                transform: translateY(-1000px);
-            }
         }
 
         /* --- NAVIGATION --- */
