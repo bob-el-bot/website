@@ -1724,7 +1724,108 @@
                         </div>
                     </div>
                     <div class="stream">
-                        <p id="preview" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#preview')">👀
+                        <p id="webhook" onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#webhook')">🪝
+                            Webhook Commands</p>
+                        <div class="command-info-card" id="webhook-create">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#webhook-create')">
+                                    🪝
+                                    <span>/webhook create</span>
+                                </h3>
+                                <p>
+                                    Bob will give you a URL that posts notifications from GitHub, GitLab, Vercel, Railway,
+                                    Netlify, Coolify, Docker Hub, or any JSON into a channel.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>channel</p>
+                                        <p>The channel notifications will be posted in.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>name</p>
+                                        <p>A friendly name for this webhook.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>provider</p>
+                                        <p>The service sending notifications. Choose from: GitHub, GitLab, Vercel, Railway,
+                                            Netlify, Coolify, Docker Hub, Generic JSON.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>avatar</p>
+                                        <p>A profile picture for the webhook's messages. Defaults to the provider's logo
+                                            (optional).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="webhook-edit">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#webhook-edit')">
+                                    🪝
+                                    <span>/webhook edit</span>
+                                </h3>
+                                <p>
+                                    Change a webhook's name, channel, provider, or avatar.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>webhook</p>
+                                        <p>The webhook you want to edit.</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>name</p>
+                                        <p>A new friendly name (optional).</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>channel</p>
+                                        <p>A new channel to post notifications in (optional).</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>provider</p>
+                                        <p>A new service to expect notifications from (optional).</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>avatar</p>
+                                        <p>A new profile picture (optional).</p>
+                                    </div>
+                                    <div class="parameter">
+                                        <p>reset-avatar</p>
+                                        <p>Go back to the provider's logo. Choose from: True, False (optional).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="webhook-list">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#webhook-list')">
+                                    🪝
+                                    <span>/webhook list</span>
+                                </h3>
+                                <p>
+                                    List all of the server's webhooks.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="command-info-card" id="webhook-delete">
+                            <div class="name">
+                                <h3 onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#webhook-delete')">
+                                    🪝
+                                    <span>/webhook delete</span>
+                                </h3>
+                                <p>
+                                    Remove a webhook and stop its notifications.
+                                </p>
+                                <div class="parameters">
+                                    <div class="parameter">
+                                        <p>webhook</p>
+                                        <p>The webhook you want to remove.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stream">
+                        <p id="preview"onclick="navigator.clipboard.writeText('https://docs.bobthebot.net#preview')">👀
                             Preview Commands</p>
                         <div class="command-info-card" id="preview-code">
                             <div class="name">
